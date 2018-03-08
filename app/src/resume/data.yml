@@ -1,0 +1,134 @@
+/* #*/ export const DETAILS = `
+name:
+  first: Anton
+  middle:
+  last: Buenavista
+
+about: Aspiring blockchain engineer and full stack developer who is
+       highly passionate about blockchain, decentralization, cryptography,
+       game theory, consensus mechanisms, smart contracts, crypto-assets,
+       crypto-economics, open source, and the semantic web.
+
+       I work on scalable, high availability applications using nascent
+       technology. My work covers both software engineering and systems
+       administration encapsulating services from end-to-end.
+
+       Vires in Numeris.
+
+position: Blockchain Developer
+
+location: Singapore
+
+experience:
+- company: Self-Employed
+  position: Blockchain Developer and Consultant
+  timeperiod: August 2017 - Present
+  location: Global
+  tasks:
+    - task: Remotely provided consultation to new blockchain companies or
+            projects on design, infrastructure, and token metrics.
+    - task: Developed a full-stack web ICO/TGE platform and architected its HA
+            infrastructure on AWS.
+
+- company: Intel Mobile Communications
+  position: Technical Analyst and DevOps Engineer
+  timeperiod: July 2015 - July 2017
+  location: Singapore
+  tasks:
+    - task: Lead developer on a workspace manager project that monitors and
+            manages the workspaces of our internal and external mobile hardware
+            development teams.
+    - task: Lead developer of a Linux command line tool that helps other
+            developers connect to a developer host farm or LSF/Netbatch cluster
+            of the different farm sites of Intel.
+    - task: Performed sys-ops tasks and developed automation tools for the git,
+            Gerrit, and Jenkins environments.
+    - task: Integration of SCM tools with many various internal and external
+            systems.
+    - task: L3 technical support for bleeding edge mobile hardware platforms.
+  projects:
+    - project: Workspace Manager (Lead Developer)
+    - project: Development Host Command Line Tool (Lead Developer)
+    - project: Build Host Checker (Team Member)
+    - project: Jenkins Automations (Team Member)
+
+- company: Tropical Marine Science Institute (NUS)
+  position: IT Analyst
+  timeperiod: February 2010 - May 2015
+  location: Singapore
+  tasks:
+    - task: Lead developer on a hydrodynamics forecast web service which serves
+            scientific hydrological model data on the Southeast Asia region,
+            providing plot information such as bathymetry, surface elevation
+            from seabed, and tide speed and direction.
+    - task: Part of an agile three-man team that developed web services for
+            government researchers to view scientific reports (i.e. storm surge
+            forecasts and oil spill simulations).
+    - task: Performed sys-ops tasks which cover the enhancement and maintenance
+            of high-performance computing clusters, web servers, storage units,
+            and network interfaces.
+    - task: Operationalized scientific numerical models by designing and
+            implementing automated systems that runs numerical models on the
+            cluster, performs data processing, then displays the data on our web
+            services.
+  projects:
+    - project: Live Access Server with OpenDAP (Lead Developer)
+    - project: Water-quality Data Processing (Lead Developer)
+    - project: Oil Spill Forecasting Web Service (Team Member)
+    - project: Storm Surge Forecasting Web Service (Team Member)
+
+- company: Texas Instruments
+  position: Application Developer
+  timeperiod: May 2009 - October 2009
+  location: Philippines
+  tasks:
+    - task: Developed backend modules and automated data-loaders for the supply
+            chain and manufacturing data warehouse.
+    - task: Implemented enhancements for an internal reporting tool which
+            tackled dead-on-arrival orders, cutting DOA orders in the production
+            line and achieving 98% delivery effectiveness.
+  projects:
+    - project: Dead-on-Arrival Order Analysis Service (Lead Developer)
+
+education:
+- degree: Bachelor of Science in Information Technology
+  university: Saint Louis University
+  timeperiod: 2005 - 2009
+  location: Philippines
+  awards:
+    - award: Consistent Dean's Lister
+    - award: Academic Group Chairman
+
+skills:
+- group: JavaScript/ES6, Python, Java, Solidity, Bash Scripting
+- group: AngularJS, VueJS, Meteor, SailsJS, FeathersJS, ExpressJS, node.js, Truffle, OpenZeppelin
+- group: HTML5, CSS3, SASS, Bootstrap
+- group: MongoDB, MySQL SQLite
+- group: Atom, AWS, git, GitHub, Jenkins, Gerrit, Nagios, Zabbix, Nginx
+- group: Scrum, XP, N-Tier Architecture, MVC, MVVM
+
+personal_projects:
+- project: Blockchain Vanity Tool
+  description: A group of Python tools that generate vanity public keys, vanity
+               mnemonic phrases based on BIP39, and key derivation based on a
+               single seed for multiple different blockchains.
+
+open_source:
+- project: ledger-chrome-wallet
+- project: bip39-tool
+- project: qtum
+- project: pivx
+
+contact:
+  email: <redacted>
+  phone: <redacted>
+  street: <redacted>
+  city: Singapore
+  github: lindqvust
+  twitter: ayobuenavista
+  telegram: ayobuenavista
+  fingerprint: 5020 4D4C A710 F3A7 1BF8 888F 130A 94A7 4C5E A8B9
+
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
+lang: en
+`

@@ -1,2 +1,3 @@
 # lindqvust.github.io
-Curriculum Vitae
+
+> My resume developed using Vue.js

@@ -97,13 +97,13 @@ education:
   location: Philippines
   awards:
     - award: Consistent Dean's Lister
-    - award: Academic Group Chairman
+    - award: Chairman of Academic Group
 
 skills:
 - group: JavaScript/ES6, Python, Java, Solidity, Bash Scripting
 - group: AngularJS, VueJS, Meteor, SailsJS, FeathersJS, ExpressJS, node.js, Truffle, OpenZeppelin
 - group: HTML5, CSS3, SASS, Bootstrap
-- group: MongoDB, MySQL SQLite
+- group: MongoDB, MySQL, SQLite
 - group: Atom, AWS, git, GitHub, Jenkins, Gerrit, Nagios, Zabbix, Nginx
 - group: Scrum, XP, N-Tier Architecture, MVC, MVVM
 

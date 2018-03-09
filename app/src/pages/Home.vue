@@ -21,9 +21,10 @@
     height: 100%;
     width: 100%;
   }
+
   .page-wrapper {
     overflow-x: hidden;
-    background: #CCCCCC;
+    background: white;
     margin: 0;
     padding: 0;
     -webkit-print-color-adjust: exact;
@@ -33,16 +34,10 @@
   .resume {
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   .page {
-    background: white;
     position: relative;
-    /* height: 2100px; */
-    /* display: block; */
     page-break-after: auto;
     overflow: hidden;
   }

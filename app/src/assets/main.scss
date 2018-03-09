@@ -1,0 +1,100 @@
+//== Colors
+
+$anchor:                    #42B983;
+$background:                #2B5569;
+$particle:                  #3EE6C1;
+$dark:                      #2A4552;
+$material:                  #2A9A8D;
+$section-headline:          #47D6A2;
+$blue:                      #2589F3;
+$dark-blue:                 #2D3B8E;
+$green:                     #59B54B;
+$light-green:               #B1DB50;
+$dark-green:                #7DBA3B;
+$light-grey:                #B2B3B4;
+$dark-grey:                 #BDBDBD;
+$grey:                      #7E8189;
+$orange:                    #F0AD4E;
+$light-red:                 #DE5F66;
+$red:                       #E54D42;
+$white:                     #FFFFFF;
+$box-shadow:                0 2px 5px 0 rgba(0, 0, 0, 0.16),
+                            0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$button-shadow:             0 10px 7.5px 0 rgba(0, 0, 0, 0.1),
+                            inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.2),
+                            inset 0 0.5px 0 0 rgba(255, 255, 255, 0.5);
+$text-shadow:               0 0.5px 0 rgba(0, 0, 0, 0.2);
+
+//== Media queries breakpoints
+
+// Extra small screen / phone
+$screen-xxs:                480px;
+$screen-xxs-min:            $screen-xxs;
+
+// Small tablet
+$screen-xs:                 600px;
+$screen-xs-min:             $screen-xs;
+
+// Small screen / tablet
+$screen-sm:                 768px;
+$screen-sm-min:             $screen-sm;
+
+// Medium screen / desktop
+$screen-md:                 992px;
+$screen-md-min:             $screen-md;
+
+// Large screen / wide desktop
+$screen-lg:                 1200px;
+$screen-lg-min:             $screen-lg;
+
+// Extra large screen / extra wide desktop
+$screen-xl:                 1500px;
+$screen-xl-min:             $screen-xl;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:             ($screen-xs-min - 1);
+$screen-xs-max:             ($screen-sm-min - 1);
+$screen-sm-max:             ($screen-md-min - 1);
+$screen-md-max:             ($screen-lg-min - 1);
+$screen-lg-max:             ($screen-xl-min - 1);
+
+$xxs-up: "only screen";
+$xxs-only: "max-width: #{$screen-xxs-max}";
+
+$xs-up: "min-width: #{$screen-xs-min}";
+$xs-only: "min-width: #{$screen-xs-min}) and (max-width: #{$screen-sm-max}";
+
+$sm-up: "min-width: #{$screen-sm-min}";
+$sm-only: "min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}";
+
+$md-up: "min-width: #{$screen-md-min}";
+$md-only: "min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}";
+
+$lg-up: "min-width: #{$screen-lg-min}";
+$lg-only: "min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}";
+
+$xl-up: "min-width: #{$screen-xl-min}";
+
+//== Z-index
+
+$zindex-button:              10 !default;
+$zindex-backdrop:           990 !default;
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-fixed:             1030 !default;
+$zindex-sticky:            1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+
+
+// == Fonts
+
+$font-condensed: 'Roboto Condensed', serif;
+$font-normal: 'Roboto', serif;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

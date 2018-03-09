@@ -1,22 +1,5 @@
 <template>
   <div id="app">
-    <Particles
-      :particleOpacity="0.7"
-      linesColor="#3EE6C1"
-      :particlesNumber="30"
-      shapeType="circle"
-      :particleSize="3"
-      :linesWidth="2"
-      :lineLinked="true"
-      :lineOpacity="0.4"
-      :linesDistance="150"
-      :moveSpeed="0.3"
-      :hoverEffect="true"
-      hoverMode="grab"
-      :clickEffect="true"
-      clickMode="push"
-    >
-    </Particles>
     <router-view />
   </div>
 </template>
@@ -40,16 +23,5 @@ export default {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background: #CCCCCC;
-  }
-
-  #particles-js {
-    z-index: 9999;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1930px;
   }
 </style>

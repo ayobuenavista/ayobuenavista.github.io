@@ -6,8 +6,8 @@ name:
 
 about: Aspiring blockchain engineer and full stack developer who is
        highly passionate about blockchain, decentralization, cryptography,
-       game theory, consensus mechanisms, smart contracts, crypto-assets,
-       crypto-economics, open source, and the semantic web.
+       game theory, consensus mechanisms, smart contracts, cryptoassets,
+       cryptonomics, open source, and the semantic web.
 
        I work on scalable, high availability applications using nascent
        technology. My work covers both software engineering and systems
@@ -20,13 +20,37 @@ position: Blockchain Developer
 location: Singapore
 
 experience:
+- company: Kyber Network
+  position: Senior Engineer
+  timeperiod: July 2018 - Present
+  location: Singapore
+  tasks:
+    - task: Lead the growth of Kyber's developer ecosystem via workshops,
+            documentation, education, integrations, hackathons, and support.
+    - task: Supported projects on the integration of Kyber's on-chain protocol,
+            with notable projects namely Totle, CoinGecko, Ledger, Daonomic,
+            Peepeth, to name a few.
+    - task: On-boarding of new reserves/liquidity providers to the network
+            through evangelism and technical support.
+    - task: Started and maintained the official developer documentation of
+            Kyber's protocol and tech.
+    - task: Created and maintained the Kyber workshop Truffle repository for
+            the benefit of external project's testing and for conducting
+            hackathon workshops.
+    - task: Kyber marketing, business, and evangelism efforts, helping expand
+            Kyber's awareness and adoption in the space.
+  projects:
+    - project: https://developer.kyber.network (Lead Developer)
+    - project: https://github.com/KyberNetwork/workshop (Lead Developer)
+
+
 - company: Self-Employed
-  position: Blockchain Developer and Consultant
-  timeperiod: August 2017 - Present
+  position: Blockchain Consultant and Freelancer
+  timeperiod: August 2017 - July 2018
   location: Global
   tasks:
-    - task: Remotely provided consultation to new blockchain companies or
-            projects on design, infrastructure, and token metrics.
+    - task: Remotely provided consultation to blockchain companies or
+            projects on design, infrastructure, and tokenomics.
     - task: Developed a full-stack web ICO/TGE platform and architected its HA
             infrastructure on AWS.
 
@@ -101,10 +125,10 @@ education:
 
 skills:
 - group: JavaScript/ES6, Python, Java, Solidity, Bash Scripting
-- group: AngularJS, VueJS, Meteor, SailsJS, FeathersJS, ExpressJS, node.js, Truffle, OpenZeppelin
-- group: HTML5, CSS3, SASS, Bootstrap
+- group: Angular, Vue, Sails, Feathers, Express, node.js, Truffle, OpenZeppelin
+- group: HTML5, CSS3, SASS, Bootstrap, Web3
 - group: MongoDB, MySQL, SQLite
-- group: Atom, AWS, git, GitHub, Jenkins, Gerrit, Nagios, Zabbix, Nginx
+- group: Atom, AWS, git, GitHub, Jenkins, TravisCI, Gerrit, Nagios, Zabbix, Nginx
 - group: Scrum, XP, N-Tier Architecture, MVC, MVVM
 
 personal_projects:
@@ -113,21 +137,15 @@ personal_projects:
                mnemonic phrases based on BIP39, and key derivation based on a
                single seed for multiple different blockchains.
 
-open_source:
-- project: ledger-chrome-wallet
-- project: bip39-tool
-- project: qtum
-- project: pivx
+- project: Universal Blockchain Explorer
+  description: A multi-blockchain explorer, initially targetting Cosmos and Polkadot.
 
 contact:
-  email: <redacted>
-  phone: <redacted>
-  street: <redacted>
   city: Singapore
-  github: lindqvust
+  github: ayobuenavista
   twitter: ayobuenavista
   telegram: ayobuenavista
-  fingerprint: FB32 7D54 1D9F C796 B041  9C64 828C AB9C A0EB A7EC
+  fingerprint: FB32 7D54 1D9F C796 B041 9C64 828C AB9C A0EB A7EC
 
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en

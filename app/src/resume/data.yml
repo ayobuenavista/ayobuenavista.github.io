@@ -25,23 +25,17 @@ experience:
   timeperiod: July 2018 - Present
   location: Singapore
   tasks:
-    - task: Lead the growth of Kyber's developer ecosystem via workshops,
-            documentation, education, integrations, hackathons, and support.
-    - task: Supported projects on the integration of Kyber's on-chain protocol,
-            with notable projects namely Totle, CoinGecko, Ledger, Daonomic,
-            Peepeth, to name a few.
-    - task: On-boarding of new reserves/liquidity providers to the network
-            through evangelism and technical support.
-    - task: Started and maintained the official developer documentation of
-            Kyber's protocol and tech.
-    - task: Created and maintained the Kyber workshop Truffle repository for
-            the benefit of external project's testing and for conducting
-            hackathon workshops.
-    - task: Kyber marketing, business, and evangelism efforts, helping expand
-            Kyber's awareness and adoption in the space.
+    - task: Lead growth of Kyber's developer ecosystem via integrations,
+            liquidity provider onboarding, workshops, documentation,
+            presentations, etc.
+    - task: Kyber marketing, business, engagement, and evangelism efforts,
+            helping expand Kyber's awareness and adoption in the space.
+    - task: Blockchain-ops and development of several smart contract projects.
   projects:
     - project: https://developer.kyber.network (Lead Developer)
     - project: https://github.com/KyberNetwork/workshop (Lead Developer)
+    - project: https://github.com/KyberNetwork/telegram-query-bot (Lead Developer)
+    - project: https://github.com/KyberNetwork/smart-contracts (Team Member)
 
 
 - company: Self-Employed
@@ -63,10 +57,8 @@ experience:
             manages the workspaces of our internal and external mobile hardware
             development teams.
     - task: Lead developer of a Linux command line tool that helps other
-            developers connect to a developer host farm or LSF/Netbatch cluster
-            of the different farm sites of Intel.
-    - task: Performed sys-ops tasks and developed automation tools for the git,
-            Gerrit, and Jenkins environments.
+            developers connect to a developer host farm or LSF/Netbatch cluster.
+    - task: Sys-ops tasks and development of automation tools.
     - task: Integration of SCM tools with many various internal and external
             systems.
     - task: L3 technical support for bleeding edge mobile hardware platforms.
@@ -125,11 +117,11 @@ education:
 
 skills:
 - group: JavaScript/ES6, Python, Java, Solidity, Bash Scripting
-- group: Angular, Vue, Sails, Feathers, Express, node.js, Truffle, OpenZeppelin
+- group: Angular, Vue, Sails, Feathers, Express, node.js, Truffle, Buidler, OpenZeppelin
 - group: HTML5, CSS3, SASS, Bootstrap, Web3
 - group: MongoDB, MySQL, SQLite
 - group: Atom, AWS, git, GitHub, Jenkins, TravisCI, Gerrit, Nagios, Zabbix, Nginx
-- group: Scrum, XP, N-Tier Architecture, MVC, MVVM
+- group: Scrum, XP, TDD, N-Tier Architecture, MVC, MVVM
 
 personal_projects:
 - project: Blockchain Vanity Tool
@@ -145,7 +137,7 @@ contact:
   github: ayobuenavista
   twitter: ayobuenavista
   telegram: ayobuenavista
-  fingerprint: FB32 7D54 1D9F C796 B041 9C64 828C AB9C A0EB A7EC
+  fingerprint: 51FD 0E47 431E FBFA 5730 EA74 3BE1 61A3 62B8 3FF7
 
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en

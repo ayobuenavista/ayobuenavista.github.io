@@ -54,6 +54,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Sapper build files
+__sapper__
+
 # dotenv environment variables file
 .env
 

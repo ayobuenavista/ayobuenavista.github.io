@@ -1,3 +1,3 @@
 # ayobuenavista.github.io
 
-> My resume developed using Vue.js
+> My profile developed using svelte, sapper, and tailwindcss

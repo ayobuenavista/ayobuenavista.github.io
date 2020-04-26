@@ -1,8 +1,8 @@
-<div class="h-auto flex mb-4 mt-20">
-  <div class="flex lg:w-3/5">
+<div class="mx-auto container h-screen w-full flex mt-40 -mb-40">
+  <div class="lg:w-3/5 -mb-64">
     <img alt="Merkle Tree" class="object-scale-down" src="merkle_tree.png" />
   </div>
-  <div class="flex lg:w-1/2 lg:text-left px-8 md:px-24 content-center">
+  <div class="lg:w-1/2 lg:text-left px-8 md:px-24 content-center">
     <div class="content-center">
       <h2 class="text-3xl md:text-4xl">Hi, I'm</h2>
       <h2 class="text-5xl font-semibold md:text-4xl text-signature">
@@ -16,10 +16,10 @@
 				<br />
         Welcome to my playground.
       </p>
-      <div class="flex justify-center lg:justify-start mt-12">
+      <div class="justify-center lg:justify-start mt-12">
         <a
-          class="px-4 py-3 bg-regal-black text-regal-white text-xs
-          font-semibold rounded hover:bg-gray-600"
+          class="px-4 py-3 bg-signature text-regal-white text-xs
+          font-semibold rounded hover:bg-red-700"
           href="playground"
         >
           Visit my Playground

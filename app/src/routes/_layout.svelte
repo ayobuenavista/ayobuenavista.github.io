@@ -7,7 +7,7 @@
 
 <Header {segment} />
 
-<main class="mx-auto container">
+<main>
   <slot />
 </main>
 

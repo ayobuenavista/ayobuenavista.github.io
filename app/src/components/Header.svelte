@@ -3,41 +3,65 @@
   import NavLink from './NavLink.svelte';
 
   export let segment;
+
+  let headerClass = "";
   let expand = false;
+  let duration = "500ms";
+  let offset = 5;
+  let y = 0;
+
+  function getClass(y) {
+    if (y < offset) {
+      return "";
+    }
+
+    return "scrolled";
+  }
+
+  function getTextColor() {
+    return getClass(y) ? "text-regal-white" : "text-regal-black";
+  }
+
+  function setTransitionDuration(node) {
+    node.style.transitionDuration = duration;
+  }
 
   function toggleMobileMenu(event) {
     expand = event.detail;
   }
+
+  $: headerClass = getClass(y);
+  $: textColor = getTextColor();
 </script>
 
-<div class="flex mb-4">
-  <nav class="w-full">
-    <div class="md:flex items-center justify-between py-5 md:px-20">
-      <a href="." class="mr-4 float-left">
-        <div class="rounded-full h-10 w-10 flex-shrink-0 mr-3 overflow-hidden shadow-inner relative float-left">
-          <img
-            alt="Profile Picture"
-            class="absolute inset-0 z-negative w-full h-full"
-            loading="lazy"
-            src="profile.jpg"
-          />
-        </div>
-        <span class="font-semibold text-xl tracking-tight align-text-top">
-          Anton Buenavista
-        </span>
-      </a>
+<svelte:window bind:scrollY={y} />
 
-      <div class="block lg:hidden">
-        <MobileMenu on:click={toggleMobileMenu} {expand} />
+<nav use:setTransitionDuration class="mb-4 p-2 mt-0 fixed w-full z-10 top-0 {headerClass}">
+  <div class="md:flex items-center justify-between py-2 md:px-20">
+    <a href="." class="mr-4 float-left">
+      <div class="rounded-full h-10 w-10 flex-shrink-0 mr-3 overflow-hidden shadow-inner relative float-left">
+        <img
+          alt="Profile Picture"
+          class="absolute inset-0 z-negative w-full h-full"
+          loading="lazy"
+          src="profile.jpg"
+        />
       </div>
-      <div class="w-full block lg:flex lg:items-center lg:w-auto float-right">
-        <div class="{!expand && 'hidden'} lg:block text-base lg:flex-grow">
-          <NavLink text="About Me" href="about" {segment} rel="prefetch" />
-          <NavLink text="Playground" href="playground" {segment} rel="prefetch" />
-          <NavLink text="Resume" href="resume" {segment} rel="prefetch" />
-          <NavLink text="Contact" href="contact" {segment} rel="prefetch" />
-        </div>
+      <span class="font-semibold text-xl tracking-tight align-text-top">
+        Anton Buenavista
+      </span>
+    </a>
+
+    <div class="block lg:hidden">
+      <MobileMenu on:click={toggleMobileMenu} {expand} />
+    </div>
+    <div class="w-full block lg:flex lg:items-center lg:w-auto float-right">
+      <div class="{!expand && 'hidden'} lg:block text-base lg:flex-grow">
+        <NavLink text="Playground" href="playground" {segment} color={textColor} rel="prefetch" />
+        <NavLink text="About Me" href="about" {segment} color={textColor} rel="prefetch" />
+        <NavLink text="Resume" href="resume" {segment} color={textColor} rel="prefetch" />
+        <NavLink text="Contact" href="contact" {segment} color={textColor} rel="prefetch" />
       </div>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>

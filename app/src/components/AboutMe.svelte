@@ -1,4 +1,4 @@
-<div class="h-auto w-full bg-white pb-10">
+<div id="about" class="h-auto w-full bg-white pb-10">
   <div class="container mx-auto flex pt-10">
     <div class="content-center text-center w-1/4">
       <h2 class="text-5xl font-semibold md:text-4xl text-regal-black">
@@ -63,7 +63,7 @@
           <span class="flex-1 text-regal-white" aria-label="git" data-balloon-pos="down-left">
             <i class="devicon-git-plain-wordmark colored text-6xl" />
           </span>
-          <span class="flex-1 text-regal-white" aria-label="git" data-balloon-pos="down-left">
+          <span class="flex-1 text-regal-white" aria-label="Linux" data-balloon-pos="down-left">
             <i class="devicon-linux-plain colored text-6xl" />
           </span>
         </div>

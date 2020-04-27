@@ -58,10 +58,17 @@
     <div class="w-full block lg:flex lg:items-center lg:w-auto float-right">
       <div class="{!expand && 'hidden'} lg:block text-base lg:flex-grow">
         <NavLink text="Playground" href="playground" {segment} color={textColor} rel="prefetch" />
-        <NavLink text="About Me" href="about" {segment} color={textColor} rel="prefetch" />
         <NavLink text="Resume" href="resume" {segment} color={textColor} rel="prefetch" />
-        <NavLink text="Contact" href="contact" {segment} color={textColor} rel="prefetch" />
+        <NavLink text="About" href="#about" {segment} color={textColor} rel="prefetch" />
+        <NavLink text="Contact" href="#contact" {segment} color={textColor} rel="prefetch" />
       </div>
     </div>
   </div>
 </nav>
+
+
+<style>
+  nav.scrolled {
+    @apply bg-regal-black text-regal-white;
+  }
+</style>

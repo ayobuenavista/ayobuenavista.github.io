@@ -1,6 +1,6 @@
 <div class="h-full w-full bg-regal-black py-3">
-  <div class="container mx-auto text-center text-regal-white my-8">
-    <p class="text-xl font-semibold">
+  <div class="container mx-auto text-center text-gray-500 my-8">
+    <p class="text-xl">
       Passion outperforms upbringing
       <br />
       Disrespect the impossible
@@ -17,7 +17,7 @@
       <i class="fab fa-linkedin text-regal-white text-2xl px-5"></i>
     </a>
   </div>
-  <div class="container mx-auto text-center text-regal-white my-8">
+  <div class="container mx-auto text-center text-gray-500 my-8">
     <p class="text-base">Handcrafted by me © ayobuenavista</p>
     <div class="text-sm mx-auto mt-5">
       Made with

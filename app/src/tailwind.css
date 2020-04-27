@@ -9,12 +9,6 @@
   content: '';
 }
 
-/* Header Navbar */
-nav.scrolled {
-  @apply bg-regal-black text-regal-white;
-}
-
-
 /* Balloon.css */
 :root {
   --balloon-border-radius: 2px;

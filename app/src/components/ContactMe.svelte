@@ -20,7 +20,7 @@
   })();
 </script>
 
-<div class="h-auto w-full bg-gray-200 pb-10">
+<div id="contact" class="h-auto w-full bg-gray-200 pb-10">
   <div class="container mx-auto pt-10 text-center">
     <h2 class="text-5xl font-semibold md:text-4xl text-regal-black">
       Contact Me
@@ -30,7 +30,7 @@
       <div
         class="typeform-widget h-48"
         data-url="https://aybuenavista.typeform.com/to/ZyUNgN"
-      ></div>
+      />
     </div>
   </div>
 </div>

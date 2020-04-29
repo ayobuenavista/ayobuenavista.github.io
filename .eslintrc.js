@@ -13,6 +13,8 @@ module.exports = {
     'eslint-plugin-json',
     'eslint-plugin-node',
     'eslint-plugin-promise',
+    'eslint-plugin-svelte3',
+    'eslint-plugin-tailwind'
   ],
   overrides: [
     {
@@ -20,7 +22,7 @@ module.exports = {
       processor: 'svelte3/svelte3',
     }
   ],
-  extends: 'eslint:recommended',
+  extends: ['eslint:recommended', 'plugin:tailwind/recommended'],
   rules: {
     'indent': [
       'error',

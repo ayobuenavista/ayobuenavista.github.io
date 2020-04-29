@@ -1,0 +1,182 @@
+/* #*/ export const DETAILS = `
+name:
+  first: Anton
+  last: Buenavista
+
+position: Blockchain Engineer
+
+location: Singapore
+
+experience:
+- company: Kyber Network
+  logo: kyber.png
+  description: Kyber is an on-chain liquidity protocol that allows decentralized
+               token swaps to be integrated into any application, enabling value
+               exchange to be performed seamlessly between all parties in the
+               ecosystem.
+  position: Senior Engineer
+  timeperiod: Present
+  location: Singapore
+  tasks:
+    - task: Lead growth of Kyber's developer ecosystem via integrations,
+            liquidity provider onboarding, workshops, documentation,
+            presentations, etc.
+    - task: Kyber marketing, business, engagement, and evangelism efforts,
+            helping expand Kyber's awareness and adoption in the space.
+    - task: Blockchain-ops and development of several smart contract projects.
+  projects:
+    - project: https://developer.kyber.network (Lead Developer)
+    - project: https://github.com/KyberNetwork/workshop (Lead Developer)
+    - project: https://github.com/KyberNetwork/telegram-query-bot (Lead Developer)
+    - project: https://github.com/KyberNetwork/smart-contracts (Team Member)
+  technologies:
+    - technology: Ethereum
+    - technology: Solidity
+    - technology: web3
+    - technology: Truffle
+    - technology: Buidler
+
+- company: Self-Employed
+  logo: selfemployed.png
+  description: Self-employed, doing consulting and freelance work.
+  position: Blockchain Consultant and Freelancer
+  timeperiod: Aug 2017 - Jul 2018
+  location: Global
+  tasks:
+    - task: Remotely provided consultation to blockchain companies or
+            projects on design, infrastructure, and tokenomics.
+    - task: Developed a full-stack web ICO/TGE platform and architected its HA
+            infrastructure on AWS.
+  technologies:
+    - technology: Ethereum
+    - technology: Solidity
+    - technology: web3.js
+    - technology: Truffle
+    - technology: Vue
+    - technology: Feathers
+    - technology: MongoDB
+    - technology: AWS
+
+- company: Intel Mobile Communications
+  logo: intel.png
+  description: Intel Mobile Communications (IMC), is the mobile research and
+               development division of Intel. IMC develops, manufactures and
+               markets semiconductor products and solutions for wireless
+               communications.
+  position: Technical Analyst and DevOps Engineer
+  timeperiod: Jul 2015 - Jul 2017
+  location: Singapore
+  tasks:
+    - task: Lead developer on a workspace manager project that monitors and
+            manages the workspaces of our internal and external mobile hardware
+            development teams.
+    - task: Lead developer of a Linux command line tool that helps other
+            developers connect to a developer host farm or LSF/Netbatch cluster.
+    - task: Sys-ops tasks and development of automation tools.
+    - task: Integration of SCM tools with many various internal and external
+            systems.
+    - task: L3 technical support for bleeding edge mobile hardware platforms.
+  projects:
+    - project: Workspace Manager (Lead Developer)
+    - project: Development Host Command Line Tool (Lead Developer)
+    - project: Build Host Checker (Team Member)
+    - project: Jenkins Automations (Team Member)
+  technologies:
+    - technology: Angular
+    - technology: Sails
+    - technology: MongoDB
+    - technology: MySQL
+    - technology: Django
+    - technology: Gerrit
+    - technology: Jenkins
+    - technology: Nagios
+
+- company: Tropical Marine Science Institute
+  logo: tmsi.png
+  description: TMSI is a centre of excellence for research, development and
+               consultancy in tropical marine science as well as environmental
+               science. With its multi-disciplinary research laboratories and
+               active international links, it handles projects relevant to
+               Physical Oceanography, Acoustics, Marine Biology, Marine Mammals,
+               Biofuels, Water Resources and Climate Change.
+  position: IT Analyst
+  timeperiod: Feb 2010 - May 2015
+  location: Singapore
+  tasks:
+    - task: Lead developer on a hydrodynamics forecast web service which serves
+            scientific hydrological model data on the Southeast Asia region,
+            providing plot information such as bathymetry, surface elevation
+            from seabed, and tide speed and direction.
+    - task: Part of an agile three-man team that developed web services for
+            government researchers to view scientific reports (i.e. storm surge
+            forecasts and oil spill simulations).
+    - task: Performed sys-ops tasks which cover the enhancement and maintenance
+            of high-performance computing clusters, web servers, storage units,
+            and network interfaces.
+    - task: Operationalized scientific numerical models by designing and
+            implementing automated systems that runs numerical models on the
+            cluster, performs data processing, then displays the data on our web
+            services.
+  projects:
+    - project: Live Access Server with OpenDAP (Lead Developer)
+    - project: Water-quality Data Processing (Lead Developer)
+    - project: Oil Spill Forecasting Web Service (Team Member)
+    - project: Storm Surge Forecasting Web Service (Team Member)
+  technologies:
+    - technology: NetCDF
+    - technology: Ferret
+    - technology: LAS
+    - technology: Java
+    - technology: MySQL
+    - technology: ArcGIS
+    - technology: Sun Grid Engine
+
+- company: Texas Instruments
+  logo: ti.png
+  description: Texas Instruments (TI) is an American technology company that
+               designs and manufactures semiconductors and various integrated
+               circuits, which it sells to electronics designers and manufacturers
+               globally. TI is one of the top 10 semiconductor companies worldwide,
+               based on sales volume.
+  position: Application Developer
+  timeperiod: May 2009 - Oct 2009
+  location: Philippines
+  tasks:
+    - task: Developed backend modules and automated data-loaders for the supply
+            chain and manufacturing data warehouse.
+    - task: Implemented enhancements for an internal reporting tool which
+            tackled dead-on-arrival orders, cutting DOA orders in the production
+            line and achieving 98% delivery effectiveness.
+  projects:
+    - project: Dead-on-Arrival Order Analysis Service (Lead Developer)
+  technologies:
+    - technology: Java
+    - technology: Oracle
+
+education:
+  degree: Bachelor of Science in Information Technology
+  university: Saint Louis University
+  timeperiod: 2005 - 2009
+  location: Philippines
+  awards:
+    - award: Dean's Lister
+    - award: Chairman of Academic Group
+
+skills:
+- group: Solidity, web3, Truffle, Buidler
+- group: HTML5, CSS3, JavaScript, Python, Shell Scripting
+- group: Svelte, Sapper, TailwindCSS, Vue, Sails, Feathers, Express, node.js, 
+- group: MongoDB, MySQL, SQLite
+- group: AWS, git, GitHub, Jenkins, TravisCI, Gerrit, Nagios, Zabbix, Nginx
+
+contact:
+  city: Singapore
+  website: https://ayobuenavista.io/
+  github: ayobuenavista
+  twitter: ayobuenavista
+  telegram: ayobuenavista
+  fingerprint: 51FD 0E47 431E FBFA 5730 EA74 3BE1 61A3 62B8 3FF7
+
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
+lang: en
+`

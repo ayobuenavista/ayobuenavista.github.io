@@ -1,17 +1,9 @@
 <script>
-  import Header from '../components/Header.svelte';
-  import Footer from '../components/Footer.svelte';
+  import Header from '@/components/Header.svelte';
+  import Footer from '@/components/Footer.svelte';
 
   export let segment;
 </script>
-
-<Header {segment} />
-
-<main>
-  <slot />
-</main>
-
-<Footer />
 
 <style global>
   @tailwind base;
@@ -89,7 +81,8 @@
   }
   [aria-label][data-balloon-pos].font-awesome:after {
     font-family: FontAwesome, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+      sans-serif;
   }
   [aria-label][data-balloon-pos][data-balloon-break]:after {
     white-space: pre;
@@ -307,3 +300,11 @@
     width: 100%;
   }
 </style>
+
+<Header {segment} />
+
+<main>
+  <slot />
+</main>
+
+<Footer />

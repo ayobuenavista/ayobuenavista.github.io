@@ -34,7 +34,7 @@
     @apply bg-cover;
     @apply z-10;
     @apply w-auto;
-    height: 450%;
+    height: 460%;
     width: inherit;
   }
 
@@ -168,9 +168,7 @@
     top: 138px;
   }
 
-  .timeline-element:first-child
-  .timeline-date
-  .timeline-timeperiod {
+  .timeline-element:first-child .timeline-date .timeline-timeperiod {
     @apply block;
     margin-top: -5px;
     top: 107px;
@@ -210,7 +208,8 @@
           />
         </div>
         <h2
-          class="mx-auto mb-1 text-4xl font-semibold md:text-3xl text-regal-white"
+          class="mx-auto mb-1 text-4xl font-semibold md:text-3xl
+          text-regal-white"
         >
           {person.name.first} {person.name.last}
         </h2>
@@ -304,7 +303,7 @@
     <!-- Right Column -->
     <div class="right-col w-3/4">
       <div class="particles background">
-        <svelte:component this={Particles} />
+        <svelte:component this="{Particles}" />
       </div>
       <div class="flex flex-col w-11/12 mx-auto">
         <div class="section-title my-3">ABOUT</div>
@@ -313,11 +312,12 @@
             <div class="timeline-contents">
               <p class="text-sm md:text-base text-justify mb-5">
                 Full-stack developer who is highly passionate about blockchain,
-                cryptography, decentralization, game theory, consensus mechanisms,
-                smart contracts, cryptoassets, crypteconomics, open source, and the
-                semantic web. I work on scalable, high availability applications
-                using nascent technology. My work covers both software engineering
-                and systems administration encapsulating services from end-to-end.
+                cryptography, decentralization, game theory, consensus
+                mechanisms, smart contracts, cryptoassets, crypteconomics, open
+                source, and the semantic web. I work on scalable, high
+                availability applications using nascent technology. My work
+                covers both software engineering and systems administration
+                encapsulating services from end-to-end.
               </p>
             </div>
           </div>
@@ -363,7 +363,9 @@
                     {/if}
                   </div>
                   <div class="my-3 text-sm">
-                    <span class="text-signature-500 block mb-2">TECHNOLOGIES</span>
+                    <span class="text-signature-500 block mb-2">
+                      TECHNOLOGIES
+                    </span>
                     {#each technologies as { technology }}
                       <div class="inline-block">
                         <div class="technology">{technology}</div>

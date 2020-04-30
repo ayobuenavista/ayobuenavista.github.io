@@ -9,8 +9,8 @@
 <a
   {rel}
   {href}
-  class="block mt-4 lg:mx-4 lg:inline-block lg:mt-0 {segment === href ? 'text-signature' : { color }}
-  hover:text-red-600"
+  class="block mt-4 lg:mx-4 lg:inline-block lg:mt-0 {segment === href ? 'text-signature-500' : { color }}
+  hover:text-signature-800"
 >
   {text}
 </a>

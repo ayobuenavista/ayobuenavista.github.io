@@ -30,7 +30,7 @@
 
   $: headerClass = getClass(y);
   $: textColor = getTextColor();
-  $: isResume = segment === 'resume' ? 'hidden' : '';
+  $: isResume = (segment === 'resume' && headerClass !== 'scrolled') ? 'hidden' : '';
 </script>
 
 <style>
@@ -45,17 +45,17 @@
 <section class="flex" id="header">
   <nav
     use:setTransitionDuration
-    class="mb-4 p-2 mt-0 fixed w-full z-10 top-0 {headerClass}"
+    class="z-50 mb-4 p-2 mt-0 fixed w-full z-10 top-0 {headerClass}"
   >
     <div class="md:flex items-center justify-between py-2 md:px-20">
       <a href="." class="mr-4 float-left">
         <div
           class="rounded-full h-10 w-10 flex-shrink-0 mr-3 overflow-hidden
-          shadow-inner relative float-left {isResume}"
+          shadow-inner relative float-left"
         >
           <img
             alt="Profile Picture"
-            class="absolute inset-0 z-negative w-full h-full"
+            class="absolute inset-0 z-negative w-full h-full {isResume}"
             loading="lazy"
             src="profile.jpg"
           />

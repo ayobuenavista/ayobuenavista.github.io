@@ -19,7 +19,7 @@
 
   .bullet {
     @apply relative;
-    @apply text-signature;
+    @apply text-signature-500;
     bottom: 4px;
     font-size: 0.3rem;
   }
@@ -32,16 +32,17 @@
   .particles {
     @apply absolute;
     @apply bg-cover;
-    @apply z-50;
-    @apply w-full;
-    height: 420%;
+    @apply z-10;
+    @apply w-auto;
+    height: 450%;
+    width: inherit;
   }
 
   .left-col {
     @apply flex-col;
     @apply flex-grow;
-    @apply bg-regal-white;
-    @apply text-regal-black;
+    @apply bg-signature-700;
+    @apply text-regal-white;
     @apply py-20;
   }
 
@@ -55,7 +56,7 @@
 
   .section-headline {
     @apply font-semibold;
-    @apply my-3;
+    @apply my-5;
   }
 
   .section-text {
@@ -65,19 +66,20 @@
 
   .section-title {
     @apply text-4xl;
-    @apply text-signature;
+    @apply text-signature-500;
   }
 
   .skills {
-    @apply bg-white;
+    @apply text-regal-white;
     @apply rounded-md;
     @apply p-2;
     @apply mb-2;
+    background: rgba(50, 18, 4, 0.2);
     width: 95%;
   }
 
   .technology {
-    @apply bg-signature;
+    @apply bg-signature-500;
     @apply text-white;
     @apply p-2;
     @apply mx-1;
@@ -141,12 +143,12 @@
   .timeline-date:after {
     @apply absolute;
     @apply block;
-    @apply bg-signature;
+    @apply bg-signature-500;
     @apply rounded-full;
     @apply w-2;
     @apply h-2;
     content: ' ';
-    top: 40.5px;
+    top: 150px;
     right: -5.5px;
   }
 
@@ -157,17 +159,33 @@
   }
 
   .timeline-timeperiod {
+    @apply absolute;
     @apply text-xs;
     @apply text-gray-500;
+    @apply text-right;
+    @apply left-0;
+    width: 112px;
+    top: 138px;
   }
 
-  .timeline-element:first-child .timeline-date .timeline-timeperiod {
+  .timeline-element:first-child
+  .timeline-date
+  .timeline-timeperiod {
     @apply block;
     margin-top: -5px;
+    top: 107px;
   }
 
   .timeline-element:first-child .timeline-date:after {
-    @apply top-0;
+    top: 108px;
+  }
+
+  .timeline-education {
+    top: 0 !important;
+  }
+
+  .timeline-education:after {
+    top: 0 !important;
   }
 </style>
 
@@ -192,20 +210,20 @@
           />
         </div>
         <h2
-          class="mx-auto mb-1 text-4xl font-semibold md:text-3xl text-signature"
+          class="mx-auto mb-1 text-4xl font-semibold md:text-3xl text-regal-white"
         >
           {person.name.first} {person.name.last}
         </h2>
-        <h3 class="mx-auto mb-2 text-2xl md:text-xl text-signature">
+        <h3 class="mx-auto mb-2 text-2xl md:text-xl text-regal-white">
           {person.position}
         </h3>
         <div class="ml-10">
           <div class="section-headline">PROFILE</div>
-          <div class="flex items-center my-2">
+          <div class="flex items-center my-3">
             <i class="fa fa-map-marker text-2xl"></i>
             <span class="pl-5">{person.location}</span>
           </div>
-          <div class="my-2">
+          <div class="my-3">
             <a
               class="flex items-center"
               href="https://twitter.com/{person.contact.twitter}"
@@ -215,7 +233,7 @@
               <span class="pl-4">@{person.contact.twitter}</span>
             </a>
           </div>
-          <div class="my-2">
+          <div class="my-3">
             <a
               class="flex items-center"
               href="https://t.me/{person.contact.telegram}"
@@ -225,7 +243,7 @@
               <span class="pl-4">@{person.contact.telegram}</span>
             </a>
           </div>
-          <div class="my-2">
+          <div class="my-3">
             <a
               class="flex items-center"
               href="https://github.com/{person.contact.github}"
@@ -237,7 +255,7 @@
               </span>
             </a>
           </div>
-          <div class="my-2">
+          <div class="my-3">
             <a
               class="flex items-center"
               href="person.contact.website"
@@ -247,14 +265,14 @@
               <span class="pl-4">{person.contact.website}</span>
             </a>
           </div>
-          <div class="flex items-center my-2">
+          <div class="flex items-center my-3">
             <i class="fa fa-key text-2xl"></i>
             <span class="pl-4 w-64">{person.contact.fingerprint}</span>
           </div>
           <div class="section-headline">SKILLS</div>
           {#each person.skills as { group }}
-            <div class="flex">
-              <div class="skills flex-col">{group}</div>
+            <div class="flex skills">
+              <div class="flex-col">{group}</div>
             </div>
           {/each}
           <div class="section-headline">PERSONAL PROJECTS</div>
@@ -272,6 +290,15 @@
             .
           </div>
         </div>
+        <div class="mx-auto mt-8">
+          <a
+            class="px-4 py-3 bg-regal-white text-regal-black text-xs
+            font-semibold rounded hover:bg-gray-400 w-32 text-center"
+            href="resume/AntonBuenavista_resume.pdf"
+          >
+            Download a copy of my resume
+          </a>
+        </div>
       </div>
     </div>
     <!-- Right Column -->
@@ -280,6 +307,22 @@
         <svelte:component this={Particles} />
       </div>
       <div class="flex flex-col w-11/12 mx-auto">
+        <div class="section-title my-3">ABOUT</div>
+        <div class="timeline">
+          <div class="timeline-element">
+            <div class="timeline-contents">
+              <p class="text-sm md:text-base text-justify mb-5">
+                Full-stack developer who is highly passionate about blockchain,
+                cryptography, decentralization, game theory, consensus mechanisms,
+                smart contracts, cryptoassets, crypteconomics, open source, and the
+                semantic web. I work on scalable, high availability applications
+                using nascent technology. My work covers both software engineering
+                and systems administration encapsulating services from end-to-end.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div class="section-title mb-3">EXPERIENCE</div>
         <div class="timeline">
           <ul>
@@ -300,7 +343,7 @@
                   <h5 class="italic">{position} · {location}</h5>
                   <div class="clear-both mt-3 text-justify">{description}</div>
                   <div class="my-3">
-                    <span class="text-signature">TASKS</span>
+                    <span class="text-signature-500">TASKS</span>
                     {#each tasks as { task }}
                       <div class="flex items-baseline pl-2">
                         <i class="fa fa-circle bullet"></i>
@@ -310,7 +353,7 @@
                   </div>
                   <div class="my-3">
                     {#if projects}
-                      <span class="text-signature">NOTABLE PROJECTS</span>
+                      <span class="text-signature-500">NOTABLE PROJECTS</span>
                       {#each projects as { project }}
                         <div class="flex items-baseline pl-2">
                           <i class="fa fa-circle bullet"></i>
@@ -320,7 +363,7 @@
                     {/if}
                   </div>
                   <div class="my-3 text-sm">
-                    <span class="text-signature block mb-2">TECHNOLOGIES</span>
+                    <span class="text-signature-500 block mb-2">TECHNOLOGIES</span>
                     {#each technologies as { technology }}
                       <div class="inline-block">
                         <div class="technology">{technology}</div>
@@ -337,8 +380,8 @@
         <div class="timeline">
           <ul>
             <li class="timeline-element">
-              <div class="timeline-date">
-                <time class="timeline-timeperiod">
+              <div class="timeline-education timeline-date">
+                <time class="timeline-education timeline-timeperiod">
                   {person.education.timeperiod}
                 </time>
               </div>
@@ -350,7 +393,7 @@
                   {person.education.degree} · {person.education.location}
                 </h5>
                 <div class="my-3">
-                  <span class="text-signature">AWARDS</span>
+                  <span class="text-signature-500">AWARDS</span>
                   {#each person.education.awards as { award }}
                     <div class="flex items-baseline pl-2">
                       <i class="fa fa-circle bullet"></i>

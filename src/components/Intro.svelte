@@ -6,7 +6,7 @@
     <div class="lg:w-1/2 lg:text-left px-8 md:px-24 content-center">
       <div class="content-center">
         <h2 class="text-3xl md:text-4xl">Hi, I'm</h2>
-        <h2 class="text-5xl font-semibold md:text-4xl text-signature">
+        <h2 class="text-5xl font-semibold md:text-4xl text-signature-500">
           Anton Buenavista
           <span class="horizontal-line mt-3 bg-red-500"></span>
         </h2>
@@ -22,7 +22,7 @@
         </p>
         <div class="justify-center lg:justify-start mt-12">
           <a
-            class="px-4 py-3 bg-signature text-regal-white text-xs font-semibold
+            class="px-4 py-3 bg-signature-500 text-regal-white text-xs font-semibold
             rounded hover:bg-red-700"
             href="playground"
           >

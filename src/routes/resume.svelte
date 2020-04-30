@@ -1,8 +1,15 @@
 <script>
   import yaml from 'js-yaml';
+  import { onMount } from 'svelte';
   import { DETAILS } from 'static/resume.yml';
 
+  let Particles;
   let person = yaml.load(DETAILS);
+
+  onMount(async () => {
+    const module = await import('@/components/Particles.svelte');
+    Particles = module.default;
+  });
 </script>
 
 <style>
@@ -15,6 +22,19 @@
     @apply text-signature;
     bottom: 4px;
     font-size: 0.3rem;
+  }
+
+  .company-logo {
+    @apply mb-2;
+    height: 100px;
+  }
+
+  .particles {
+    @apply absolute;
+    @apply bg-cover;
+    @apply z-50;
+    @apply w-full;
+    height: 420%;
   }
 
   .left-col {
@@ -256,19 +276,29 @@
     </div>
     <!-- Right Column -->
     <div class="right-col w-3/4">
+      <div class="particles background">
+        <svelte:component this={Particles} />
+      </div>
       <div class="flex flex-col w-11/12 mx-auto">
         <div class="section-title mb-3">EXPERIENCE</div>
         <div class="timeline">
           <ul>
-            {#each person.experience as { timeperiod, company, position, location, description, tasks, projects, technologies }}
+            {#each person.experience as { timeperiod, company, logo, position, location, description, tasks, projects, technologies }}
               <li class="timeline-element">
                 <div class="timeline-date">
                   <time class="timeline-timeperiod">{timeperiod}</time>
                 </div>
                 <div class="timeline-contents">
-                  <h3 class="text-2xl font-semibold">{company}</h3>
+                  <img
+                    alt="{company} Logo"
+                    class="company-logo"
+                    align="left"
+                    loading="lazy"
+                    src="resume/{logo}"
+                  />
+                  <h3 class="clear-both text-2xl font-semibold">{company}</h3>
                   <h5 class="italic">{position} · {location}</h5>
-                  <div class="mt-3 text-justify">{description}</div>
+                  <div class="clear-both mt-3 text-justify">{description}</div>
                   <div class="my-3">
                     <span class="text-signature">TASKS</span>
                     {#each tasks as { task }}

@@ -1,5 +1,7 @@
 <script>
-  (function() {
+  import { onMount } from 'svelte';
+
+  onMount(async () => {
     var qs,
       js,
       q,
@@ -17,7 +19,7 @@
       q = gt.call(d, 'script')[0];
       q.parentNode.insertBefore(js, q);
     }
-  })();
+  });
 </script>
 
 <section class="flex" id="contact">

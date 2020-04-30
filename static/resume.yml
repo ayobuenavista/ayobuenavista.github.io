@@ -93,12 +93,13 @@ experience:
 
 - company: Tropical Marine Science Institute
   logo: tmsi.png
-  description: TMSI is a centre of excellence for research, development and
-               consultancy in tropical marine science as well as environmental
-               science. With its multi-disciplinary research laboratories and
-               active international links, it handles projects relevant to
-               Physical Oceanography, Acoustics, Marine Biology, Marine Mammals,
-               Biofuels, Water Resources and Climate Change.
+  description: TMSI, at the National University of Singapore,is a centre of
+               excellence for research, development and consultancy in tropical
+               marine science as well as environmental science. With its
+               multi-disciplinary research laboratories and active international
+               links, it handles projects relevant to Physical Oceanography,
+               Acoustics, Marine Biology, Marine Mammals, Biofuels, Water
+               Resources and Climate Change.
   position: IT Analyst
   timeperiod: Feb 2010 - May 2015
   location: Singapore
@@ -160,7 +161,7 @@ education:
   location: Philippines
   awards:
     - award: Dean's Lister
-    - award: Chairman of Academic Group
+    - award: Chairman of the ICON Academic Group
 
 skills:
 - group: Solidity, web3, Truffle, Buidler

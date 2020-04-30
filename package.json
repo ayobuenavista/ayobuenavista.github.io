@@ -38,8 +38,8 @@
   "dependencies": {
     "compression": "^1.7.4",
     "js-yaml": "^3.13.1",
-    "particles.js": "^2.0.0",
     "polka": "^0.5.2",
-    "sirv": "^0.4.2"
+    "sirv": "^0.4.2",
+    "tsparticles": "^1.13.5"
   }
 }

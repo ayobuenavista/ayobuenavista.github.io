@@ -32,9 +32,8 @@
   .particles {
     @apply absolute;
     @apply bg-cover;
-    @apply z-10;
-    @apply w-auto;
-    height: 460%;
+    @apply z-0;
+    height: 3622px;
     width: inherit;
   }
 
@@ -50,8 +49,9 @@
     @apply flex-col;
     @apply flex-grow;
     @apply bg-white;
-    @apply text-regal-black;
+    @apply text-regal-gray;
     @apply py-20;
+    height: 3722px;
   }
 
   .section-headline {
@@ -132,7 +132,7 @@
     @apply bottom-0;
     @apply left-0;
     @apply text-right;
-    @apply text-regal-black;
+    @apply text-regal-gray;
     width: 130px;
     padding-top: 28px;
     padding-right: 15px;
@@ -291,7 +291,7 @@
         </div>
         <div class="mx-auto mt-8">
           <a
-            class="px-4 py-3 bg-regal-white text-regal-black text-xs
+            class="px-4 py-3 bg-regal-white text-regal-gray text-xs
             font-semibold rounded hover:bg-gray-400 w-32 text-center"
             href="resume/AntonBuenavista_resume.pdf"
           >
@@ -302,10 +302,10 @@
     </div>
     <!-- Right Column -->
     <div class="right-col w-3/4">
-      <div class="particles background">
+      <div class="particles">
         <svelte:component this="{Particles}" />
       </div>
-      <div class="flex flex-col w-11/12 mx-auto">
+      <div class="flex flex-col w-11/12 mx-auto z-10">
         <div class="section-title my-3">ABOUT</div>
         <div class="timeline">
           <div class="timeline-element">

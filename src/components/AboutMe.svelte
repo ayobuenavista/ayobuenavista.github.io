@@ -1,10 +1,10 @@
-<section class="flex" id="about">
+<section class="antialiased flex" id="about">
   <div class="h-auto w-full bg-white pb-10">
     <div class="container mx-auto flex mt-20">
       <div class="content-center text-center w-1/4">
-        <h2 class="text-5xl font-semibold md:text-4xl text-regal-black">
+        <h2 class="text-5xl font-semibold md:text-4xl text-regal-gray">
           About Me
-          <span class="horizontal-line mt-3 bg-regal-black mx-auto"></span>
+          <span class="horizontal-line mt-3 bg-regal-gray mx-auto"></span>
         </h2>
         <div
           class="h-40 w-40 mt-5 mx-auto overflow-hidden shadow-inner relative"

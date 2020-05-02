@@ -1,4 +1,4 @@
-<section class="flex" id="intro">
+<section class="antialiased flex" id="intro">
   <div class="mx-auto container h-screen w-full flex mt-40 -mb-40">
     <div class="lg:w-3/5 -mb-64">
       <img alt="Merkle Tree" class="object-scale-down" src="merkle_tree.png" />

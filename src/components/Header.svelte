@@ -17,7 +17,7 @@
   }
 
   function getTextColor() {
-    return getClass(y) ? 'text-regal-white' : 'text-regal-black';
+    return getClass(y) ? 'text-regal-white' : 'text-regal-gray';
   }
 
   function setTransitionDuration(node) {
@@ -30,6 +30,7 @@
 
   $: headerClass = getClass(y);
   $: textColor = getTextColor();
+  $: isPlayground = segment === 'playground' ? 'hidden' : '';
   $: isResume = (segment === 'resume' && headerClass !== 'scrolled') ? 'hidden' : '';
 </script>
 
@@ -42,7 +43,7 @@
 
 <svelte:window bind:scrollY="{y}" />
 
-<section class="flex" id="header">
+<header class="flex {isPlayground}" id="header">
   <nav
     use:setTransitionDuration
     class="z-50 mb-4 p-2 mt-0 fixed w-full z-10 top-0 {headerClass}"
@@ -104,4 +105,4 @@
       </div>
     </div>
   </nav>
-</section>
+</header>

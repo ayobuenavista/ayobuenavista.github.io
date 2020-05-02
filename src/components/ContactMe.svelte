@@ -22,12 +22,12 @@
   });
 </script>
 
-<section class="flex" id="contact">
+<section class="antialiased flex" id="contact">
   <div class="h-auto w-full bg-gray-200 pb-10">
     <div class="container mx-auto pt-10 mt-10 mb-20 text-center">
-      <h2 class="text-5xl font-semibold md:text-4xl text-regal-black">
+      <h2 class="text-5xl font-semibold md:text-4xl text-regal-gray">
         Contact Me
-        <span class="horizontal-line mt-3 bg-regal-black mx-auto"></span>
+        <span class="horizontal-line mt-3 bg-regal-gray mx-auto"></span>
       </h2>
       <div class="mx-auto relative w-full">
         <div

@@ -1,8 +1,8 @@
 <script>
   export let segment;
 </script>
-<section class="flex -mt-12" id="footer">
-  {#if segment === 'resume'}
+<footer class="antialiased flex -mt-12" id="footer">
+  {#if (segment === 'resume' || segment === 'playground')}
     <div class="h-full w-full bg-transparent py-3">
       <div class="container mx-auto text-center">
         <div class="w-auto mx-auto text-gray-500 inline-block">
@@ -22,7 +22,7 @@
       </div>
     </div>
   {:else}
-    <div class="h-full w-full bg-regal-black py-3">
+    <div class="h-full w-full bg-regal-gray py-3">
       <div class="container mx-auto text-center text-gray-500 my-8">
         <p class="text-xl">
           Passion outperforms upbringing
@@ -65,4 +65,4 @@
       </div>
     </div>
   {/if}
-</section>
+  </footer>

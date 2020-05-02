@@ -11,7 +11,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        'regal-black': '#64667F',
+        'regal-gray': '#64667F',
+        'regal-black': '#4F4F4F',
         'regal-white': '#F5F5F5',
         'signature-100': '#FFAE89',
         'signature-200': '#FF9D71',

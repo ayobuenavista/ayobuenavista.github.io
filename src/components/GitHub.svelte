@@ -1,4 +1,4 @@
-<section class="flex" id="github">
+<section class="antialiased flex" id="github">
   <div class="h-auto w-full bg-white pb-10">
     <div class="container mx-auto pt-10 text-center">
       <a

@@ -2,11 +2,12 @@
   import { createEventDispatcher } from 'svelte';
   import { onMount } from 'svelte';
 
+  export let segment;
+
   const REGAL_WHITE = '#F5F5F5';
   const REGAL_BLACK = '#4F4F4F';
 
   let prev = '';
-  let selected = '';
   let fill = {
     ethereum: REGAL_WHITE,
     near: REGAL_WHITE,
@@ -19,15 +20,10 @@
     flow: REGAL_WHITE,
   };
 
-  onMount(async (event, event2) => {
-    console.log(event);
-    console.log(event2);
-  });
-
   $: {
     fill[prev] = REGAL_WHITE;
-    fill[selected] = REGAL_BLACK;
-    prev = selected;
+    fill[segment] = REGAL_BLACK;
+    prev = segment;
   }
 </script>
 
@@ -43,7 +39,7 @@
     @apply w-40;
   }
 
-  button {
+  a {
     @apply block;
     @apply text-left;
     @apply w-full;
@@ -130,9 +126,10 @@
   <div class="protocols">
     <ul>
       <li id="ethereum">
-        <button
-          on:click="{() => (selected = 'ethereum')}"
-          class:selected="{selected === 'ethereum'}"
+        <a
+          href="playground/ethereum"
+          on:click="{() => (segment = 'ethereum')}"
+          class:selected="{segment === 'ethereum'}"
         >
           <div class="item">
             <svg
@@ -153,12 +150,13 @@
             </svg>
             <span>Ethereum</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="near">
-        <button
-          on:click="{() => (selected = 'near')}"
-          class:selected="{selected === 'near'}"
+        <a
+          href="playground/near"
+          on:click="{() => (segment = 'near')}"
+          class:selected="{segment === 'near'}"
         >
           <div class="item">
             <svg
@@ -206,12 +204,13 @@
             </svg>
             <span class="text-sm">NEAR</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="tezos">
-        <button
-          on:click="{() => (selected = 'tezos')}"
-          class:selected="{selected === 'tezos'}"
+        <a
+          href="playground/tezos"
+          on:click="{() => (segment = 'tezos')}"
+          class:selected="{segment === 'tezos'}"
         >
           <div class="item">
             <svg
@@ -252,12 +251,13 @@
             </svg>
             <span class="text-sm">Tezos</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="polkadot">
-        <button
-          on:click="{() => (selected = 'polkadot')}"
-          class:selected="{selected === 'polkadot'}"
+        <a
+          href="playground/polkadot"
+          on:click="{() => (segment = 'polkadot')}"
+          class:selected="{segment === 'polkadot'}"
         >
           <div class="item">
             <svg
@@ -295,12 +295,13 @@
             </svg>
             <span>Polkadot</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="algorand">
-        <button
-          on:click="{() => (selected = 'algorand')}"
-          class:selected="{selected === 'algorand'}"
+        <a
+          href="playground/algorand"
+          on:click="{() => (segment = 'algorand')}"
+          class:selected="{segment === 'algorand'}"
         >
           <div class="item">
             <svg
@@ -328,12 +329,13 @@
             </svg>
             <span>Algorand</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="solana">
-        <button
-          on:click="{() => (selected = 'solana')}"
-          class:selected="{selected === 'solana'}"
+        <a
+          href="playground/solana"
+          on:click="{() => (segment = 'solana')}"
+          class:selected="{segment === 'solana'}"
         >
           <div class="item">
             <svg
@@ -364,12 +366,13 @@
             </svg>
             <span>Solana</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="skale">
-        <button
-          on:click="{() => (selected = 'skale')}"
-          class:selected="{selected === 'skale'}"
+        <a
+          href="playground/skale"
+          on:click="{() => (segment = 'skale')}"
+          class:selected="{segment === 'skale'}"
         >
           <div class="item">
             <svg
@@ -433,12 +436,13 @@
             </svg>
             <span>SKALE</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="celo">
-        <button
-          on:click="{() => (selected = 'celo')}"
-          class:selected="{selected === 'celo'}"
+        <a
+          href="playground/celo"
+          on:click="{() => (segment = 'celo')}"
+          class:selected="{segment === 'celo'}"
         >
           <div class="item">
             <svg
@@ -623,12 +627,13 @@
             </svg>
             <span>Celo</span>
           </div>
-        </button>
+        </a>
       </li>
       <li id="flow">
-        <button
-          on:click="{() => (selected = 'flow')}"
-          class:selected="{selected === 'flow'}"
+        <a
+          href="playground/flow"
+          on:click="{() => (segment = 'flow')}"
+          class:selected="{segment === 'flow'}"
         >
           <div class="item">
             <svg
@@ -741,7 +746,7 @@
             </svg>
             <span>Flow</span>
           </div>
-        </button>
+        </a>
       </li>
     </ul>
   </div>

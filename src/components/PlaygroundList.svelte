@@ -28,7 +28,7 @@
       <div class="mx-auto relative w-full flex mb-0">
         <a
           class="flex-1 m-0 text-regal-white"
-          href="playground/#ethereum"
+          href="playground/ethereum"
           aria-label="Ethereum"
           data-balloon-pos="up-right"
         >
@@ -55,7 +55,7 @@
         </a>
         <a
           class="flex-1 m-0 text-regal-white"
-          href="playground/#near"
+          href="playground/near"
           aria-label="NEAR"
           data-balloon-pos="up-right"
         >

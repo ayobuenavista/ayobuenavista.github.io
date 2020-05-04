@@ -22,6 +22,12 @@
   });
 </script>
 
+<style>
+  section {
+    height: 720px;
+  }
+</style>
+
 <section class="antialiased flex" id="contact">
   <div class="h-auto w-full bg-gray-200 pb-10">
     <div class="container mx-auto pt-10 mt-10 mb-20 text-center">

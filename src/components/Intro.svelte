@@ -1,6 +1,6 @@
 <section class="antialiased flex" id="intro">
-  <div class="mx-auto container h-screen w-full flex mt-40 -mb-40">
-    <div class="lg:w-3/5 -mb-64">
+  <div class="mx-auto container h-screen w-full flex pt-40">
+    <div class="lg:w-3/5">
       <img alt="Merkle Tree" class="object-scale-down" src="merkle_tree.png" />
     </div>
     <div class="lg:w-1/2 lg:text-left px-8 md:px-24 content-center">

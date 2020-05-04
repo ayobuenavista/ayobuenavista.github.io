@@ -1,7 +1,7 @@
 <script>
   export let segment;
 </script>
-<footer class="antialiased flex -mt-12" id="footer">
+<footer class="antialiased flex absolute bottom-0 h-auto w-full" id="footer">
   {#if (segment === 'resume' || segment === 'playground')}
     <div class="h-full w-full bg-transparent py-3">
       <div class="container mx-auto text-center">

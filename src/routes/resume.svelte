@@ -32,8 +32,9 @@
   .particles {
     @apply absolute;
     @apply bg-cover;
+    @apply h-full;
     @apply z-0;
-    height: 3622px;
+    @apply -my-20;
     width: inherit;
   }
 
@@ -51,7 +52,7 @@
     @apply bg-white;
     @apply text-regal-gray;
     @apply py-20;
-    height: 3722px;
+    @apply h-full;
   }
 
   .section-headline {
@@ -266,7 +267,7 @@
           </div>
           <div class="flex items-center my-3">
             <i class="fa fa-key text-2xl"></i>
-            <span class="pl-4 w-64">{person.contact.fingerprint}</span>
+            <span class="pl-4 w-56">{person.contact.fingerprint}</span>
           </div>
           <div class="section-headline">SKILLS</div>
           {#each person.skills as { group }}

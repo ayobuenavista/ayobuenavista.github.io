@@ -1,14 +1,6 @@
 <script>
   import { fade } from 'svelte/transition';
-  import algorand from '@/components/svg/algorand.svelte';
-  import celo from '@/components/svg/celo.svelte';
-  import ethereum from '@/components/svg/ethereum.svelte';
-  import flow from '@/components/svg/flow.svelte';
-  import near from '@/components/svg/near.svelte';
-  import polkadot from '@/components/svg/polkadot.svelte';
-  import skale from '@/components/svg/skale.svelte';
-  import solana from '@/components/svg/solana.svelte';
-  import tezos from '@/components/svg/tezos.svelte';
+  import protocols from '@/conf/protocols.js';
 
   export let segment;
 
@@ -17,64 +9,12 @@
 
   let expand = true;
   let prev = '';
-  let fill = {
-    ethereum: REGAL_WHITE,
-    near: REGAL_WHITE,
-    tezos: REGAL_WHITE,
-    polkadot: REGAL_WHITE,
-    algorand: REGAL_WHITE,
-    solana: REGAL_WHITE,
-    skale: REGAL_WHITE,
-    celo: REGAL_WHITE,
-    flow: REGAL_WHITE,
-  };
-  let protocols = [
-    {
-      id: 'ethereum',
-      name: 'Ethereum',
-      svg: ethereum,
-    },
-    {
-      id: 'near',
-      name: 'NEAR',
-      svg: near,
-    },
-    {
-      id: 'tezos',
-      name: 'Tezos',
-      svg: tezos,
-    },
-    {
-      id: 'polkadot',
-      name: 'Polkadot',
-      svg: polkadot,
-    },
-    {
-      id: 'algorand',
-      name: 'Algorand',
-      svg: algorand,
-    },
-    {
-      id: 'solana',
-      name: 'Solana',
-      svg: solana,
-    },
-    {
-      id: 'skale',
-      name: 'SKALE',
-      svg: skale,
-    },
-    {
-      id: 'celo',
-      name: 'Celo',
-      svg: celo,
-    },
-    {
-      id: 'flow',
-      name: 'Flow',
-      svg: flow,
-    },
-  ];
+  let fill = {};
+  
+  for (const protocol of protocols) {
+    protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(res => res.default);
+    fill[protocol.id] = REGAL_WHITE;
+  }
 
   function toggleExpand() {
     expand = !expand;
@@ -147,6 +87,10 @@
   .collapsed .item {
     @apply pl-0;
     @apply text-center;
+  }
+
+  .collapsed .item:hover {
+    @apply rounded-none;
   }
 
   .collapsed .item > .svg {
@@ -278,11 +222,13 @@
                 >
                   <div class="item animate">
                     <div class="svg">
-                      <svelte:component
-                        this="{protocol.svg}"
-                        svgColor="{fill[protocol.id]}"
-                        svgSize="30"
-                      />
+                      {#await protocol.svg then svg}
+                        <svelte:component
+                          this="{svg}"
+                          svgColor="{fill[protocol.id]}"
+                          svgSize="30"
+                        />
+                      {/await}
                     </div>
                     {#if expand}
                       <span transition:fade>{protocol.name}</span>
@@ -298,7 +244,7 @@
     <div class="collapser">
       <button on:click="{toggleExpand}">
         <i
-          class="fas {expand ? 'fa-angle-double-left' : 'fa-angle-double-right'}"
+          class="fas fa-angle-double-{expand ? 'left' : 'right'}"
         ></i>
       </button>
     </div>

@@ -1,18 +1,20 @@
 <script context="module">
-  export async function preload(page, session) {
-    const { slug } = page.params;
+  export async function preload({ params }) {
+    const [protocol, article] = params.slug;
 
-    return { slug };
+    return { protocol, article };
   }
 </script>
 
 <script>
   import Article from '@/components/PlaygroundArticles.svelte';
 
-  export let slug;
+  export let protocol;
+  export let article;
 
-  // TODO: get all .md for particular slug
-  slug;
+  // TODO: loading of articles
+  protocol;
+  article;
 
   const articles = [
     {
@@ -48,4 +50,11 @@
 <!-- Article Content -->
 <section class="p-10 border-l bg-white w-full">
   Markdown content here...
+</section>
+<!-- Article Navigation -->
+<section
+  class="flex flex-col p-4 w-full max-w-xs border-l flex-none bg-white min-h-0
+  overflow-auto"
+>
+  <h3 class="text-signature-500 font-semibold">Navigation</h3>
 </section>

@@ -1,63 +1,11 @@
 <script>
-  import algorand from '@/components/svg/algorand.svelte';
-  import celo from '@/components/svg/celo.svelte';
-  import ethereum from '@/components/svg/ethereum.svelte';
-  import flow from '@/components/svg/flow.svelte';
-  import near from '@/components/svg/near.svelte';
-  import polkadot from '@/components/svg/polkadot.svelte';
-  import skale from '@/components/svg/skale.svelte';
-  import solana from '@/components/svg/solana.svelte';
-  import tezos from '@/components/svg/tezos.svelte';
+  import protocols from '@/conf/protocols.js';
 
   const REGAL_GRAY = '#64667F';
 
-  let protocols = [
-    {
-      id: 'ethereum',
-      name: 'Ethereum',
-      svg: ethereum,
-    },
-    {
-      id: 'near',
-      name: 'NEAR',
-      svg: near,
-    },
-    {
-      id: 'tezos',
-      name: 'Tezos',
-      svg: tezos,
-    },
-    {
-      id: 'polkadot',
-      name: 'Polkadot',
-      svg: polkadot,
-    },
-    {
-      id: 'algorand',
-      name: 'Algorand',
-      svg: algorand,
-    },
-    {
-      id: 'solana',
-      name: 'Solana',
-      svg: solana,
-    },
-    {
-      id: 'skale',
-      name: 'SKALE',
-      svg: skale,
-    },
-    {
-      id: 'celo',
-      name: 'Celo',
-      svg: celo,
-    },
-    {
-      id: 'flow',
-      name: 'Flow',
-      svg: flow,
-    },
-  ];
+  for (const protocol of protocols) {
+    protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(res => res.default);
+  }
 </script>
 
 <style>
@@ -93,11 +41,13 @@
           >
             <div class="card hover:bg-gray-100 hover:shadow-2xl">
               <div class="inline-block">
-                <svelte:component
-                  this="{protocol.svg}"
-                  svgColor="{REGAL_GRAY}"
-                  svgSize="100"
-                />
+                {#await protocol.svg then svg}
+                  <svelte:component
+                    this="{svg}"
+                    svgColor="{REGAL_GRAY}"
+                    svgSize="100"
+                  />
+                {/await}
               </div>
             </div>
           </a>

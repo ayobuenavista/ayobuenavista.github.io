@@ -219,6 +219,7 @@
                   on:click="{() => (segment = protocol.id)}"
                   class:selected="{segment === protocol.id}"
                   class="animate {expanded}"
+                  rel="prefetch"
                 >
                   <div class="item animate">
                     <div class="svg">

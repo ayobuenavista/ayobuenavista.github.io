@@ -1,4 +1,4 @@
-{
+export default {
   "ethereum": [
     "Ethereum-EthernautGuide"
   ],

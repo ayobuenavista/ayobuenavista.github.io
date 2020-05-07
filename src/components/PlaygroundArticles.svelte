@@ -1,13 +1,20 @@
 <script>
+  export let id;
   export let type;
   export let title;
   export let description;
   export let date;
+  export let protocol;
+  export let segment;
 
   function icon() {
     switch (type) {
+      case 'blog':
+        return 'fas fa-quote-left';
       case 'code':
         return 'fas fa-code';
+      case 'defi':
+        return 'fas fa-coins';
       case 'guide':
         return 'fab fa-readme';
       default:
@@ -56,23 +63,29 @@
     @apply text-sm;
     @apply text-gray-500;
   }
+
+  .selected {
+    @apply border-signature-700;
+  }
 </style>
 
-<article>
-  <div class="icon">
-    <div>
-      <i class={icon()} />
+<a href="playground/{protocol}/{id}">
+  <article class:selected="{segment === id}">
+    <div class="icon">
+      <div>
+        <i class={icon()} />
+      </div>
     </div>
-  </div>
-  <div class="flex-1 relative">
-    <header class="mb-1">
-      <span class="font-semibold">{title}</span>
-    </header>
-    <p class="text-regal-gray">
-      {description}
-    </p>
-    <footer class="absolute bottom-0 mt-2 text-gray-500 text-sm">
-      {date}
-    </footer>
-  </div>
-</article>
+    <div class="flex-1 relative">
+      <header class="mb-1">
+        <span class="font-semibold">{title}</span>
+      </header>
+      <p class="text-regal-gray">
+        {description}
+      </p>
+      <footer class="absolute bottom-0 mt-2 text-gray-500 text-sm">
+        {date}
+      </footer>
+    </div>
+  </article>
+</a>

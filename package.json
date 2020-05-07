@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@sveltejs/site-kit": "^1.1.4",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-json": "^2.1.1",
     "eslint-plugin-node": "^11.1.0",
@@ -36,9 +37,13 @@
     "webpack": "^4.43.0"
   },
   "dependencies": {
+    "@polka/send": "^0.4.0",
     "compression": "^1.7.4",
     "js-yaml": "^3.13.1",
+    "markdown-it": "^10.0.0",
+    "marked": "^1.0.0",
     "polka": "^0.5.2",
+    "prismjs": "^1.20.0",
     "sirv": "^0.4.2",
     "tsparticles": "^1.13.5"
   }

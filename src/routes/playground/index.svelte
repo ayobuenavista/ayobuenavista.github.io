@@ -1,7 +1,3 @@
-<script>
-  import Article from '@/components/PlaygroundArticles.svelte';
-</script>
-
 <section
   class="p-10 bg-regal-white w-full"
 >

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import marked from 'marked';
+import toc from 'markdown-toc';
 import {
   extract_frontmatter,
   link_renderer,
@@ -17,6 +18,7 @@ export default function get_articles(protocol) {
     const renderer = new marked.Renderer();
     
     const { content, metadata } = extract_frontmatter(markdown);
+    const deeplinks = toc(content).json;
     
     renderer.link = link_renderer;
     renderer.code = highlight;
@@ -24,9 +26,11 @@ export default function get_articles(protocol) {
       const deeplink = text.toLowerCase().replace(/[^\w]+/g, '-');
 
       return `
-        <h${level}>
-          <a href="playground/${protocol}/${metadata.id}#${deeplink}" class="anchor" aria-hidden="true">
-          </a>
+        <h${level} id="${deeplink}" class="relative">
+          <a
+            href="playground/${protocol}/${metadata.id}#${deeplink}"
+            class="anchor" aria-hidden="true"
+          ></a>
           ${text}
         </h${level}>`;
     };
@@ -37,7 +41,8 @@ export default function get_articles(protocol) {
     );
 
     return {
-    	html,
+      html,
+      deeplinks,
     	metadata,
     };
   });

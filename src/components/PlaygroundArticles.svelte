@@ -7,7 +7,7 @@
   export let protocol;
   export let segment;
 
-  function icon() {
+  $: icon = () => {
     switch (type) {
       case 'blog':
         return 'fas fa-quote-left';

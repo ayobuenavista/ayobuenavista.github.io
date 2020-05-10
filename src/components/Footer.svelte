@@ -2,7 +2,7 @@
   export let segment;
 </script>
 <footer class="antialiased flex absolute bottom-0 h-auto w-full" id="footer">
-  {#if (segment === 'resume' || segment === 'playground')}
+  {#if segment === 'resume'}
     <div class="h-full w-full bg-transparent py-3">
       <div class="container mx-auto text-center">
         <div class="w-auto mx-auto text-gray-500 inline-block">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  {:else}
+  {:else if segment !== 'playground'}
     <div class="h-full w-full bg-regal-gray py-3">
       <div class="container mx-auto text-center text-gray-500 my-8">
         <p class="text-xl">

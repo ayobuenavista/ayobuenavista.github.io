@@ -5,29 +5,49 @@
       res.json()
     );
 
-    return { articles, protocol };
+    return { articles };
   }
 </script>
 
 <script>
+  import { beforeUpdate } from 'svelte';
   import Article from '@/components/PlaygroundArticles.svelte';
-
+  import { stores } from '@sapper/app';
+  
   export let articles;
-  export let protocol;
   export let segment;
+  
+  let page;
+  let protocol;
+
+  beforeUpdate(() => {
+    page = stores().page;
+    protocol = $page.params.protocol;
+  });
 </script>
 
+<style>
+  .articles {
+    @apply flex;
+    @apply flex-col;
+    @apply bg-regal-white;
+    @apply border-r;
+    @apply p-4;
+    @apply overflow-x-hidden;
+    @apply overflow-y-auto;
+    min-width: 365px;
+    max-width: 365px;
+  }
+</style>
+
 <!-- Article List -->
-<section
-  class="flex flex-col border-r p-4 min-h-screen w-full max-w-sm flex-none
-  bg-regal-white overflow-auto"
->
+<section class="articles">
   {#if articles.length > 0}
     <h1 class="font-semibold mb-3">Select an article</h1>
     <ul>
       {#each articles as article}
         <li>
-          <Article {...article.metadata} {protocol} {segment} />
+          <Article {...article.metadata} {segment} bind:protocol={protocol} />
         </li>
       {/each}
     </ul>

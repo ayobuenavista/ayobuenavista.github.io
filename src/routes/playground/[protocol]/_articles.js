@@ -6,11 +6,10 @@ import {
   extract_frontmatter,
   link_renderer,
 } from '@sveltejs/site-kit/utils/markdown.js';
-import articles from '@/conf/articles.js';
 import { highlight } from '@/utils/highlight.js';
 
 export default function get_articles(protocol) {
-  const PATH = `src/articles/${protocol}`;
+  const PATH = `static/articles/${protocol}`;
   return fs.readdirSync(PATH).map(file => {
     if (path.extname(file) !== '.md') return;
 

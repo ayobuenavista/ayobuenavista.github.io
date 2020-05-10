@@ -28,6 +28,6 @@
   />
 </svelte:head>
 
-<section class="relative p-10 border-l border-r bg-white w-full">
+<section class="relative p-10 border-l border-r bg-white h-screen w-full">
   {@html intro.html}
 </section>

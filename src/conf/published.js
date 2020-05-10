@@ -1,9 +1,10 @@
 export default {
   "ethereum": [
-    "Ethereum-EthernautGuide"
+    "Ethernaut-Solutions",
+    "Ganache-MainnetFork",
   ],
   "near": [
-
+    "Contracts-Intro",
   ],
   "tezos": [
     

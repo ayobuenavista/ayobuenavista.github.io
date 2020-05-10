@@ -4,14 +4,20 @@
   export let segment;
 </script>
 
+<style>
+  .playground {
+    max-width: 100vw;
+  }
+</style>
+
 <svelte:head>
   <title>Anton Buenavista's Playground</title>
 </svelte:head>
 
-<main class="antialiased flex h-screen" id="playground">
+<main class="playground antialiased flex h-screen w-screen overflow-hidden" id="playground">
   <Sidebar {segment} />
-  <div class="flex-1 flex flex-col">
-    <div class="flex-grow flex min-h-0 border-t">
+  <div class="flex flex-col w-full">
+    <div class="flex min-h-0 border-t">
       <slot />
     </div>
   </div>

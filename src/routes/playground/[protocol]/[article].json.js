@@ -16,7 +16,6 @@ export function get(req, res) {
   const article = lookup.get(req.params.article);
 
   if (article) {
-    res.setHeader('Cache-Control', `max-age=${5 * 60 * 1e3}`); // 5 minutes
     send(res, 200, JSON.stringify(article));
   } else {
     send(res, 404, { message: 'Not Found' });

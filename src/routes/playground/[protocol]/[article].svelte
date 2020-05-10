@@ -16,34 +16,64 @@
 </script>
 
 <style>
-  ::-webkit-scrollbar {
-    display: none;
+  .content {
+    @apply relative; 
+    @apply bg-white;
+    @apply border-l;
+    @apply min-h-screen;
+    @apply h-full;
+    @apply overflow-x-hidden;
+    @apply overflow-y-auto;
+    @apply p-10;
+    @apply w-full;
+    min-width: 50%;
+    max-width: inherit;
   }
 
-  .contents {
+  .deeplinks {
     @apply flex;
     @apply flex-col;
     @apply text-gray-600;
   }
 
-  .contents > a {
+  .deeplinks > a {
     @apply my-1;
   }
 
-  .contents > a:hover {
+  .deeplinks > a:hover {
     @apply text-signature-500;
   }
 
-  .contents > .lvl1 {
+  .deeplinks > .lvl1 {
     @apply font-semibold;
   }
 
-  .contents > .lvl2 {
+  .deeplinks > .lvl2 {
     margin-left: 2em;
   }
 
-  .contents > .lvl3 {
+  .deeplinks > .lvl3 {
     margin-left: 4em;
+  }
+
+  .navigation {
+    @apply flex;
+    @apply flex-col;
+    @apply bg-regal-white;
+    @apply border-l;
+    @apply min-h-screen;
+    @apply h-full;
+    @apply overflow-x-hidden;
+    @apply overflow-y-auto;
+    @apply px-4;
+    @apply py-16;
+    min-width: 260px;
+    max-width: 260px;
+  }
+
+  .wrapper {
+    @apply flex;
+    @apply flex-col;
   }
 
   .wrapper > :global(h1) {
@@ -73,7 +103,7 @@
 </svelte:head>
 
 <!-- Article Content -->
-<section class="relative bg-white overflow-x-hidden p-10 border-l w-full">
+<section class="content">
   <span class="font-semibold text-4xl">{md.metadata.title}</span>
   <span class="horizontal-line my-2 bg-red-500"></span>
   <article class="wrapper mt-10">
@@ -81,12 +111,9 @@
   </article>
 </section>
 <!-- Article Navigation -->
-<section
-  class="flex flex-col px-4 py-16 h-auto w-full max-w-xs border-l flex-none
-  bg-regal-white overflow-y-hidden"
->
-  <h3 class="text-xl text-signature-500 font-semibold mb-3">Contents</h3>
-  <div class="contents">
+<section class="navigation">
+  <h3 class="text-xl text-signature-500 font-semibold mb-3">Navigation</h3>
+  <div class="deeplinks">
     {#each md.deeplinks as { content, lvl, slug }}
       <a href="playground/{protocol}/{article}#{slug}" class="lvl{lvl}">
         {content}

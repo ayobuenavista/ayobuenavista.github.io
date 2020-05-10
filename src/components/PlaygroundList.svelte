@@ -4,7 +4,9 @@
   const REGAL_GRAY = '#64667F';
 
   for (const protocol of protocols) {
-    protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(res => res.default);
+    protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(
+      res => res.default
+    );
   }
 </script>
 

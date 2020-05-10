@@ -21,23 +21,26 @@ function ordering(protocol) {
 export function get(req, res) {
   const { protocol } = req.params;
 
-  if (!json || process.env.NODE_ENV !== 'production') {
-    let articles = get_articles(protocol).map(article => {
-      let { metadata } = article;
+  let articles = get_articles(protocol);
 
-      return {
-        metadata,
-      };
-    });
-
-    articles = articles.filter(e => {
-      return published[protocol].includes(e.metadata.id);
-    });
-
-    articles.sort(ordering(protocol)),
-
-    json = JSON.stringify(articles);
+  if (!articles) {
+    send(res, 404, JSON.stringify({ message: 'Not Found' }));
+    return;
   }
+
+  articles = articles.map(article => {
+    let { metadata } = article;
+
+    return {
+      metadata,
+    };
+  });
+
+  articles = articles.filter(e => {
+    return published[protocol].includes(e.metadata.id);
+  });
+
+  articles.sort(ordering(protocol)), (json = JSON.stringify(articles));
 
   send(res, 200, json, {
     'Content-Type': 'application/json',

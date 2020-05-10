@@ -31,7 +31,8 @@
   $: headerClass = getClass(y);
   $: textColor = getTextColor();
   $: isPlayground = segment === 'playground' ? 'hidden' : '';
-  $: isResume = (segment === 'resume' && headerClass !== 'scrolled') ? 'hidden' : '';
+  $: isResume =
+    segment === 'resume' && headerClass !== 'scrolled' ? 'hidden' : '';
 </script>
 
 <style>

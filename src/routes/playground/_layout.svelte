@@ -14,7 +14,10 @@
   <title>Anton Buenavista's Playground</title>
 </svelte:head>
 
-<main class="playground antialiased flex h-screen w-screen overflow-hidden" id="playground">
+<main
+  class="playground antialiased flex h-screen w-screen overflow-hidden"
+  id="playground"
+>
   <Sidebar {segment} />
   <div class="flex flex-col w-full">
     <div class="flex min-h-0 border-t">

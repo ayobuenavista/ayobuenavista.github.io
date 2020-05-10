@@ -10,9 +10,11 @@
   let expand = true;
   let prev = '';
   let fill = {};
-  
+
   for (const protocol of protocols) {
-    protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(res => res.default);
+    protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(
+      res => res.default
+    );
     fill[protocol.id] = REGAL_WHITE;
   }
 
@@ -244,9 +246,7 @@
     </div>
     <div class="collapser">
       <button on:click="{toggleExpand}">
-        <i
-          class="fas fa-angle-double-{expand ? 'left' : 'right'}"
-        ></i>
+        <i class="fas fa-angle-double-{expand ? 'left' : 'right'}"></i>
       </button>
     </div>
   </div>

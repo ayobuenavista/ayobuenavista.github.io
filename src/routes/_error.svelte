@@ -35,9 +35,9 @@
 <section class="antialiased flex h-screen bg-regal-white" id="playground">
   <div class="container mx-auto mt-20 text-center align-middle">
     <h1>{status}</h1>
-    
+
     <p>{error.message}</p>
-    
+
     {#if dev && error.stack}
       <pre>{error.stack}</pre>
     {/if}

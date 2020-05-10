@@ -17,7 +17,7 @@
 
 <style>
   .content {
-    @apply relative; 
+    @apply relative;
     @apply bg-white;
     @apply border-l;
     @apply min-h-screen;

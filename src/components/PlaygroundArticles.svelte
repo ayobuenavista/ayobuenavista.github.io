@@ -20,7 +20,7 @@
       default:
         return 'fas fa-question';
     }
-  }
+  };
 </script>
 
 <style>
@@ -73,16 +73,14 @@
   <article class:selected="{segment === id}">
     <div class="icon">
       <div>
-        <i class={icon()} />
+        <i class="{icon()}"></i>
       </div>
     </div>
     <div class="flex-1 relative">
       <header class="mb-1">
         <span class="font-semibold">{title}</span>
       </header>
-      <p class="text-regal-gray">
-        {description}
-      </p>
+      <p class="text-regal-gray">{description}</p>
       <footer class="absolute bottom-0 mt-2 text-gray-500 text-sm">
         {date}
       </footer>

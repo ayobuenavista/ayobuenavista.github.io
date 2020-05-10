@@ -22,8 +22,8 @@
         </p>
         <div class="justify-center lg:justify-start mt-12">
           <a
-            class="px-4 py-3 bg-signature-500 text-regal-white text-xs font-semibold
-            rounded hover:bg-red-700"
+            class="px-4 py-3 bg-signature-500 text-regal-white text-xs
+            font-semibold rounded hover:bg-red-700"
             href="playground"
           >
             Visit my Playground

@@ -1,6 +1,6 @@
 ---
 id: Ganache-MainnetFork
-type: guide
+type: code
 title: Deploy Kyber on Ganache
 description: Deploy the Kyber Network smart contracts on a ganache instance
 date: 9 May 2020

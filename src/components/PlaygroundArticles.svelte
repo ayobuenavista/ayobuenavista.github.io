@@ -37,7 +37,7 @@
   }
 
   article:hover {
-    @apply border-signature-500;
+    @apply border-signature-700;
   }
 
   article .icon {
@@ -65,7 +65,15 @@
   }
 
   .selected {
-    @apply border-signature-700;
+    @apply border-signature-500;
+  }
+
+  .selected > div > header {
+    @apply text-signature-500;
+  }
+
+  .selected > div > div > i {
+    @apply text-signature-500;
   }
 </style>
 

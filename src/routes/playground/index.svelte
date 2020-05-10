@@ -11,5 +11,10 @@
       class="object-scale-down pt-10"
       src="merkle_tree.png"
     />
+    <div class="text-center mt-20">
+      <h3 class="md:text-xl text-red-600 mt-2">
+        THIS PAGE IS HEAVILY UNDER CONSTRUCTION
+      </h3>
+    </div>
   </div>
 </section>

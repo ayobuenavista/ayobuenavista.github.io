@@ -14,7 +14,6 @@
         <img
           alt="ayobuenavista's Github chart"
           class="responsive w-full"
-          loading="lazy"
           src="http://ghchart.rshah.org/ff5c13/ayobuenavista"
         />
       </div>

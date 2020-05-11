@@ -50,7 +50,6 @@
             <img
               alt="Made with Svelte"
               class="w-5 h-5 inline-block ml-2"
-              loading="lazy"
               src="svelte.png"
             />
           </a>
@@ -58,7 +57,6 @@
             <img
               alt="Made with tailwindcss"
               class="w-5 h-5 inline-block ml-1"
-              loading="lazy"
               src="tailwindcss.png"
             />
           </a>

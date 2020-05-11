@@ -204,7 +204,6 @@
           <img
             alt="Hackergotchi"
             class="m-auto inset-0 z-negative w-32 h-32 align-middle"
-            loading="lazy"
             src="hackergotchi.png"
           />
         </div>
@@ -258,7 +257,7 @@
           <div class="my-3">
             <a
               class="flex items-center"
-              href="person.contact.website"
+              href="/"
               target="_blank"
             >
               <i class="fa fa-globe text-2xl"></i>
@@ -337,7 +336,6 @@
                     alt="{company} Logo"
                     class="company-logo"
                     align="left"
-                    loading="lazy"
                     src="resume/{logo}"
                   />
                   <h3 class="clear-both text-2xl font-semibold">{company}</h3>

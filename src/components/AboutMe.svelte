@@ -12,7 +12,6 @@
           <img
             alt="Hackergotchi"
             class="absolute inset-0 z-negative w-full h-full"
-            loading="lazy"
             src="hackergotchi.png"
           />
         </div>

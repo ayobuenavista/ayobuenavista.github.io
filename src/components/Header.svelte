@@ -58,7 +58,6 @@
           <img
             alt="Profile Picture"
             class="absolute inset-0 z-negative w-full h-full {isResume}"
-            loading="lazy"
             src="profile.jpg"
           />
         </div>

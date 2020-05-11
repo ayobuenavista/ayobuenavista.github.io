@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@polka/send": "^0.4.0",
+    "@typeform/embed": "^0.17.0",
     "compression": "^1.7.4",
     "js-yaml": "^3.13.1",
     "markdown-it": "^10.0.0",

@@ -198,7 +198,6 @@
             <img
               alt="Profile Picture"
               class="w-full h-full"
-              loading="lazy"
               src="profile.jpg"
             />
           </div>

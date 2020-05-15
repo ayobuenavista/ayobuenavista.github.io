@@ -192,7 +192,7 @@
   <title>Anton Buenavista's Resume</title>
 </svelte:head>
 
-<section class="flex bg-white" id="resume">
+<section class="flex bg-white overflow-auto scrolling-touch" id="resume">
   <div class="mx-auto h-auto w-full flex">
     <!-- Left Column -->
     <div class="left-col w-1/4">

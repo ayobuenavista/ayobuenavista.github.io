@@ -1,9 +1,17 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+
   export let segment;
   export let href;
   export let text;
   export let color;
   export let rel = '';
+
+  const dispatch = createEventDispatcher();
+
+  function linkTapped() {
+    dispatch('click', false);
+  }
 </script>
 
 <style>
@@ -26,6 +34,11 @@
   }
 </style>
 
-<a {rel} {href} class="{segment === href ? 'text-signature-500' : { color }}">
+<a
+  on:click="{linkTapped}"
+  {rel}
+  {href}
+  class="{segment === href ? 'text-signature-500' : { color }}"
+>
   {text}
 </a>

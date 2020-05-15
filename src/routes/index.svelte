@@ -10,8 +10,10 @@
   <title>Anton Buenavista</title>
 </svelte:head>
 
-<Intro />
-<PlaygroundList />
-<AboutMe />
-<GitHub />
-<ContactMe />
+<div class="overflow-auto scrolling-touch">
+  <Intro />
+  <PlaygroundList />
+  <AboutMe />
+  <GitHub />
+  <ContactMe />
+</div>

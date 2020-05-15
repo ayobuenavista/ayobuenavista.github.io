@@ -49,13 +49,27 @@
     @apply h-full;
   }
 
-  nav {
+  header {
+    @apply flex-col;
+    @apply fixed;
     @apply text-regal-black;
+    @apply p-2;
+    @apply mb-4;
+    @apply mt-0;
+    @apply w-full;
+    @apply top-0;
+    @apply z-10;
   }
 
-  nav.scrolled {
+  header.scrolled {
     @apply bg-regal-black;
     @apply text-regal-white;
+  }
+
+  nav {
+    @apply items-center;
+    @apply justify-between;
+    @apply py-2;
   }
 
   .profile-pic {
@@ -76,13 +90,30 @@
     @apply tracking-tight;
   }
 
-  .navlinks {
+  .nav-container {
+    @apply block;
+    @apply float-right;
+    @apply w-full;
+  }
+
+  .nav-links {
     @apply text-base;
     @apply mr-4;
   }
 
+  @screen md {
+    @apply flex;
+    @apply px-20;
+  }
+
   @screen lg {
-    .navlinks {
+    .nav-container {
+      @apply flex;
+      @apply items-center;
+      @apply w-auto;
+    }
+
+    .nav-links {
       @apply block;
       @apply flex-grow;
       @apply mr-0;
@@ -92,57 +123,58 @@
 
 <svelte:window bind:outerWidth="{size}" bind:scrollY="{y}" />
 
-<header class="flex {isPlayground} z-" id="header">
-  <nav
-    use:setTransitionDuration
-    class="z-50 mb-4 p-2 mt-0 fixed w-full z-10 top-0 {headerClass}"
-  >
-    <div class="md:flex items-center justify-between py-2 md:px-20">
-      <a href="." class="mr-4 float-left">
-        <div class="profile-pic">
-          <img alt="Profile Picture" class="{isResume}" src="profile.jpg" />
+<header
+  use:setTransitionDuration
+  class="{isPlayground} {headerClass}"
+  id="header"
+>
+  <nav>
+    <a href="." class="mr-4 float-left">
+      <div class="profile-pic">
+        <img alt="Profile Picture" class="{isResume}" src="profile.jpg" />
+      </div>
+      <span class="name {isResume}">Anton Buenavista</span>
+    </a>
+    <div class="block float-right lg:hidden">
+      <MobileMenu on:click="{toggleMobileMenu}" {expand} {headerClass} />
+    </div>
+    <div class="nav-container">
+      {#if visibility}
+        <div class="nav-links" transition:fly="{{ x: 100, duration: 500 }}">
+          <NavLink
+            on:click="{toggleMobileMenu}"
+            text="Playground"
+            href="playground"
+            color="{textColor}"
+            rel="prefetch"
+            {segment}
+          />
+          <NavLink
+            on:click="{toggleMobileMenu}"
+            text="Resume"
+            href="resume"
+            color="{textColor}"
+            rel="prefetch"
+            {segment}
+          />
+          <NavLink
+            on:click="{toggleMobileMenu}"
+            text="About"
+            href="#about"
+            color="{textColor}"
+            rel="prefetch"
+            {segment}
+          />
+          <NavLink
+            on:click="{toggleMobileMenu}"
+            text="Contact"
+            href="#contact"
+            color="{textColor}"
+            rel="prefetch"
+            {segment}
+          />
         </div>
-        <span class="name {isResume}">Anton Buenavista</span>
-      </a>
-
-      <div class="block lg:hidden float-right">
-        <MobileMenu on:click="{toggleMobileMenu}" {expand} {headerClass} />
-      </div>
-      <div class="w-full block lg:flex lg:items-center lg:w-auto float-right">
-        {#if visibility}
-          <div class="navlinks" transition:fly={{ x: 100, duration: 500 }}>
-    
-            <NavLink
-              text="Playground"
-              href="playground"
-              color="{textColor}"
-              rel="prefetch"
-              {segment}
-            />
-            <NavLink
-              text="Resume"
-              href="resume"
-              color="{textColor}"
-              rel="prefetch"
-              {segment}
-            />
-            <NavLink
-              text="About"
-              href="#about"
-              color="{textColor}"
-              rel="prefetch"
-              {segment}
-            />
-            <NavLink
-              text="Contact"
-              href="#contact"
-              color="{textColor}"
-              rel="prefetch"
-              {segment}
-            />
-          </div>
-        {/if}
-      </div>
+      {/if}
     </div>
   </nav>
 </header>

@@ -6,11 +6,26 @@
   export let rel = '';
 </script>
 
-<a
-  {rel}
-  {href}
-  class="block mt-4 lg:mx-4 lg:inline-block lg:mt-0 {segment === href ? 'text-signature-500' : { color }}
-  hover:text-signature-800"
->
+<style>
+  a {
+    @apply block;
+    @apply mt-4;
+    @apply text-right;
+  }
+
+  a:hover {
+    @apply text-signature-800;
+  }
+
+  @screen lg {
+    a {
+      @apply inline-block;
+      @apply mx-4;
+      @apply mt-0;
+    }
+  }
+</style>
+
+<a {rel} {href} class="{segment === href ? 'text-signature-500' : { color }}">
   {text}
 </a>

@@ -258,7 +258,6 @@
             <a
               class="flex items-center"
               href="/"
-              target="_blank"
             >
               <i class="fa fa-globe text-2xl"></i>
               <span class="pl-4">{person.contact.website}</span>

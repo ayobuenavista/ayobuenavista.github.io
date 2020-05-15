@@ -5,7 +5,7 @@
 <footer class="antialiased flex absolute bottom-0 h-auto w-full" id="footer">
   {#if segment === 'resume'}
     <div class="h-full w-full bg-transparent py-3">
-      <div class="container mx-auto text-center">
+      <div class="mx-auto text-center">
         <div class="w-auto mx-auto text-gray-500 inline-block">
           <p class="text-base">Handcrafted by me © ayobuenavista</p>
         </div>
@@ -24,14 +24,14 @@
     </div>
   {:else if segment !== 'playground'}
     <div class="h-full w-full bg-regal-gray py-3">
-      <div class="container mx-auto text-center text-gray-500 my-8">
+      <div class="mx-auto text-center text-gray-500 my-8">
         <p class="text-xl">
           Passion outperforms upbringing
           <br />
           Disrespect the impossible
         </p>
       </div>
-      <div class="container mx-auto text-center my-8">
+      <div class="mx-auto text-center my-8">
         <a href="https://twitter.com/ayobuenavista" target="_blank">
           <i class="fab fa-twitter text-regal-white text-2xl px-5"></i>
         </a>
@@ -42,7 +42,7 @@
           <i class="fab fa-linkedin text-regal-white text-2xl px-5"></i>
         </a>
       </div>
-      <div class="container mx-auto text-center text-gray-500 my-8">
+      <div class="mx-auto text-center text-gray-500 my-8">
         <p class="text-base">Handcrafted by me © ayobuenavista</p>
         <div class="text-sm mx-auto mt-5">
           Made with

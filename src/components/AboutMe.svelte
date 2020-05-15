@@ -1,6 +1,6 @@
 <section class="antialiased flex" id="about">
   <div class="h-auto w-full bg-white pb-10">
-    <div class="container mx-auto flex mt-20">
+    <div class="mx-auto flex mt-20">
       <div class="content-center text-center w-1/4">
         <h2 class="text-5xl font-semibold md:text-4xl text-regal-gray">
           About Me

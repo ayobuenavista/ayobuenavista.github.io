@@ -7,6 +7,40 @@ position: Blockchain Engineer
 
 location: Singapore
 
+blurb:
+  about: Full-stack developer who is highly passionate about blockchain,
+         cryptography, decentralization, game theory, consensus mechanisms,
+         smart contracts, cryptoassets, crypteconomics, open source, and the
+         semantic web. I work on scalable, high availability applications using
+         nascent technology. My work covers both software engineering and
+         systems administration encapsulating services from end-to-end. Vires
+         in Numeris.
+  skills:
+    - skill: HTML5
+      icon: devicon-html5-plain-wordmark
+    - skill: CSS3
+      icon: devicon-css3-plain-wordmark
+    - skill: Javascript
+      icon: devicon-javascript-plain colored
+    - skill: NodeJS
+      icon: devicon-nodejs-plain-wordmark
+    - skill: Express
+      icon: devicon-express-original-wordmark
+    - skill: Python
+      icon: devicon-python-plain-wordmark
+    - skill: MongoDB
+      icon: devicon-mongodb-plain-wordmark
+    - skill: MySQL
+      icon: devicon-mysql-plain-wordmark
+    - skill: Amazon Web Services
+      icon: devicon-amazonwebservices-plain-wordmark
+    - skill: Docker
+      icon: devicon-docker-plain-wordmark
+    - skill: git
+      icon: devicon-git-plain-wordmark
+    - skill: Linux
+      icon: devicon-linux-plain colored
+
 experience:
 - company: Kyber Network
   logo: kyber.png

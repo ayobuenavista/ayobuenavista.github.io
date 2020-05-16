@@ -1,6 +1,6 @@
 <style>
   .blurb {
-    @apply mt-10;
+    @apply mt-8;
     @apply text-xl;
     @apply text-gray-600;
     @apply text-center;
@@ -56,7 +56,7 @@
     @apply w-full;
     @apply text-center;
     @apply px-8;
-    @apply -mt-24;
+    @apply mt-0;
     @apply content-center;
   }
 
@@ -64,10 +64,25 @@
     @apply font-semibold;
     @apply text-5xl;
     @apply text-signature-500;
+    @apply leading-tight;
+  }
+
+  .tree-desktop {
+    @apply mx-auto;
+    @apply w-7/12;
+    @apply hidden;
+  }
+
+  .tree-mobile {
+    @apply block;
+    @apply mx-auto;
+    @apply mt-8 ;
+    @apply w-9/12;
   }
 
   @screen lg {
     .blurb {
+      @apply mt-10;
       @apply text-left;
       @apply text-lg;
     }
@@ -100,12 +115,22 @@
     .name {
       @apply text-4xl;
     }
+    
+    .tree-desktop {
+      @apply block;
+      @apply w-3/5;
+    }
+
+    .tree-mobile {
+      @apply hidden;
+      @apply w-3/5
+    }
   }
 </style>
 
 <section class="antialiased flex" id="intro">
   <div class="container intro-container">
-    <div class="mx-auto w-7/12 lg:w-3/5">
+    <div class="tree-desktop">
       <img alt="Merkle Tree" class="object-scale-down" src="merkle_tree.png" />
     </div>
     <div class="intro-text">
@@ -115,15 +140,18 @@
           Anton Buenavista
           <span class="horizontal-line"></span>
         </h2>
+        <div class="tree-mobile">
+          <img alt="Merkle Tree" class="object-scale-down" src="merkle_tree.png" />
+        </div>
         <p class="blurb">
-          I work in the crypto space.
+          <span class="text-signature-300">I'm a</span> cryptonative in the cryptoverse
           <br />
-          I'm a full-stack developer.
+          <span class="text-signature-300">I enjoy</span> trying new things
           <br />
-          I like building things just for fun.
+          <span class="text-signature-300">I like to</span> build stuff just for fun
           <br />
           <br />
-          Welcome to my playground.
+          Welcome to my playground
         </p>
         <div class="justify-center mt-12">
           <a

@@ -1,6 +1,20 @@
+<style>
+  .github-container {
+    @apply px-5;
+    @apply pt-10;
+    @apply text-center;
+  }
+
+  @screen lg {
+    .github-container {
+      @apply mx-auto;
+    }
+  }
+</style>
+
 <section class="antialiased flex" id="github">
   <div class="h-auto w-full bg-white pb-10">
-    <div class="container mx-auto pt-10 text-center">
+    <div class="container github-container">
       <a
         class="text-regal-white"
         href="https://github.com/ayobuenavista"

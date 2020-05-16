@@ -310,13 +310,7 @@
           <div class="timeline-element">
             <div class="timeline-contents">
               <p class="text-sm md:text-base text-justify mb-5">
-                Full-stack developer who is highly passionate about blockchain,
-                cryptography, decentralization, game theory, consensus
-                mechanisms, smart contracts, cryptoassets, crypteconomics, open
-                source, and the semantic web. I work on scalable, high
-                availability applications using nascent technology. My work
-                covers both software engineering and systems administration
-                encapsulating services from end-to-end.
+                {person.blurb.about}
               </p>
             </div>
           </div>

@@ -30,9 +30,9 @@
 <section class="antialiased flex" id="contact">
   <div class="w-full bg-gray-200">
     <div class="contact">
-      <h2 class="text-5xl font-semibold md:text-4xl text-regal-gray">
+      <h2 class="font-semibold text-regal-gray text-5xl md:text-4xl">
         Contact Me
-        <span class="horizontal-line mt-3 bg-regal-gray mx-auto"></span>
+        <span class="horizontal-line bg-regal-gray mx-auto mt-3"></span>
       </h2>
       <div class="mx-auto h-full">
         <div id="typeform"></div>

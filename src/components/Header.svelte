@@ -72,22 +72,18 @@
     @apply py-2;
   }
 
-  .profile-pic {
-    @apply relative;
-    @apply flex-shrink-0;
+  nav > a {
+    @apply flex;
     @apply float-left;
-    @apply mr-3;
-    @apply overflow-hidden;
-    @apply rounded-full;
-    @apply h-10;
-    @apply w-10;
+    @apply items-center;
+    @apply -mt-2;
   }
 
   .name {
-    @apply align-text-top;
     @apply font-semibold;
     @apply text-xl;
     @apply tracking-tight;
+    @apply h-full;
   }
 
   .nav-container {
@@ -101,12 +97,27 @@
     @apply mr-4;
   }
 
+  .profile-pic {
+    @apply relative;
+    @apply flex-shrink-0;
+    @apply float-left;
+    @apply mr-3;
+    @apply overflow-hidden;
+    @apply rounded-full;
+    @apply h-10;
+    @apply w-10;
+  }
+
   @screen md {
     @apply flex;
     @apply px-20;
   }
 
   @screen lg {
+    nav > a {
+      @apply ml-12;
+    }
+
     .nav-container {
       @apply flex;
       @apply items-center;
@@ -116,7 +127,7 @@
     .nav-links {
       @apply block;
       @apply flex-grow;
-      @apply mr-0;
+      @apply mr-12;
     }
   }
 </style>
@@ -129,11 +140,11 @@
   id="header"
 >
   <nav>
-    <a href="." class="mr-4 float-left">
+    <a href=".">
       <div class="profile-pic">
         <img alt="Profile Picture" class="{isResume}" src="profile.jpg" />
       </div>
-      <span class="name {isResume}">Anton Buenavista</span>
+      <div class="name {isResume}">Anton Buenavista</div>
     </a>
     <div class="block float-right lg:hidden">
       <MobileMenu on:click="{toggleMobileMenu}" {expand} {headerClass} />

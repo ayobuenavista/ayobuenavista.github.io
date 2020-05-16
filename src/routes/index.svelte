@@ -10,7 +10,7 @@
   <title>Anton Buenavista</title>
 </svelte:head>
 
-<div class="overflow-auto scrolling-touch">
+<div class="scrolling-auto">
   <Intro />
   <PlaygroundList />
   <AboutMe />

@@ -49,15 +49,15 @@
     @apply flex-wrap;
     @apply pt-16;
     @apply w-full;
-    height: 780px;
   }
 
   .intro-text {
-    @apply w-full;
     @apply text-center;
     @apply px-8;
     @apply mt-0;
     @apply content-center;
+    @apply h-full;
+    @apply w-full;
   }
 
   .name {
@@ -153,7 +153,7 @@
           <br />
           Welcome to my playground
         </p>
-        <div class="justify-center mt-12">
+        <div class="justify-center my-12">
           <a
             class="btn-playground"
             href="playground"

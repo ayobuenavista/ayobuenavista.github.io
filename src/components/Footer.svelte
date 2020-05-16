@@ -2,14 +2,67 @@
   export let segment;
 </script>
 
-<footer class="antialiased flex absolute bottom-0 h-auto w-full" id="footer">
+<style>
+  footer {
+    @apply absolute;
+    @apply antialiased;
+    @apply flex;
+    @apply bottom-0;
+    @apply h-auto;
+    @apply w-full;
+  }
+
+  .copyright {
+    @apply mx-auto;
+    @apply my-8;
+    @apply text-center;
+    @apply text-gray-500;
+  }
+
+  .links {
+    @apply mx-auto;
+    @apply my-8;
+    @apply text-center;
+  }
+
+  .resume-copyright {
+    @apply inline-block;
+    @apply mx-auto;
+    @apply text-gray-500;
+    @apply w-full;
+  }
+
+  .resume-links {
+    @apply text-gray-500;
+    @apply w-full;
+  }
+
+  .quotes {
+    @apply mx-auto;
+    @apply my-8;
+    @apply text-center;
+    @apply text-gray-500;
+    @apply text-xl;
+  }
+
+  @screen lg {
+    .resume-links {
+      @apply absolute;
+      @apply inline-block;
+      @apply right-0;
+      @apply w-auto;
+    }
+  }
+</style>
+
+<footer id="footer">
   {#if segment === 'resume'}
     <div class="h-full w-full bg-transparent py-3">
-      <div class="mx-auto text-center">
-        <div class="w-auto mx-auto text-gray-500 inline-block">
+      <div class="flex flex-col-reverse lg:flex-row mx-auto text-center">
+        <div class="resume-copyright">
           <p class="text-base">Handcrafted by me © ayobuenavista</p>
         </div>
-        <div class="absolute right-0 text-gray-500 inline-block">
+        <div class="resume-links">
           <a href="https://twitter.com/ayobuenavista" target="_blank">
             <i class="fab fa-twitter text-gray-500 text-2xl px-5"></i>
           </a>
@@ -24,14 +77,14 @@
     </div>
   {:else if segment !== 'playground'}
     <div class="h-full w-full bg-regal-gray py-3">
-      <div class="mx-auto text-center text-gray-500 my-8">
-        <p class="text-xl">
+      <div class="quotes">
+        <p>
           Passion outperforms upbringing
           <br />
           Disrespect the impossible
         </p>
       </div>
-      <div class="mx-auto text-center my-8">
+      <div class="links">
         <a href="https://twitter.com/ayobuenavista" target="_blank">
           <i class="fab fa-twitter text-regal-white text-2xl px-5"></i>
         </a>
@@ -42,7 +95,7 @@
           <i class="fab fa-linkedin text-regal-white text-2xl px-5"></i>
         </a>
       </div>
-      <div class="mx-auto text-center text-gray-500 my-8">
+      <div class="copyright">
         <p class="text-base">Handcrafted by me © ayobuenavista</p>
         <div class="text-sm mx-auto mt-5">
           Made with

@@ -17,6 +17,12 @@
     width: fit-content;
   }
 
+  .blurb {
+    @apply mb-5;
+    @apply text-justify;
+    @apply text-sm;
+  }
+
   .bullet {
     @apply relative;
     @apply text-signature-500;
@@ -24,18 +30,55 @@
     font-size: 0.3rem;
   }
 
+  .columns {
+    @apply relative;
+    @apply flex;
+    @apply flex-wrap;
+    @apply mx-auto;
+    @apply h-auto;
+    @apply w-full;
+  }
+
   .company-logo {
     @apply mb-2;
     height: 100px;
   }
 
+  .name {
+    @apply mx-auto;
+    @apply mb-1;
+    @apply text-4xl;
+    @apply font-semibold;
+    @apply text-regal-white;
+  }
+
   .particles {
     @apply absolute;
     @apply bg-cover;
-    @apply h-full;
+    @apply top-0;
+    @apply left-0;
     @apply z-0;
-    @apply -my-20;
-    width: inherit;
+    @apply h-full;
+    @apply w-full;
+  }
+
+  .position {
+    @apply mx-auto;
+    @apply mb-2;
+    @apply text-2xl;
+    @apply text-regal-white;
+  }
+
+  .profile-pic {
+    @apply flex;
+    @apply flex-shrink-0;
+    @apply bg-white;
+    @apply mx-auto;
+    @apply overflow-hidden;
+    @apply rounded-full;
+    @apply shadow-inner;
+    @apply h-40;
+    @apply w-40;
   }
 
   .left-col {
@@ -43,16 +86,35 @@
     @apply flex-grow;
     @apply bg-signature-700;
     @apply text-regal-white;
-    @apply py-20;
+    @apply pt-20;
+    @apply pb-10;
   }
 
   .right-col {
+    @apply relative;
     @apply flex-col;
     @apply flex-grow;
     @apply bg-white;
     @apply text-regal-gray;
-    @apply py-20;
-    @apply h-full;
+    @apply pt-5;
+    @apply pb-20;
+    @apply h-auto;
+  }
+
+  .resume {
+    @apply bg-regal-white;
+    @apply font-semibold;
+    @apply px-4;
+    @apply py-3;
+    @apply rounded;
+    @apply text-center;
+    @apply text-regal-gray;
+    @apply text-xs;
+    @apply w-32;
+  }
+
+  .resume:hover {
+    @apply bg-gray-400;
   }
 
   .section-headline {
@@ -83,7 +145,7 @@
     @apply bg-signature-500;
     @apply text-white;
     @apply p-2;
-    @apply mx-1;
+    @apply m-1;
   }
 
   .timeline {
@@ -105,8 +167,6 @@
     border-top: 2px solid #f5f5f5;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-left: 160px;
-    width: 80%;
   }
 
   .timeline-element {
@@ -186,20 +246,56 @@
   .timeline-education:after {
     top: 0 !important;
   }
+
+  @screen md {
+    .blurb {
+      @apply text-base;
+    }
+
+    .name {
+      @apply text-3xl;
+    }
+
+    .position {
+      @apply text-xl;
+    }
+  }
+
+  @screen lg {
+    .columns {
+      @apply flex-no-wrap;
+    }
+
+    .left-col {
+      @apply pb-20;
+    }
+
+    .right-col {
+      @apply py-20;
+      @apply h-full;
+    }
+
+    .timeline-contents {
+      margin-left: 160px;
+    }
+
+    .timeline-date {
+      width: 130px;
+    }
+  }
 </style>
 
 <svelte:head>
   <title>Anton Buenavista's Resume</title>
 </svelte:head>
 
-<section class="flex bg-white overflow-auto scrolling-touch" id="resume">
-  <div class="mx-auto h-auto w-full flex">
+<section class="flex bg-white scrolling-auto" id="resume">
+  <div class="columns">
     <!-- Left Column -->
-    <div class="left-col w-1/4">
+    <div class="left-col w-full lg:w-1/4">
       <div class="flex flex-col -mt-16">
         <div
-          class="mx-auto rounded-full bg-white h-40 w-40 flex flex-shrink-0
-          overflow-hidden shadow-inner"
+          class="profile-pic"
         >
           <img
             alt="Hackergotchi"
@@ -208,12 +304,11 @@
           />
         </div>
         <h2
-          class="mx-auto mb-1 text-4xl font-semibold md:text-3xl
-          text-regal-white"
+          class="name"
         >
           {person.name.first} {person.name.last}
         </h2>
-        <h3 class="mx-auto mb-2 text-2xl md:text-xl text-regal-white">
+        <h3 class="position">
           {person.position}
         </h3>
         <div class="ml-10">
@@ -255,10 +350,7 @@
             </a>
           </div>
           <div class="my-3">
-            <a
-              class="flex items-center"
-              href="/"
-            >
+            <a class="flex items-center" href="/">
               <i class="fa fa-globe text-2xl"></i>
               <span class="pl-4">{person.contact.website}</span>
             </a>
@@ -290,8 +382,7 @@
         </div>
         <div class="mx-auto mt-8">
           <a
-            class="px-4 py-3 bg-regal-white text-regal-gray text-xs
-            font-semibold rounded hover:bg-gray-400 w-32 text-center"
+            class="resume"
             href="resume/AntonBuenavista_resume.pdf"
           >
             Download a copy of my resume
@@ -300,7 +391,7 @@
       </div>
     </div>
     <!-- Right Column -->
-    <div class="right-col w-3/4">
+    <div class="right-col w-full lg:w-3/4">
       <div class="particles">
         <svelte:component this="{Particles}" />
       </div>
@@ -309,19 +400,18 @@
         <div class="timeline">
           <div class="timeline-element">
             <div class="timeline-contents">
-              <p class="text-sm md:text-base text-justify mb-5">
+              <p class="blurb">
                 {person.blurb.about}
               </p>
             </div>
           </div>
         </div>
-
         <div class="section-title mb-3">EXPERIENCE</div>
         <div class="timeline">
           <ul>
             {#each person.experience as { timeperiod, company, logo, position, location, description, tasks, projects, technologies }}
               <li class="timeline-element">
-                <div class="timeline-date">
+                <div class="timeline-date hidden lg:block">
                   <time class="timeline-timeperiod">{timeperiod}</time>
                 </div>
                 <div class="timeline-contents">
@@ -332,6 +422,7 @@
                     src="resume/{logo}"
                   />
                   <h3 class="clear-both text-2xl font-semibold">{company}</h3>
+                  <h3 class="text-gray-500 lg:hidden">{timeperiod}</h3>
                   <h5 class="italic">{position} · {location}</h5>
                   <div class="clear-both mt-3 text-justify">{description}</div>
                   <div class="my-3">
@@ -369,12 +460,11 @@
             {/each}
           </ul>
         </div>
-
         <div class="section-title my-3">EDUCATION</div>
         <div class="timeline">
           <ul>
             <li class="timeline-element">
-              <div class="timeline-education timeline-date">
+              <div class="timeline-education timeline-date hidden lg:block">
                 <time class="timeline-education timeline-timeperiod">
                   {person.education.timeperiod}
                 </time>
@@ -385,6 +475,9 @@
                 </h3>
                 <h5 class="italic">
                   {person.education.degree} · {person.education.location}
+                </h5>
+                <h5 class="text-gray-500 block lg:hidden">
+                  {person.education.timeperiod}
                 </h5>
                 <div class="my-3">
                   <span class="text-signature-500">AWARDS</span>

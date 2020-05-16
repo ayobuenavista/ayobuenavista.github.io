@@ -20,10 +20,6 @@
     return 'scrolled';
   }
 
-  function getTextColor() {
-    return getClass(y) ? 'text-regal-white' : 'text-regal-gray';
-  }
-
   function setTransitionDuration(node) {
     node.style.transitionDuration = duration;
   }
@@ -34,10 +30,10 @@
 
   $: desktop = size >= lg;
   $: headerClass = getClass(y);
-  $: textColor = getTextColor();
   $: isPlayground = segment === 'playground' ? 'hidden' : '';
-  $: isResume =
-    segment === 'resume' && headerClass !== 'scrolled' ? 'hidden' : '';
+  $: isResume = segment === 'resume';
+  $: shouldHide = isResume && headerClass !== 'scrolled' ? 'hidden' : '';
+  $: shouldWhite = isResume && !desktop ? 'text-regal-white' : '';
   $: visibility = desktop || expand;
 </script>
 
@@ -142,21 +138,20 @@
   <nav>
     <a href=".">
       <div class="profile-pic">
-        <img alt="Profile Picture" class="{isResume}" src="profile.jpg" />
+        <img alt="Profile Picture" class="{shouldHide}" src="profile.jpg" />
       </div>
-      <div class="name {isResume}">Anton Buenavista</div>
+      <div class="name {shouldHide}">Anton Buenavista</div>
     </a>
     <div class="block float-right lg:hidden">
-      <MobileMenu on:click="{toggleMobileMenu}" {expand} {headerClass} />
+      <MobileMenu on:click="{toggleMobileMenu}" {expand} {isResume} {headerClass} />
     </div>
     <div class="nav-container">
       {#if visibility}
-        <div class="nav-links" transition:fly="{{ x: 100, duration: 500 }}">
+        <div class="nav-links {shouldWhite}" transition:fly="{{ x: 100, duration: 500 }}">
           <NavLink
             on:click="{toggleMobileMenu}"
             text="Playground"
             href="playground"
-            color="{textColor}"
             rel="prefetch"
             {segment}
           />
@@ -164,7 +159,6 @@
             on:click="{toggleMobileMenu}"
             text="Resume"
             href="resume"
-            color="{textColor}"
             rel="prefetch"
             {segment}
           />
@@ -172,7 +166,6 @@
             on:click="{toggleMobileMenu}"
             text="About"
             href="#about"
-            color="{textColor}"
             rel="prefetch"
             {segment}
           />
@@ -180,7 +173,6 @@
             on:click="{toggleMobileMenu}"
             text="Contact"
             href="#contact"
-            color="{textColor}"
             rel="prefetch"
             {segment}
           />

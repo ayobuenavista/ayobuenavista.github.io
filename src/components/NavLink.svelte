@@ -4,7 +4,6 @@
   export let segment;
   export let href;
   export let text;
-  export let color;
   export let rel = '';
 
   const dispatch = createEventDispatcher();
@@ -38,7 +37,7 @@
   on:click="{linkTapped}"
   {rel}
   {href}
-  class="{segment === href ? 'text-signature-500' : { color }}"
+  class="{segment === href ? 'text-signature-500' : ''}"
 >
   {text}
 </a>

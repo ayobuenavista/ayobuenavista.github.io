@@ -4,12 +4,14 @@
 
   export let segment;
 
+  const lg = 1024;
   const REGAL_WHITE = '#F5F5F5';
   const REGAL_BLACK = '#4F4F4F';
 
   let expand = true;
   let prev = '';
   let fill = {};
+  let size = 0;
 
   for (const protocol of protocols) {
     protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(
@@ -27,8 +29,8 @@
     fill[segment] = REGAL_BLACK;
     prev = segment;
   }
-  $: expanded = expand ? 'expanded' : 'collapsed';
-  $: visibility = !expand ? 'hidden' : '';
+  $: desktop = size >= lg;
+  $: expanded = expand && desktop ? 'expanded' : 'collapsed';
 </script>
 
 <style>
@@ -135,6 +137,22 @@
     padding-top: 8px;
   }
 
+  .profile-container {
+    @apply flex;
+    @apply mx-auto;
+    @apply h-10;
+    @apply w-3/4;
+    padding-left: 2px;
+  }
+
+  .profile-pic {
+    @apply flex-shrink-0;
+    @apply mr-3;
+    @apply overflow-hidden;
+    @apply rounded-full;
+    @apply shadow-inner;
+  }
+
   .protocols {
     @apply block;
     @apply flex-grow-0;
@@ -186,22 +204,17 @@
   }
 </style>
 
+<svelte:window bind:outerWidth="{size}" />
+
 <nav id="sidebar" aria-label="sidebar" aria-orientation="vertical">
   <div class="animate {expanded}">
     <div class="scrollable">
       <a href="/" class="mt-5 w-full">
-        <div class="mx-auto flex h-10 w-3/4">
-          <div
-            class="rounded-full h-10 w-10 flex-shrink-0 mr-3 overflow-hidden
-            shadow-inner"
-          >
-            <img
-              alt="Profile Picture"
-              class="w-full h-full"
-              src="profile.jpg"
-            />
+        <div class="profile-container">
+          <div class="profile-pic">
+            <img alt="Profile Picture" class="h-10 w-10" src="profile.jpg" />
           </div>
-          {#if expand}
+          {#if expand && desktop}
             <div class="leading-none w-full pt-1 -ml-2" transition:fade>
               <span class="align-middle tracking-tight text-sm font-semibold">
                 Anton Buenavista
@@ -232,7 +245,7 @@
                         />
                       {/await}
                     </div>
-                    {#if expand}
+                    {#if expand && desktop}
                       <span transition:fade>{protocol.name}</span>
                     {/if}
                   </div>
@@ -243,10 +256,12 @@
         </div>
       </div>
     </div>
-    <div class="collapser">
-      <button on:click="{toggleExpand}">
-        <i class="fas fa-angle-double-{expand ? 'left' : 'right'}"></i>
-      </button>
-    </div>
+    {#if desktop}
+      <div class="collapser">
+        <button on:click="{toggleExpand}">
+          <i class="fas fa-angle-double-{expand ? 'left' : 'right'}"></i>
+        </button>
+      </div>
+    {/if}
   </div>
 </nav>

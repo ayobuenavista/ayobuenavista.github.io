@@ -71,24 +71,227 @@
     max-width: 260px;
   }
 
-  .wrapper {
+  .markdown {
     @apply flex;
     @apply flex-col;
+    @apply break-words;
+    @apply leading-normal;
   }
 
-  .wrapper > :global(h1) {
+  .markdown :global(.anchor) {
+    @apply absolute;
+    @apply float-left;
+    @apply leading-none;
+    @apply h-full;
+    margin-left: -20px;
+  }
+
+  .markdown :global(.anchor:focus) {
+    @apply outline-none;
+  }
+
+  .markdown :global(.anchor-link) {
+    @apply inline-block;
+    @apply fill-current;
+  }
+
+  .markdown :global([type=checkbox]) {
+    @apply box-border;
+    @apply p-0;
+  }
+
+  .markdown :global(h1 .anchor-link),
+  .markdown :global(h2 .anchor-link),
+  .markdown :global(h3 .anchor-link),
+  .markdown :global(h4 .anchor-link),
+  .markdown :global(h5 .anchor-link),
+  .markdown :global(h6 .anchor-link) {
+    @apply align-middle;
+    @apply hidden;
+  }
+
+  .markdown :global(h1:hover .anchor),
+  .markdown :global(h2:hover .anchor),
+  .markdown :global(h3:hover .anchor),
+  .markdown :global(h4:hover .anchor),
+  .markdown :global(h5:hover .anchor),
+  .markdown :global(h6:hover .anchor) {
+    @apply no-underline;
+  }
+
+  .markdown :global(h1:hover .anchor .anchor-link),
+  .markdown :global(h2:hover .anchor .anchor-link),
+  .markdown :global(h3:hover .anchor .anchor-link),
+  .markdown :global(h4:hover .anchor .anchor-link),
+  .markdown :global(h5:hover .anchor .anchor-link),
+  .markdown :global(h6:hover .anchor .anchor-link) {
+    @apply inline-block;
+    @apply visible;
+    @apply h-full;
+  }
+
+  .markdown :global(h1:hover .anchor .anchor-link:before),
+  .markdown :global(h2:hover .anchor .anchor-link:before),
+  .markdown :global(h3:hover .anchor .anchor-link:before),
+  .markdown :global(h4:hover .anchor .anchor-link:before),
+  .markdown :global(h5:hover .anchor .anchor-link:before),
+  .markdown :global(h6:hover .anchor .anchor-link:before) {
+    @apply inline-block;
+    content: ' ';
+    background: url(link.svg) no-repeat;
+    background-size: 20px 20px;
+    vertical-align: -25%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .markdown :global(a) {
+    background-color: initial;
+  }
+
+  .markdown :global(a:active),
+  .markdown :global(a:hover) {
+    outline-width: 0;
+  }
+
+  .markdown :global(details) {
+    @apply block;
+  }
+
+  .markdown :global(summary) {
+    display: list-item;
+  }
+
+  .markdown :global(strong) {
+    @apply font-bold;
+    font-weight: inherit;
+  }
+
+  .markdown :global(img) {
+    border-style: none;
+  }
+
+  .markdown :global(code),
+  .markdown :global(kbd),
+  .markdown :global(pre) {
+    @apply font-mono;
+    @apply text-base;
+  }
+
+  .markdown :global(dd) {
+    @apply ml-0;
+  }
+
+  .markdown :global(pre) {
+    @apply my-0;
+    @apply rounded-lg
+  }
+
+  .markdown :global(kbd) {
+    @apply inline-block;
+    @apply align-middle;
+    @apply bg-regal-white;
+    @apply border;
+    @apply font-mono;
+    @apply leading-none;
+    @apply rounded-sm;
+    @apply shadow;
+    @apply text-regal-gray;
+    padding: 3px 5px;
+  }
+
+  .markdown :global(hr) {
+    @apply bg-transparent;
+    @apply border-0;
+    @apply border-b;
+    @apply border-regal-gray;
+    @apply overflow-hidden;
+    @apply h-0;
+    box-sizing: initial;
+    margin: 15px 0;
+  }
+
+  .markdown :global(hr:after),
+  .markdown :global(hr:before) {
+    @apply table;
+    content: "";
+  }
+
+  .markdown :global(hr:after) {
+    @apply clear-both;
+  }
+
+  .markdown :global(input) {
+    @apply m-0;
+    @apply overflow-visible;
+  }
+  
+  .markdown :global(table) {
+    @apply border-collapse;
+    border-spacing: 0;
+  }
+
+  .markdown :global(td),
+  .markdown :global(th) {
+    @apply p-0;
+  }
+
+  .markdown :global(details summary) {
+    @apply cursor-pointer;
+  }
+
+  .markdown :global(blockquote) {
+    @apply m-0;
+  }
+
+  .markdown :global(p) {
+    @apply mt-0;
+    @apply mb-5;
+  }
+
+  .markdown :global(ol),
+  .markdown :global(ul) {
+    @apply pl-0;
+    @apply my-0;
+  }
+
+  .markdown :global(ol ol),
+  .markdown :global(ul ol) {
+    list-style-type: lower-roman;
+  }
+
+  .markdown :global(ol ol ol),
+  .markdown :global(ol ul ol),
+  .markdown :global(ul ol ol),
+  .markdown :global(ul ul ol) {
+    list-style-type: lower-alpha;
+  }
+
+  .markdown :global(blockquote),
+  .markdown :global(details),
+  .markdown :global(dl),
+  .markdown :global(ol),
+  .markdown :global(p),
+  .markdown :global(pre),
+  .markdown :global(table),
+  .markdown :global(ul) {
+    @apply mt-0;
+    @apply mb-5;
+  }
+
+  .markdown :global(h1) {
     @apply font-medium;
     @apply text-3xl;
   }
 
-  .wrapper > :global(h2) {
+  .markdown :global(h2) {
     @apply font-mono;
     @apply font-semibold;
     @apply text-xl;
     @apply text-signature-400;
   }
 
-  .wrapper > :global(h3) {
+  .markdown :global(h3) {
     @apply font-semibold;
     @apply text-gray-700;
   }
@@ -99,14 +302,15 @@
 
   <meta name="twitter:title" content="{md.metadata.title}" />
   <meta name="twitter:description" content="{md.metadata.description}" />
-  <meta name="Description" content="{md.metadata.description}" />
+  <meta property="og:title" content="{md.metadata.title}" />
+  <meta property="og:description" content="{md.metadata.description}">
 </svelte:head>
 
 <!-- Article Content -->
 <section class="content">
   <span class="font-semibold text-4xl">{md.metadata.title}</span>
   <span class="horizontal-line my-2 bg-red-500"></span>
-  <article class="wrapper mt-10">
+  <article class="markdown mt-10">
     {@html md.html}
   </article>
 </section>

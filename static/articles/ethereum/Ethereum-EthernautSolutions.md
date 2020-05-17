@@ -9,6 +9,12 @@ date: 7 May 2020
 
 This is a *sample*
 
+```js
+function main() {
+  console.log('Hello World');
+}
+```
+
 ## First subhead A
 
 blah blah

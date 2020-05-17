@@ -34,7 +34,9 @@ export default function get_articles(protocol) {
           <a
             href="playground/${protocol}/${metadata.id}#${deeplink}"
             class="anchor" aria-hidden="true"
-          ></a>
+          >
+            <span class="anchor-link"></span>
+          </a>
           ${text}
         </h${level}>`;
     };

@@ -45,6 +45,7 @@
     "markdown-toc": "^1.2.0",
     "marked": "^1.0.0",
     "polka": "^0.5.2",
+    "prism-svelte": "^0.4.6",
     "prismjs": "^1.20.0",
     "sirv": "^0.4.2",
     "tsparticles": "^1.13.5"

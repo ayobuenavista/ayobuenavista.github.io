@@ -146,7 +146,7 @@
         <p class="blurb">
           <span class="text-signature-300">I'm a</span> cryptonative in the cryptoverse
           <br />
-          <span class="text-signature-300">I enjoy</span> trying new things
+          <span class="text-signature-300">I enjoy</span> trying out new things
           <br />
           <span class="text-signature-300">I like to</span> build stuff just for fun
           <br />

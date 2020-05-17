@@ -20,14 +20,34 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-115783431-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115783431-1');
+    </script>
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ayobuenavista" />
     <meta name="twitter:creator" content="@ayobuenavista" />
+    <meta name="twitter:title" content="Anton Buenavista" />
+    <meta name="twitter:description" content="The personal website of Anton Buenavista" />
     <meta
       name="twitter:image"
-      content="https://ayobuenavista.io/twitter-card.png"
+      content="https://ayobuenavista.io/twitter_card.png"
     />
-    <meta name="og:image" content="https://ayobuenavista.io/twitter-card.png" />
+    <meta property="og:title" content="Anton Buenavista" />
+    <meta property="og:url" content="https://ayobuenavista.io/">
+    <meta property="og:description" content="The personal website of Anton Buenavista"">
+    <meta property="og:image" content="https://ayobuenavista.io/twitter_card.png" />
 
     %sapper.styles% %sapper.head%
   </head>

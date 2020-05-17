@@ -1,4 +1,5 @@
 <script>
+  import Analytics from '@/components/GoogleAnalytics.svelte';
   import Header from '@/components/Header.svelte';
   import Footer from '@/components/Footer.svelte';
 
@@ -16,10 +17,10 @@
   }
 </style>
 
-<Header {segment} />
+<Analytics />
 
+<Header {segment} />
 <main>
   <slot />
 </main>
-
 <Footer {segment} />

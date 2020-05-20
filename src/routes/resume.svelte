@@ -3,13 +3,18 @@
   import { onMount } from 'svelte';
   import { DETAILS } from 'static/resume.yml';
 
+  const lg = 1024;
+
   let Particles;
   let person = yaml.load(DETAILS);
+  let size = 0;
 
   onMount(async () => {
     const module = await import('@/components/Particles.svelte');
     Particles = module.default;
   });
+
+  $: desktop = size >= lg;
 </script>
 
 <style>
@@ -285,6 +290,8 @@
   }
 </style>
 
+<svelte:window bind:outerWidth="{size}" />
+
 <svelte:head>
   <title>Anton Buenavista's Resume</title>
 </svelte:head>
@@ -382,7 +389,7 @@
     <!-- Right Column -->
     <div class="right-col w-full lg:w-3/4">
       <div class="particles">
-        <svelte:component this="{Particles}" />
+        <svelte:component this="{Particles}" {desktop} />
       </div>
       <div class="flex flex-col w-11/12 mx-auto z-10">
         <div class="section-title my-3">ABOUT</div>

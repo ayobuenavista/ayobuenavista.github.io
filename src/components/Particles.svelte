@@ -2,14 +2,24 @@
   import { onMount } from 'svelte';
   import { tsParticles } from 'tsparticles';
 
+  export let desktop;
+
+  let numParticles;
+  let particleSize;
+  let valueArea;
+  
   onMount(async () => {
+    numParticles = (desktop) ? 50 : 10;
+    particleSize = (desktop) ? 4 : 2;
+    valueArea = (desktop) ? 1200 : 400;
+
     tsParticles.load('particles-js', {
       particles: {
         number: {
-          value: 50,
+          value: numParticles,
           density: {
             enable: true,
-            value_area: 1200,
+            value_area: valueArea,
           },
         },
         color: {
@@ -36,7 +46,7 @@
           },
         },
         size: {
-          value: 4,
+          value: particleSize,
           random: true,
           anim: {
             enable: false,

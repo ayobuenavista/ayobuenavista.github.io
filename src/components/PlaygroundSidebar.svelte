@@ -41,10 +41,16 @@
 </script>
 
 <style>
+  ::-webkit-scrollbar {
+    @apply bg-transparent;
+    @apply w-0;
+  }
+
   #sidebar {
     @apply relative;
     @apply bg-regal-black;
     @apply text-white;
+    @apply h-auto;
     @apply z-50;
   }
 
@@ -54,6 +60,15 @@
 
   #sidebar > .expanded {
     @apply w-40;
+  }
+
+  #sidebar > .sidebar-container {
+    @apply flex;
+    @apply flex-col;
+    @apply m-0;
+    @apply sticky;
+    @apply top-0;
+    @apply h-screen;
   }
 
   a {
@@ -92,10 +107,11 @@
   }
 
   .collapser {
-    @apply absolute;
+    @apply sticky;
+    @apply p-2;
     @apply bottom-0;
     @apply left-0;
-    @apply p-2;
+    @apply right-0;
     @apply w-full;
     @apply z-10;
   }
@@ -115,6 +131,15 @@
 
   .collapsed .item > .svg {
     @apply mx-auto;
+  }
+
+  .elements {
+    @apply flex;
+    @apply flex-col;
+    @apply h-screen;
+    @apply w-full;
+    @apply overflow-x-hidden;
+    @apply overflow-y-auto;
   }
 
   .expanded a {
@@ -142,15 +167,15 @@
 
   .item > .svg {
     @apply inline-block;
+    @apply align-middle;
   }
 
   .item > span {
-    @apply absolute;
+    @apply inline-block;
     @apply align-middle;
     @apply text-regal-white;
     @apply text-sm;
     padding-left: 3px;
-    padding-top: 8px;
   }
 
   .profile-container {
@@ -207,14 +232,6 @@
     @apply bg-transparent;
   }
 
-  .scrollable {
-    @apply flex;
-    @apply flex-col;
-    @apply overflow-x-hidden;
-    @apply overflow-y-auto;
-    @apply w-full;
-  }
-
   .selected > .item > span {
     @apply text-regal-black;
   }
@@ -223,8 +240,8 @@
 <svelte:window bind:outerWidth="{size}" />
 
 <nav id="sidebar" aria-label="sidebar" aria-orientation="vertical">
-  <div class="animate {expanded}">
-    <div class="scrollable">
+  <div class="sidebar-container animate {expanded}">
+    <div class="elements">
       <a href="/" class="mt-5 w-full">
         <div class="profile-container">
           <div class="profile-pic">

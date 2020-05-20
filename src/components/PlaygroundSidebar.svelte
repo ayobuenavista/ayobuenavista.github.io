@@ -1,5 +1,6 @@
 <script>
   import { fade } from 'svelte/transition';
+  import { articleTitle, articlePane, navPane } from '@/utils/stores.js';
   import protocols from '@/conf/protocols.js';
 
   export let segment;
@@ -20,6 +21,11 @@
     fill[protocol.id] = REGAL_WHITE;
   }
 
+  function select(id) {
+    articleTitle.set('Introduction');
+    segment = id;
+  }
+
   function toggleExpand() {
     expand = !expand;
   }
@@ -31,6 +37,7 @@
   }
   $: desktop = size >= lg;
   $: expanded = expand && desktop ? 'expanded' : 'collapsed';
+  $: showPane = $articlePane || $navPane;
 </script>
 
 <style>
@@ -38,6 +45,7 @@
     @apply relative;
     @apply bg-regal-black;
     @apply text-white;
+    @apply z-50;
   }
 
   #sidebar > .collapsed {
@@ -73,6 +81,14 @@
     @apply transition-all;
     @apply ease-in-out;
     @apply duration-500;
+  }
+
+  .bg-mobile-white {
+    background-color: #fff !important;
+  }
+
+  .bg-mobile-regal-white {
+    background-color: #f5f5f5 !important;
   }
 
   .collapser {
@@ -230,9 +246,11 @@
               <li id="{protocol.id}">
                 <a
                   href="playground/{protocol.id}"
-                  on:click="{() => (segment = protocol.id)}"
+                  on:click="{() => select(protocol.id)}"
                   class:selected="{segment === protocol.id}"
-                  class="animate {expanded}"
+                  class="animate {expanded}
+                  {segment === protocol.id && showPane && !desktop ? 'bg-mobile-regal-white' : ''}
+                  {segment === protocol.id && !showPane && !desktop ? 'bg-mobile-white' : ''}"
                   rel="prefetch"
                 >
                   <div class="item animate">

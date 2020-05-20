@@ -22,12 +22,13 @@
     name="twitter:description"
     content="Articles on protocol's I've played around with"
   />
+  <meta property="og:title" content="Anton Buenavista's Playground" />
   <meta
-    name="Description"
+    property="og:description"
     content="Articles on protocol's I've played around with"
   />
 </svelte:head>
 
-<section class="relative p-10 border-l border-r bg-white h-screen w-full">
+<section class="relative p-3 lg:p-10 lg:border-l border-r bg-white h-screen w-full">
   {@html intro.html}
 </section>

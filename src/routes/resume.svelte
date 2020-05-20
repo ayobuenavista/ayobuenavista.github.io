@@ -294,23 +294,15 @@
     <!-- Left Column -->
     <div class="left-col w-full lg:w-1/4">
       <div class="flex flex-col -mt-16">
-        <div
-          class="profile-pic"
-        >
+        <div class="profile-pic">
           <img
             alt="Hackergotchi"
             class="m-auto inset-0 z-negative w-32 h-32 align-middle"
             src="hackergotchi.png"
           />
         </div>
-        <h2
-          class="name"
-        >
-          {person.name.first} {person.name.last}
-        </h2>
-        <h3 class="position">
-          {person.position}
-        </h3>
+        <h2 class="name">{person.name.first} {person.name.last}</h2>
+        <h3 class="position">{person.position}</h3>
         <div class="ml-10">
           <div class="section-headline">PROFILE</div>
           <div class="flex items-center my-3">
@@ -381,10 +373,7 @@
           </div>
         </div>
         <div class="mx-auto mt-8">
-          <a
-            class="resume"
-            href="resume/AntonBuenavista_resume.pdf"
-          >
+          <a class="resume" href="resume/AntonBuenavista_resume.pdf">
             Download a copy of my resume
           </a>
         </div>
@@ -400,9 +389,7 @@
         <div class="timeline">
           <div class="timeline-element">
             <div class="timeline-contents">
-              <p class="blurb">
-                {person.blurb.about}
-              </p>
+              <p class="blurb">{person.blurb.about}</p>
             </div>
           </div>
         </div>

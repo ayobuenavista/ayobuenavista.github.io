@@ -10,21 +10,31 @@
 </script>
 
 <script>
+  import { fly } from 'svelte/transition';
+  import { articleTitle, navPane } from '@/utils/stores.js';
+
   export let article;
   export let md;
   export let protocol;
+
+  const lg = 1024;
+
+  let size = 0;
+  
+  if ($articleTitle === '') articleTitle.set(md.metadata.title);
+
+  $: desktop = size >= lg;
 </script>
 
 <style>
   .content {
     @apply relative;
     @apply bg-white;
-    @apply border-l;
     @apply min-h-screen;
     @apply h-full;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
-    @apply p-10;
+    @apply p-3;
     @apply w-full;
     min-width: 50%;
     max-width: inherit;
@@ -60,15 +70,14 @@
     @apply flex;
     @apply flex-col;
     @apply bg-regal-white;
-    @apply border-l;
     @apply min-h-screen;
     @apply h-full;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
     @apply px-4;
-    @apply py-16;
-    min-width: 260px;
-    max-width: 260px;
+    @apply py-4;
+    @apply min-w-full;
+    @apply max-w-full;
   }
 
   .markdown {
@@ -295,7 +304,23 @@
     @apply font-semibold;
     @apply text-gray-700;
   }
+
+  @screen lg {
+    .content {
+      @apply border-l;
+      @apply border-r;
+      @apply p-10;
+    }
+
+    .navigation {
+      @apply py-16;
+      min-width: 260px;
+      max-width: 260px;
+    }
+  }
 </style>
+
+<svelte:window bind:outerWidth="{size}" />
 
 <svelte:head>
   <title>{md.metadata.title}</title>
@@ -307,21 +332,27 @@
 </svelte:head>
 
 <!-- Article Content -->
-<section class="content">
-  <span class="font-semibold text-4xl">{md.metadata.title}</span>
-  <span class="horizontal-line my-2 bg-red-500"></span>
-  <article class="markdown mt-10">
-    {@html md.html}
-  </article>
-</section>
+{#if !$navPane || desktop}
+  <section class="content">
+    {#if desktop}
+      <span class="font-semibold text-4xl">{md.metadata.title}</span>
+      <span class="horizontal-line my-2 bg-red-500"></span>
+    {/if}
+    <article class="markdown lg:mt-10">
+      {@html md.html}
+    </article>
+  </section>
+{/if}
 <!-- Article Navigation -->
-<section class="navigation">
-  <h3 class="text-xl text-signature-500 font-semibold mb-3">Navigation</h3>
-  <div class="deeplinks">
-    {#each md.deeplinks as { content, lvl, slug }}
-      <a href="playground/{protocol}/{article}#{slug}" class="lvl{lvl}">
-        {content}
-      </a>
-    {/each}
-  </div>
-</section>
+{#if $navPane || desktop}
+  <section class="navigation">
+    <h3 class="text-xl text-signature-500 font-semibold mb-3">Navigation</h3>
+    <div class="deeplinks">
+      {#each md.deeplinks as { content, lvl, slug }}
+        <a href="playground/{protocol}/{article}#{slug}" class="lvl{lvl}">
+          {content}
+        </a>
+      {/each}
+    </div>
+  </section>
+{/if}

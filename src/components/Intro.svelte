@@ -76,7 +76,7 @@
   .tree-mobile {
     @apply block;
     @apply mx-auto;
-    @apply mt-8 ;
+    @apply mt-8;
     @apply w-9/12;
   }
 
@@ -115,7 +115,7 @@
     .name {
       @apply text-4xl;
     }
-    
+
     .tree-desktop {
       @apply block;
       @apply w-3/5;
@@ -123,7 +123,7 @@
 
     .tree-mobile {
       @apply hidden;
-      @apply w-3/5
+      @apply w-3/5;
     }
   }
 </style>
@@ -141,31 +141,28 @@
           <span class="horizontal-line"></span>
         </h2>
         <div class="tree-mobile">
-          <img alt="Merkle Tree" class="object-scale-down" src="merkle_tree.png" />
+          <img
+            alt="Merkle Tree"
+            class="object-scale-down"
+            src="merkle_tree.png"
+          />
         </div>
         <p class="blurb">
-          <span class="text-signature-300">I'm a</span> cryptonative in the cryptoverse
+          <span class="text-signature-300">I'm a</span>
+          cryptonative in the cryptoverse
           <br />
-          <span class="text-signature-300">I enjoy</span> trying out new things
+          <span class="text-signature-300">I enjoy</span>
+          trying out new things
           <br />
-          <span class="text-signature-300">I like to</span> build stuff just for fun
+          <span class="text-signature-300">I like to</span>
+          build stuff just for fun
           <br />
           <br />
           Welcome to my playground
         </p>
         <div class="justify-center my-12">
-          <a
-            class="btn-playground"
-            href="playground"
-          >
-            Visit my Playground
-          </a>
-          <a
-            class="btn-resume"
-            href="resume"
-          >
-            Resume
-          </a>
+          <a class="btn-playground" href="playground">Visit my Playground</a>
+          <a class="btn-resume" href="resume">Resume</a>
         </div>
       </div>
     </div>

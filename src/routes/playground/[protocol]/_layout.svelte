@@ -11,19 +11,26 @@
 
 <script>
   import { beforeUpdate } from 'svelte';
-  import Article from '@/components/PlaygroundArticles.svelte';
+  import { fly } from 'svelte/transition';
   import { stores } from '@sapper/app';
+  import { articlePane } from '@/utils/stores.js';
+  import Article from '@/components/PlaygroundArticles.svelte';
 
   export let articles;
   export let segment;
 
+  const lg = 1024;
+
   let page;
   let protocol;
+  let size = 0;
 
   beforeUpdate(() => {
     page = stores().page;
     protocol = $page.params.protocol;
   });
+
+  $: desktop = size >= lg;
 </script>
 
 <style>
@@ -32,27 +39,42 @@
     @apply flex-col;
     @apply bg-regal-white;
     @apply border-r;
-    @apply p-4;
+    @apply p-2;
+    @apply pr-5;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
-    min-width: 365px;
-    max-width: 365px;
+    @apply min-w-full;
+    @apply max-w-full;
+  }
+
+  @screen lg {
+    .articles {
+      @apply p-4;
+      min-width: 365px;
+      max-width: 365px;
+    }
   }
 </style>
 
+<svelte:window bind:outerWidth="{size}" />
+
 <!-- Article List -->
-<section class="articles">
-  {#if articles.length > 0}
-    <h1 class="font-semibold mb-3">Select an article</h1>
-    <ul>
-      {#each articles as article}
-        <li>
-          <Article {...article.metadata} {segment} bind:protocol />
-        </li>
-      {/each}
-    </ul>
-  {:else}
-    <h1 class="font-semibold mb-3">Articles are not yet available</h1>
-  {/if}
-</section>
-<slot />
+{#if $articlePane || desktop}
+  <section class="articles" transition:fly="{{ x: -100, duration: 200 }}">
+    {#if articles.length > 0}
+      <h1 class="font-semibold mb-3">Select an article</h1>
+      <ul>
+        {#each articles as article}
+          <li>
+            <Article {...article.metadata} {desktop} {segment} bind:protocol />
+          </li>
+        {/each}
+      </ul>
+    {:else}
+      <h1 class="font-semibold mb-3">Articles are not yet available</h1>
+    {/if}
+  </section>
+{/if}
+{#if !$articlePane || desktop}
+  <slot />
+{/if}

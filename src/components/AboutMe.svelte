@@ -121,7 +121,11 @@
         </p>
         <div class="skills">
           {#each person.blurb.skills as skill}
-            <span class="skill" aria-label="{skill.skill}" data-balloon-pos="down-left">
+            <span
+              class="skill"
+              aria-label="{skill.skill}"
+              data-balloon-pos="down-left"
+            >
               <i class="{skill.icon} colored text-6xl"></i>
             </span>
           {/each}

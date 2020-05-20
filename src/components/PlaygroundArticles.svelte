@@ -1,11 +1,24 @@
 <script>
+  import { beforeUpdate } from 'svelte';
+  import { articleTitle, articlePane, navPane } from '@/utils/stores.js';
+
   export let id;
   export let type;
   export let title;
   export let description;
   export let date;
   export let protocol;
+  export let desktop;
   export let segment;
+
+  function mobileClicked() {
+    articleTitle.set(title);
+
+    if (!desktop) {
+      articlePane.set(false);
+      navPane.set(false);
+    }
+  }
 
   $: icon = () => {
     switch (type) {
@@ -77,7 +90,7 @@
   }
 </style>
 
-<a href="playground/{protocol}/{id}">
+<a href="playground/{protocol}/{id}" on:click="{mobileClicked}">
   <article class:selected="{segment === id}">
     <div class="icon">
       <div>

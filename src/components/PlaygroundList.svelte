@@ -28,7 +28,7 @@
     @apply bg-gray-100;
     @apply shadow-2xl;
   }
-  
+
   .header {
     @apply mb-10;
     @apply text-3xl;

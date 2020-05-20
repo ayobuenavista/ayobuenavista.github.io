@@ -132,7 +132,8 @@
 
 <header
   use:setTransitionDuration
-  class="{isPlayground} {headerClass}"
+  class="{isPlayground}
+  {headerClass}"
   id="header"
 >
   <nav>
@@ -143,11 +144,19 @@
       <div class="name {shouldHide}">Anton Buenavista</div>
     </a>
     <div class="block float-right lg:hidden">
-      <MobileMenu on:click="{toggleMobileMenu}" {expand} {isResume} {headerClass} />
+      <MobileMenu
+        on:click="{toggleMobileMenu}"
+        {expand}
+        {isResume}
+        {headerClass}
+      />
     </div>
     <div class="nav-container">
       {#if visibility}
-        <div class="nav-links {shouldWhite}" transition:fly="{{ x: 100, duration: 500 }}">
+        <div
+          class="nav-links {shouldWhite}"
+          transition:fly="{{ x: 100, duration: 500 }}"
+        >
           <NavLink
             on:click="{toggleMobileMenu}"
             text="Playground"

@@ -1,6 +1,8 @@
 ---
 id: Introduction-Solana
 ---
+![Solana logo](logos/solana.png)
+
 Solana is a high-performance, permissionless blockchain that features support for smart contracts and decentralized applications.
 
 Solana is a public base-layer blockchain protocol built from the ground up and optimized for scalability. Its goal is to provide a platform that enables developers to create decentralized applications (dApps) without needing to design around performance bottlenecks. Once realized, Solana intends to feature automatically ordered transactions, sub-second settlement times, low transaction costs, and support for all LLVM compatible smart contract languages.

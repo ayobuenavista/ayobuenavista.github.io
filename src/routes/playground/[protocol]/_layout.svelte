@@ -40,7 +40,6 @@
     @apply bg-regal-white;
     @apply border-r;
     @apply p-2;
-    @apply pr-5;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
     @apply min-w-full;

@@ -12,6 +12,42 @@
   }
 </script>
 
+<style>
+  .markdown {
+    @apply relative;
+    @apply bg-white;
+    @apply border-r;
+    @apply p-3;
+    @apply pb-10;
+    @apply overflow-x-hidden;
+    @apply overflow-y-auto;
+    @apply h-screen;
+    @apply w-full;
+  }
+
+  .markdown :global(img) {
+    @apply mx-auto;
+    @apply mb-10;
+    @apply text-justify;
+    border-style: none;
+    max-height: 150px;
+  }
+
+  .markdown :global(p) {
+    @apply mt-0;
+    @apply mb-5;
+    @apply text-justify;
+    @apply text-regal-black;
+  }
+
+  @screen lg {
+    .markdown {
+      @apply border-l;
+      @apply p-10;
+    }
+  }
+</style>
+
 <script>
   export let intro;
 </script>
@@ -29,6 +65,6 @@
   />
 </svelte:head>
 
-<section class="relative p-3 lg:p-10 lg:border-l border-r bg-white h-screen w-full">
+<section class="markdown">
   {@html intro.html}
 </section>

@@ -30,11 +30,12 @@
   .content {
     @apply relative;
     @apply bg-white;
-    @apply min-h-screen;
-    @apply h-full;
+    @apply p-3;
+    @apply pb-12;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
-    @apply p-3;
+    @apply min-h-screen;
+    @apply h-full;
     @apply w-full;
     min-width: 50%;
     max-width: inherit;
@@ -177,7 +178,9 @@
   }
 
   .markdown :global(img) {
+    @apply mb-2;
     border-style: none;
+    max-height: 100px;
   }
 
   .markdown :global(code),

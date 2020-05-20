@@ -9,6 +9,7 @@
   .article-pane {
     @apply flex;
     @apply flex-col;
+    @apply h-full;
     @apply w-full;
     margin-top: 40px;
   }

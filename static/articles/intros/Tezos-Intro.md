@@ -1,6 +1,8 @@
 ---
 id: Introduction-Tezos
 ---
+![Tezos logo](logos/tezos.png)
+
 Tezos is a multi-purpose blockchain which aims to combine a self-amending protocol and on-chain governance to manage future changes and implementations to the network. It supports the creation of new tokens and smart contracts (thus decentralized applications or dApps). The on-chain governance system enables token holders to make decisions together and improve the network over time, as opposed to the less-inclusive off-chain governance models used by Bitcoin and Ethereum.
 
 Tezos founded and on-chain governance design

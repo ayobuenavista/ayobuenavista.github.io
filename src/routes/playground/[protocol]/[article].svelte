@@ -30,7 +30,9 @@
   .content {
     @apply relative;
     @apply bg-white;
-    @apply p-3;
+    @apply pl-5;
+    @apply pt-12;
+    @apply pr-3;
     @apply pb-12;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
@@ -73,6 +75,7 @@
     @apply bg-regal-white;
     @apply min-h-screen;
     @apply h-full;
+    @apply mt-12;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
     @apply px-4;
@@ -93,7 +96,7 @@
     @apply float-left;
     @apply leading-none;
     @apply h-full;
-    margin-left: -20px;
+    margin-left: -15px;
   }
 
   .markdown :global(.anchor:focus) {
@@ -146,13 +149,14 @@
   .markdown :global(h4:hover .anchor .anchor-link:before),
   .markdown :global(h5:hover .anchor .anchor-link:before),
   .markdown :global(h6:hover .anchor .anchor-link:before) {
-    @apply inline-block;
-    content: ' ';
+    @apply absolute;
     background: url(link.svg) no-repeat;
-    background-size: 20px 20px;
-    vertical-align: -25%;
-    width: 20px;
-    height: 20px;
+    background-size: 15px 15px;
+    content: ' ';
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
   }
 
   .markdown :global(a) {
@@ -316,6 +320,7 @@
     }
 
     .navigation {
+      @apply mt-0;
       @apply py-16;
       min-width: 260px;
       max-width: 260px;

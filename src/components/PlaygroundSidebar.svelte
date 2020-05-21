@@ -47,10 +47,10 @@
   }
 
   #sidebar {
-    @apply relative;
+    @apply absolute;
     @apply bg-regal-black;
     @apply text-white;
-    @apply h-auto;
+    @apply h-screen;
     @apply z-50;
   }
 
@@ -157,6 +157,7 @@
   .item {
     @apply py-2;
     @apply text-regal-white;
+    height: 46px;
   }
 
   .item:hover {
@@ -235,6 +236,12 @@
   .selected > .item > span {
     @apply text-regal-black;
   }
+
+  @screen lg {
+    #sidebar {
+      @apply relative;
+    }
+  }
 </style>
 
 <svelte:window bind:outerWidth="{size}" />
@@ -281,7 +288,12 @@
                       {/await}
                     </div>
                     {#if expand && desktop}
-                      <span transition:fade>{protocol.name}</span>
+                      <span
+                        in:fade="{{ duration: 1000 }}"
+                        out:fade="{{ duration: 200 }}"
+                      >
+                        {protocol.name}
+                      </span>
                     {/if}
                   </div>
                 </a>

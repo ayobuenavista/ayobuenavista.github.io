@@ -39,6 +39,7 @@
     @apply flex-col;
     @apply bg-regal-white;
     @apply border-r;
+    @apply mt-12;
     @apply p-2;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
@@ -48,6 +49,7 @@
 
   @screen lg {
     .articles {
+      @apply mt-0;
       @apply p-4;
       min-width: 365px;
       max-width: 365px;

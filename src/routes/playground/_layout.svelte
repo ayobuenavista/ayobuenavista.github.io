@@ -6,15 +6,7 @@
 </script>
 
 <style>
-  .article-pane {
-    @apply flex;
-    @apply flex-col;
-    @apply h-full;
-    @apply w-full;
-    margin-top: 40px;
-  }
-
-  .playground {
+  #playground {
     @apply antialiased;
     @apply flex;
     @apply overflow-hidden;
@@ -23,9 +15,28 @@
     max-width: 100vw;
   }
 
+  .article-content {
+    @apply flex;
+    @apply min-h-0;
+    @apply h-auto;
+    @apply w-full;
+    padding-left: 60px;
+  }
+
+  .article-pane {
+    @apply flex;
+    @apply flex-col;
+    @apply h-screen;
+    @apply w-full;
+  }
+
   @screen lg {
+    .article-content {
+      @apply pl-0;
+    }
+
     .article-pane {
-      @apply mt-0;
+      @apply flex-row;
     }
   }
 </style>
@@ -36,13 +47,13 @@
 
 <a class="absolute hidden" href="playground/hidden-links">.</a>
 
-<main class="playground" id="playground">
-  {#if segment !== undefined}
-    <MobileNav />
-  {/if}
+<main id="playground">
   <Sidebar {segment} />
   <div class="article-pane">
-    <div class="flex min-h-0">
+    {#if segment !== undefined}
+      <MobileNav />
+    {/if}
+    <div class="article-content">
       <slot />
     </div>
   </div>

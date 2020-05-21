@@ -17,8 +17,10 @@
     @apply relative;
     @apply bg-white;
     @apply border-r;
-    @apply p-3;
-    @apply pb-10;
+    @apply pl-5;
+    @apply pt-12;
+    @apply pr-3;
+    @apply pb-12;
     @apply overflow-x-hidden;
     @apply overflow-y-auto;
     @apply h-screen;

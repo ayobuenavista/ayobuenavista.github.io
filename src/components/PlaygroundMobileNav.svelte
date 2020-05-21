@@ -38,16 +38,14 @@
 
 <style>
   header {
+    @apply absolute;
     @apply flex-col;
-    @apply fixed;
     @apply border-b;
     @apply text-regal-black;
     @apply p-2;
-    @apply mb-4;
-    @apply mt-0;
-    @apply w-screen;
     @apply top-0;
     @apply z-10;
+    @apply w-screen;
     padding-left: 65px;
     height: 40px;
   }

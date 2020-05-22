@@ -10,6 +10,9 @@
     <loc>https://ayobuenavista.io/playground/</loc>
   </url>
   <url>
+    <loc>https://ayobuenavista.io/playground/kyber/</loc>
+  </url>
+  <url>
     <loc>https://ayobuenavista.io/playground/ethereum/</loc>
   </url>
   <url>
@@ -34,18 +37,15 @@
     <loc>https://ayobuenavista.io/playground/celo/</loc>
   </url>
   <url>
+    <loc>https://ayobuenavista.io/playground/chainlink/</loc>
+  </url>
+  <url>
     <loc>https://ayobuenavista.io/playground/flow/</loc>
   </url>
   <url>
     <loc>https://ayobuenavista.io/resume/AntonBuenavista_resume.pdf</loc>
   </url>
   <url>
-    <loc>https://ayobuenavista.io/playground/ethereum/Ethernaut-Solutions/</loc>
-  </url>
-  <url>
-    <loc>https://ayobuenavista.io/playground/ethereum/Ganache-MainnetFork/</loc>
-  </url>
-  <url>
-    <loc>https://ayobuenavista.io/playground/near/Contracts-Intro/</loc>
+    <loc>https://ayobuenavista.io/playground/kyber/Katalyst-WhatsNew/</loc>
   </url>
 </urlset>

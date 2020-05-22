@@ -30,7 +30,7 @@
   .content {
     @apply relative;
     @apply bg-white;
-    @apply pl-5;
+    @apply pl-4;
     @apply pt-12;
     @apply pr-3;
     @apply pb-12;

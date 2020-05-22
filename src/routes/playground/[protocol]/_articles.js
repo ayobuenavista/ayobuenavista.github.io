@@ -8,6 +8,14 @@ import {
 } from '@sveltejs/site-kit/utils/markdown.js';
 import { highlight } from '@/utils/highlight.js';
 
+function sanitize(str) {
+  return str.replace(/&<"/g, function(m) {
+    if (m === '&') return '&amp;';
+    if (m === '<') return '&lt;';
+    return '&quot;';
+  });
+}
+
 export default function get_articles(protocol) {
   const PATH = `static/articles/${protocol}`;
 
@@ -26,6 +34,13 @@ export default function get_articles(protocol) {
 
     renderer.link = link_renderer;
     renderer.code = highlight;
+    renderer.image = function(src, title, alt) {
+      const exec = /=\s*(\d*)\s*x\s*(\d*)\s*$/.exec(title);
+      let res = '<img src="' + sanitize(src) + '" alt="' + sanitize(alt);
+      if (exec && exec[1]) res += '" height="' + exec[1];
+      if (exec && exec[2]) res += '" width="' + exec[2];
+      return res + '">';
+    };
     renderer.heading = (text, level) => {
       const deeplink = text.toLowerCase().replace(/[^\w]+/g, '-');
 

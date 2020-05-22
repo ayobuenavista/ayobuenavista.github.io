@@ -32,7 +32,6 @@
     @apply mb-10;
     @apply text-justify;
     border-style: none;
-    max-height: 150px;
   }
 
   .markdown :global(p) {

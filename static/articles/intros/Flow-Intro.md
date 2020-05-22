@@ -1,7 +1,7 @@
 ---
 id: Introduction-Flow
 ---
-![Flow logo](logos/flow.png)
+![Flow logo](logos/flow.png "=150x125")
 
 Flow is the blockchain for open worlds. It is described as a fast and developer-friendly blockchain built to support entire ecosystems of apps, games, and the digital assets that power them.
 

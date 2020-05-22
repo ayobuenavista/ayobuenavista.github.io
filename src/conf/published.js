@@ -1,11 +1,14 @@
 export default {
-  ethereum: ['Ethernaut-Solutions', 'Ganache-MainnetFork'],
-  near: ['Contracts-Intro'],
+  kyber: ['Katalyst-WhatsNew'],
+  ethereum: [],
+  near: [],
   tezos: [],
   polkadot: [],
+  cosmos: [],
   algorand: [],
   solana: [],
   skale: [],
   celo: [],
+  chainlink: [],
   flow: [],
 };

@@ -1,5 +1,9 @@
 export default [
   {
+    id: 'kyber',
+    name: 'Kyber',
+  },
+  {
     id: 'ethereum',
     name: 'Ethereum',
   },
@@ -16,6 +20,10 @@ export default [
     name: 'Polkadot',
   },
   {
+    id: 'cosmos',
+    name: 'Cosmos',
+  },
+  {
     id: 'algorand',
     name: 'Algorand',
   },
@@ -30,6 +38,10 @@ export default [
   {
     id: 'celo',
     name: 'Celo',
+  },
+  {
+    id: 'chainlink',
+    name: 'Chainlink',
   },
   {
     id: 'flow',

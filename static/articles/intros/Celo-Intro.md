@@ -1,7 +1,7 @@
 ---
 id: Introduction-Celo
 ---
-![Celo logo](logos/celo.png)
+![Celo logo](logos/celo.png "=150x221")
 
 Celo is a smart contract platform powered by digital assets that tokenize gold and fiat currencies as stablecoins.
 

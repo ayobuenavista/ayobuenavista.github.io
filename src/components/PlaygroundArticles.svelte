@@ -30,6 +30,8 @@
         return 'fas fa-coins';
       case 'guide':
         return 'fab fa-readme';
+      case 'draft':
+        return 'far fa-edit';
       default:
         return 'fas fa-question';
     }

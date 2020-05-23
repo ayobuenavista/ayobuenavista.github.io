@@ -27,6 +27,16 @@
     @apply w-full;
   }
 
+  .markdown :global(p > code) {
+    @apply bg-gray-200;
+    @apply font-mono;
+    @apply m-0;
+    @apply p-1;
+    @apply rounded;
+    @apply text-xs;
+    @apply tracking-wide;
+  }
+
   .markdown :global(img) {
     @apply mx-auto;
     @apply mb-10;

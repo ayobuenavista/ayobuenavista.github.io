@@ -1,9 +1,9 @@
 import { langs } from '@sveltejs/site-kit/utils/markdown.js';
-import PrismJS from 'prismjs';
+import PrismJS from '@/utils/prism.js';
 import 'prism-svelte';
 
 export function highlight(source, lang) {
-  const plang = langs[lang] || '';
+  const plang = langs[lang] || lang;
   const highlighted = plang
     ? PrismJS.highlight(source, PrismJS.languages[plang], lang)
     : source.replace(

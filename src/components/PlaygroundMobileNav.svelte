@@ -43,6 +43,10 @@
 </script>
 
 <style>
+  button {
+    @apply outline-none;
+  }
+
   header {
     @apply absolute;
     @apply flex-col;

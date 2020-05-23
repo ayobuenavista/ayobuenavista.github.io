@@ -187,6 +187,15 @@
     max-height: 100px;
   }
 
+  .markdown :global(p > code) {
+    @apply bg-gray-200;
+    @apply m-0;
+    @apply p-1;
+    @apply rounded;
+    @apply text-xs;
+    @apply tracking-wide;
+  }
+
   .markdown :global(code),
   .markdown :global(kbd),
   .markdown :global(pre) {

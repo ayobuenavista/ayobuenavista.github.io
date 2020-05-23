@@ -21,6 +21,7 @@
     @apply flex;
     @apply border;
     @apply items-center;
+    @apply outline-none;
     @apply px-3;
     @apply py-2;
     @apply rounded;

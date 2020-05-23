@@ -81,6 +81,7 @@
     @apply align-baseline;
     @apply bg-regal-white;
     @apply flex-shrink-0;
+    @apply outline-none;
     @apply overflow-hidden;
     @apply rounded-full;
     @apply text-regal-black;

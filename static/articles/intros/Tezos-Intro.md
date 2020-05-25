@@ -13,13 +13,12 @@ The self-amendment process is split into four periods: the Proposal Period, Expl
 
 **Block Explorer**: [https://tezblock.io/](https://tezblock.io/)
 
-**Addresses**: 32-byte Ed25519 (tz1), Secp256k1 (tz2), or P256 (tz3) key encoded to Base58. There are two types of addresses: implicit and smart contracts. Implicit addresses have tz1, tz2, tz3 prefixes. Smart contracts use kT1 prefix and are created with an origination operation.
-
+**Addresses**: 32-byte Ed25519 (tz1), Secp256k1 (tz2), or P256 (tz3) key encoded to Base58. There are two types of addresses: implicit and smart contracts. Implicit addresses have tz1, tz2, tz3 prefixes. Smart contracts use kT1 prefix and are created with an origination operation.<br />
 Example: `tz1RjtZUVeLhADFHDL8UwDZA6vjWWhojpu5w`
 
-**Block Time**: targetting 1 minute.
+**Block Time**: Targetting 1 minute.
 
-**Consensus**: Emmy+, a Liqidui Proof-of-Stake consensus algorithm.
+**Consensus**: Emmy+, a Liquid Proof-of-Stake consensus algorithm.
 
 **XTZ Supply**: No hard cap on the total supply.
 

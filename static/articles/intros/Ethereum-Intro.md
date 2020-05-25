@@ -9,10 +9,10 @@ Ethereum 2.0 is the upcoming and latest iteration of Ethereum, which will introd
 
 **Block Explorer**: [https://etherscan.io/](https://etherscan.io/)
 
-**Addresses**: "0x" prefix concatenated with the rightmost 20 bytes of the Keccak-256 hash of the ECDSA public key. Account and contract addresses are indistinguishable and share the same format, however contract addresses are determined by the sender address and creation transaction nonce.
+**Addresses**: "0x" prefix concatenated with the rightmost 20 bytes of the Keccak-256 hash of the ECDSA public key. Account and contract addresses are indistinguishable and share the same format, however contract addresses are determined by the sender address and creation transaction nonce.<br />
 Example: `0x2B522cABE9950D1153c26C1b399B293CaA99FcF9`
 
-**Block Time**: average of 15 seconds.
+**Block Time**: Average of 15 seconds.
 
 **Consensus**: For Ethereum 1.0, consensus is Proof-of-Work with a modified version of Nakamoto consensus via transaction-based state transitions. It uses Ethash as the hashing algorithm, which is designed to be ASIC-resistant via memory-hardness. For Ethereum 2.0, consensus is Proof-of-Stake using Casper Correct by Construction with Greediest Heaviest Observed Sub-Tree (GHOST) as the fork-choice rule protocol.
 

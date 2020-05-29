@@ -1,7 +1,7 @@
 <script>
   import yaml from 'js-yaml';
   import { onMount } from 'svelte';
-  import { DETAILS } from 'static/resume.yml';
+  import { DETAILS } from '@/conf/resume.yml';
 
   const lg = 1024;
 

@@ -1,6 +1,6 @@
 <script>
   import yaml from 'js-yaml';
-  import { DETAILS } from 'static/resume.yml';
+  import { DETAILS } from '@/conf/resume.yml';
 
   let person = yaml.load(DETAILS);
 </script>

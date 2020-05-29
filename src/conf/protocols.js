@@ -8,16 +8,16 @@ export default [
     name: 'Ethereum',
   },
   {
+    id: 'polkadot',
+    name: 'Polkadot',
+  },
+  {
     id: 'near',
     name: 'NEAR',
   },
   {
     id: 'tezos',
     name: 'Tezos',
-  },
-  {
-    id: 'polkadot',
-    name: 'Polkadot',
   },
   {
     id: 'cosmos',

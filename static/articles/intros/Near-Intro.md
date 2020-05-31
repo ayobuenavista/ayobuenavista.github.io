@@ -11,7 +11,7 @@ For consensus, once a block producer publishes a block, they collect the signatu
 
 **Block Explorer**: [https://explorer.near.org/](https://explorer.near.org/)
 
-**Addresses**: uses readable account IDs instead of a hash of a public key. Account IDs contain a minimum length of 2 with maximum length of 64. Account ID consists of Account ID parts separated by "." and each part consists of lowercase alphanumeric symbols separated by either _ or -.
+**Addresses**: Uses readable account IDs instead of a hash of a public key. Account IDs contain a minimum length of 2 with maximum length of 64. Account ID consists of Account ID parts separated by "." and each part consists of lowercase alphanumeric symbols separated by either _ or -.
 Example: `app.ayobuenavista`
 
 **Consensus**: Sharded Proof-of-Stake with blocks constructed with a gadget called Doomslug and a slower finality gadget called Nightshade Finality Gadget.

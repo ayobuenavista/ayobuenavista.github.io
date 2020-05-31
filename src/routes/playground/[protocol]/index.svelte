@@ -37,6 +37,13 @@
     @apply tracking-wide;
   }
 
+  .markdown :global(code),
+  .markdown :global(kbd),
+  .markdown :global(pre) {
+    @apply break-words;
+    @apply font-mono;
+  }
+
   .markdown :global(img) {
     @apply mx-auto;
     @apply mb-10;

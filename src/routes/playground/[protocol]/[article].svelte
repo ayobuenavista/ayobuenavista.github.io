@@ -199,8 +199,8 @@
   .markdown :global(code),
   .markdown :global(kbd),
   .markdown :global(pre) {
+    @apply break-normal;
     @apply font-mono;
-    @apply text-base;
   }
 
   .markdown :global(dd) {

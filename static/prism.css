@@ -1,5 +1,5 @@
 /* PrismJS 1.20.0
-https://prismjs.com/download.html#themes=prism-solarizedlight&languages=markup+css+clike+javascript+bash+csharp+git+go+json+ocaml+python+rust+shell-session+solidity */
+https://prismjs.com/download.html#themes=prism-solarizedlight&languages=markup+css+clike+javascript+bash+c+csharp+cpp+git+go+json+ocaml+python+rust+shell-session+solidity */
 /*
  Solarized Color Schemes originally by Ethan Schoonover
  http://ethanschoonover.com/solarized
@@ -36,7 +36,7 @@ pre[class*="language-"] {
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
 	text-align: left;
-	white-space: pre-wrap;
+	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;

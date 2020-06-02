@@ -7,8 +7,5 @@ export default {
   cosmos: [],
   algorand: [],
   solana: [],
-  skale: [],
   celo: [],
-  chainlink: [],
-  flow: [],
 };

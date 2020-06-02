@@ -32,19 +32,7 @@ export default [
     name: 'Solana',
   },
   {
-    id: 'skale',
-    name: 'SKALE',
-  },
-  {
     id: 'celo',
     name: 'Celo',
-  },
-  {
-    id: 'chainlink',
-    name: 'Chainlink',
-  },
-  {
-    id: 'flow',
-    name: 'Flow',
   },
 ];

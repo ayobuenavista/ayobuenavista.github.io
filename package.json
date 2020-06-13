@@ -47,6 +47,6 @@
     "polka": "^0.5.2",
     "prism-svelte": "^0.4.6",
     "sirv": "^0.4.2",
-    "tsparticles": "^1.13.5"
+    "tsparticles": "^1.14.3"
   }
 }

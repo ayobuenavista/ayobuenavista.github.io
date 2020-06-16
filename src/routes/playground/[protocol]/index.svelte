@@ -27,6 +27,18 @@
     @apply w-full;
   }
 
+  .markdown :global(a) {
+    @apply text-blue-500;
+    @apply underline;
+    background-color: initial;
+  }
+
+  .markdown :global(a:active),
+  .markdown :global(a:hover) {
+    @apply text-blue-700;
+    outline-width: 0;
+  }
+
   .markdown :global(p > code) {
     @apply bg-gray-200;
     @apply font-mono;

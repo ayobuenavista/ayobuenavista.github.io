@@ -42,7 +42,10 @@ export default function get_articles(protocol) {
       return res + '">';
     };
     renderer.heading = (text, level) => {
-      const deeplink = text.toLowerCase().replace(/[^\w]+/g, '-');
+      const deeplink = text
+        .toLowerCase()
+        .replace(/[\/]+/g, '')
+        .replace(/[^\w]+/g, '-');
 
       return `
         <h${level} id="${deeplink}" class="relative">

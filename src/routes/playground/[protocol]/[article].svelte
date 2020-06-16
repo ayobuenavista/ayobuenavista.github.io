@@ -160,11 +160,14 @@
   }
 
   .markdown :global(a) {
+    @apply text-blue-500;
+    @apply underline;
     background-color: initial;
   }
 
   .markdown :global(a:active),
   .markdown :global(a:hover) {
+    @apply text-blue-700;
     outline-width: 0;
   }
 
@@ -178,13 +181,13 @@
 
   .markdown :global(strong) {
     @apply font-bold;
-    font-weight: inherit;
   }
 
   .markdown :global(img) {
-    @apply mb-2;
+    @apply mx-auto;
+    @apply mb-5;
+    @apply text-justify;
     border-style: none;
-    max-height: 100px;
   }
 
   .markdown :global(p > code) {
@@ -272,6 +275,11 @@
   .markdown :global(p) {
     @apply mt-0;
     @apply mb-5;
+  }
+
+  .markdown :global(ul > li) {
+    @apply list-disc;
+    @apply list-inside;
   }
 
   .markdown :global(ol),

@@ -1,7 +1,7 @@
 export default {
   kyber: ['Katalyst-WhatsNew'],
   ethereum: [],
-  polkadot: [],
+  polkadot: ['Polkadot-TelegramQueryBot'],
   near: [],
   tezos: [],
   cosmos: [],

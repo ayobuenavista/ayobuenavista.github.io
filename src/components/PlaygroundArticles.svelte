@@ -26,6 +26,8 @@
         return 'fas fa-quote-left';
       case 'code':
         return 'fas fa-code';
+      case 'project':
+        return 'fa fa-github';
       case 'defi':
         return 'fas fa-coins';
       case 'guide':

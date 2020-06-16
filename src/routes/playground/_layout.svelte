@@ -1,6 +1,13 @@
 <script>
   import MobileNav from '@/components/PlaygroundMobileNav.svelte';
   import Sidebar from '@/components/PlaygroundSidebar.svelte';
+  import routes from '@/conf/published.js';
+
+  let protocols = [];
+
+  for (let route in routes) {
+    protocols.push(route);
+  }
 
   export let segment;
 </script>
@@ -45,8 +52,6 @@
   <title>Anton Buenavista's Playground</title>
 </svelte:head>
 
-<a class="absolute hidden" href="playground/hidden-links">.</a>
-
 <main id="playground">
   <Sidebar {segment} />
   <div class="article-pane">
@@ -58,3 +63,14 @@
     </div>
   </div>
 </main>
+
+<!-- allow sapper to crawl through all articles to generate link-->
+<div class="hidden">
+  {#each protocols as protocol}
+    {#if routes[protocol].length > 0}
+      {#each routes[protocol] as article}
+        <a href="playground/{protocol}/{article}">&nbsp;</a>
+      {/each}
+    {/if}
+  {/each}
+</div>

@@ -139,7 +139,7 @@
   <nav>
     <a href=".">
       <div class="profile-pic">
-        <img alt="Profile Picture" class="{shouldHide}" src="profile.jpg" />
+        <img alt="Profile" class="{shouldHide}" src="profile.jpg" />
       </div>
       <div class="name {shouldHide}">Anton Buenavista</div>
     </a>

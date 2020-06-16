@@ -253,7 +253,7 @@
       <a href="/" class="mt-5 w-full">
         <div class="profile-container">
           <div class="profile-pic">
-            <img alt="Profile Picture" class="h-10 w-10" src="profile.jpg" />
+            <img alt="Profile" class="h-10 w-10" src="profile.jpg" />
           </div>
           {#if expand && desktop}
             <div class="leading-none w-full pt-1 -ml-2" transition:fade>

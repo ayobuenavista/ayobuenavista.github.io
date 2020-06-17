@@ -7,7 +7,7 @@ let json;
 function ordering(protocol) {
   let order = published[protocol];
 
-  return function(a, b) {
+  return function (a, b) {
     if (order.indexOf(a.metadata.id) < order.indexOf(b.metadata.id)) {
       return -1;
     } else if (order.indexOf(a.metadata.id) > order.indexOf(b.metadata.id)) {
@@ -28,7 +28,7 @@ export function get(req, res) {
     return;
   }
 
-  articles = articles.map(article => {
+  articles = articles.map((article) => {
     let { metadata } = article;
 
     return {
@@ -36,7 +36,7 @@ export function get(req, res) {
     };
   });
 
-  articles = articles.filter(e => {
+  articles = articles.filter((e) => {
     return published[protocol].includes(e.metadata.id);
   });
 

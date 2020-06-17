@@ -1,9 +1,9 @@
 <script context="module">
   export async function preload({ params }) {
     const { protocol } = params;
-    const articles = await this.fetch(`playground/${protocol}.json`).then(res =>
-      res.ok ? res.json() : this.error(404, 'Not Found')
-    );
+    const articles = await this.fetch(
+      `playground/${protocol}.json`
+    ).then((res) => (res.ok ? res.json() : this.error(404, 'Not Found')));
 
     return { articles };
   }

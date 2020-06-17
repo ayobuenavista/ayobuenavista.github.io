@@ -13,7 +13,7 @@ export function get(req, res) {
 
   const lookup = new Map();
 
-  articles.forEach(article => {
+  articles.forEach((article) => {
     lookup.set(article.metadata.id, article);
   });
 

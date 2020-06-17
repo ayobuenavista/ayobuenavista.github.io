@@ -9,7 +9,7 @@ import {
 import { highlight } from '@/utils/highlight.js';
 
 function sanitize(str) {
-  return str.replace(/&<"/g, function(m) {
+  return str.replace(/&<"/g, function (m) {
     if (m === '&') return '&amp;';
     if (m === '<') return '&lt;';
     return '&quot;';
@@ -22,7 +22,7 @@ export default function get_articles(protocol) {
   if (protocol === undefined) return;
   if (!fs.existsSync(PATH)) return;
 
-  return fs.readdirSync(PATH).map(file => {
+  return fs.readdirSync(PATH).map((file) => {
     if (path.extname(file) !== '.md') return;
     if (!fs.existsSync(`${PATH}/${file}`)) return;
 
@@ -34,7 +34,7 @@ export default function get_articles(protocol) {
 
     renderer.link = link_renderer;
     renderer.code = highlight;
-    renderer.image = function(src, title, alt) {
+    renderer.image = function (src, title, alt) {
       const exec = /=\s*(\d*)\s*x\s*(\d*)\s*$/.exec(title);
       let res = '<img src="' + sanitize(src) + '" alt="' + sanitize(alt);
       if (exec && exec[1]) res += '" height="' + exec[1];
@@ -60,7 +60,7 @@ export default function get_articles(protocol) {
     };
 
     const html = marked(
-      content.replace(/^\t+/gm, match => match.split('\t').join('  ')),
+      content.replace(/^\t+/gm, (match) => match.split('\t').join('  ')),
       { renderer }
     );
 

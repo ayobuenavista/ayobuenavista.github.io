@@ -3,7 +3,7 @@
     const { article, protocol } = params;
     const md = await this.fetch(
       `playground/${protocol}/${article}.json`
-    ).then(res => (res.ok ? res.json() : this.error(404, 'Not Found')));
+    ).then((res) => (res.ok ? res.json() : this.error(404, 'Not Found')));
 
     return { article, md, protocol };
   }
@@ -20,8 +20,12 @@
   const lg = 1024;
 
   let size = 0;
-  
+
   if ($articleTitle === '') articleTitle.set(md.metadata.title);
+
+  function navPaneTapped() {
+    navPane.set(!$navPane);
+  }
 
   $: desktop = size >= lg;
 </script>
@@ -80,6 +84,7 @@
     @apply overflow-y-auto;
     @apply px-4;
     @apply py-4;
+    @apply pb-16;
     @apply min-w-full;
     @apply max-w-full;
   }
@@ -108,9 +113,20 @@
     @apply fill-current;
   }
 
-  .markdown :global([type=checkbox]) {
+  .markdown :global([type='checkbox']) {
     @apply box-border;
     @apply p-0;
+  }
+
+  .markdown :global(h1),
+  .markdown :global(h2),
+  .markdown :global(h3),
+  .markdown :global(h4),
+  .markdown :global(h5),
+  .markdown :global(h6) {
+    @apply inline-block;
+    @apply -mt-10;
+    @apply pt-10;
   }
 
   .markdown :global(h1 .anchor-link),
@@ -149,12 +165,11 @@
   .markdown :global(h4:hover .anchor .anchor-link:before),
   .markdown :global(h5:hover .anchor .anchor-link:before),
   .markdown :global(h6:hover .anchor .anchor-link:before) {
-    @apply absolute;
+    @apply inline-block;
     background: url(link.svg) no-repeat;
     background-size: 15px 15px;
     content: ' ';
-    top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(25%);
     height: 15px;
     width: 15px;
   }
@@ -212,7 +227,7 @@
 
   .markdown :global(pre) {
     @apply my-0;
-    @apply rounded-lg
+    @apply rounded-lg;
   }
 
   .markdown :global(kbd) {
@@ -242,7 +257,7 @@
   .markdown :global(hr:after),
   .markdown :global(hr:before) {
     @apply table;
-    content: "";
+    content: '';
   }
 
   .markdown :global(hr:after) {
@@ -253,7 +268,7 @@
     @apply m-0;
     @apply overflow-visible;
   }
-  
+
   .markdown :global(table) {
     @apply border-collapse;
     border-spacing: 0;
@@ -353,7 +368,7 @@
   <meta name="twitter:title" content="{md.metadata.title}" />
   <meta name="twitter:description" content="{md.metadata.description}" />
   <meta property="og:title" content="{md.metadata.title}" />
-  <meta property="og:description" content="{md.metadata.description}">
+  <meta property="og:description" content="{md.metadata.description}" />
 </svelte:head>
 
 <!-- Article Content -->
@@ -374,7 +389,11 @@
     <h3 class="text-xl text-signature-500 font-semibold mb-3">Navigation</h3>
     <div class="deeplinks">
       {#each md.deeplinks as { content, lvl, slug }}
-        <a href="playground/{protocol}/{article}#{slug}" class="lvl{lvl}">
+        <a
+          href="playground/{protocol}/{article}#{slug}"
+          class="lvl{lvl}"
+          on:click="{navPaneTapped}"
+        >
           {content}
         </a>
       {/each}

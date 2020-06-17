@@ -16,7 +16,7 @@
 
   for (const protocol of protocols) {
     protocol.svg = import(`@/components/svg/${protocol.id}.svelte`).then(
-      res => res.default
+      (res) => res.default
     );
     fill[protocol.id] = REGAL_WHITE;
   }

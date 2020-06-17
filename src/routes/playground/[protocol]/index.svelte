@@ -6,10 +6,14 @@
         /^./,
         protocol[0].toUpperCase()
       )}.json`
-    ).then(res => (res.ok ? res.json() : this.error(404, 'Not Found')));
+    ).then((res) => (res.ok ? res.json() : this.error(404, 'Not Found')));
 
     return { intro };
   }
+</script>
+
+<script>
+  export let intro;
 </script>
 
 <style>
@@ -77,10 +81,6 @@
     }
   }
 </style>
-
-<script>
-  export let intro;
-</script>
 
 <svelte:head>
   <meta name="twitter:title" content="Anton Buenavista's Playground" />

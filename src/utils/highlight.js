@@ -8,7 +8,7 @@ export function highlight(source, lang) {
     ? PrismJS.highlight(source, PrismJS.languages[plang], lang)
     : source.replace(
         /[&<>]/g,
-        c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])
+        (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])
       );
 
   return `<pre class='language-${plang}'><code>${highlighted}</code></pre>`;

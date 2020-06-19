@@ -5,6 +5,8 @@ title: Polkadot Telegram Query Bot
 description: Telegram bot that queries data from Polkadot other Substrate-based chains
 date: 17 Jun 2020
 ---
+![Polkadot bot](articles/images/polkadot-bot.png "=250x250")
+
 # Overview
 
 The Polkadot Telegram Query Bot is a Telegram bot that queries and returns data to users from Polkadot and other Substrate-based chains. Users can interact with this by sending them command messages in private or group chats.

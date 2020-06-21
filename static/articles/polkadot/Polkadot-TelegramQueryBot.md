@@ -5,7 +5,7 @@ title: Polkadot Telegram Query Bot
 description: Telegram bot that queries data from Polkadot other Substrate-based chains
 date: 17 Jun 2020
 ---
-![Polkadot bot](articles/images/polkadot-bot.png "=250x250")
+![Polkadot bot](articles/images/polkadot-bot.png "=120x115")
 
 # Overview
 

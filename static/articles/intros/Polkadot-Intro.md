@@ -3,11 +3,11 @@ id: Introduction-Polkadot
 ---
 ![Polkadot logo](logos/polkadot.png "=150x221")
 
-Polkadot is a multi-chain framework platform designed to offer interoperability and scalability for blockchains built on Polkadot. Its base protocol leverages Parity Technologies’ Substrate framework, allowing Polkadot-based chains and applications to communicate, transact, and transfer data without relying on intermediary products or services. Polkadot does not provide application functionality but instead aims to serve as a relay-chain, hosting dynamic data structures called parallelized chains, or parachains, that provide Polkadot’s consensus, finality and voting logic.
+Polkadot is a heterogeneous multi-chain blockchain designed to offer interoperability and scalability. Its base protocol leverages Parity Technologies’ Substrate framework, allowing Polkadot-based chains and applications to communicate, transact, and transfer data without relying on intermediary products or services. Polkadot does not provide application functionality but instead aims to serve as a relay-chain, hosting dynamic data structures called parallelized chains, or parachains, that provide Polkadot’s consensus, finality and voting logic.
 
 The blockchain consists of a Relay chain and a network of Parachains. Parachains are pegged to the Relay chain and are responsible for sending the hash of every block to the Relay chain. Imagine this similar to a screenshot of the current state of the Parachain. Receiving state updates from the Parachains allows the Relay chain to foster value transfer between Parachains. Note that messages can be broadcasted instantly between Prachains and do not require finality.
 
-Polkadot’s finality mechanism is called GRANDPA, which utilizes Proof-of-Stake. GRANDPA reaches agreements on chains. It is not responsible for validating transactions on a per-block basis. To reach consensus on individual blocks, Polkadot implements a consensus mechanism, called BABE. BABE is responsible for assigning validator slots to nodes with the highest stake.
+Polkadot’s finality mechanism is called GRANDPA, which utilizes Proof-of-Stake. GRANDPA reaches agreements on chains. It is not responsible for validating transactions on a per-block basis. To reach consensus on individual blocks, Polkadot implements a consensus mechanism, called BABE. BABE is responsible for assigning validator slots to nodes with the highest stake. This combination allows 1) probabilistic finality by BABE due to its chain selection rule, where after a certain time the block will be finalized with a probability close to one and 2) provable and deterministic finality by GRANDPA, where finalized blocks stay final forever.
 
 To enhance interoperability between blockchains, Polkadot utilizes bridges that link the Relay chain to the external blockchain. Since Ethereum cannot become a Relay chain on the Polkadot network, it is planned to connect both chains via a bridge.
 
@@ -20,7 +20,7 @@ Example: `1FRMM8PEiWXYax7rpS6X4XZX1aAAxSWx1CrKTyrVYhV24fg`
 
 **Block Time**: The Relay Chain will target to produce a block every 6 seconds.
 
-**Consensus**: GRANDPA utilizing Proof-of-Stake.
+**Consensus**: Nominated Proof-of-Stake with GRANDPA as the finality gadget and BABE as the block production mechanism.
 
 **DOT Supply**: No hard cap on the total supply.
 

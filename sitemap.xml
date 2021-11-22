@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ayobuenavista.io/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/pendle/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/kyber/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/ethereum/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/polkadot/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/near/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/tezos/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/algorand/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/solana/</loc>
+  </url>
+  <url>
+    <loc>https://ayobuenavista.io/playground/celo/</loc>
+  </url>
+</urlset>

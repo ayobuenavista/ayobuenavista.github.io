@@ -25,18 +25,6 @@
     @apply text-center;
   }
 
-  .resume-copyright {
-    @apply inline-block;
-    @apply mx-auto;
-    @apply text-gray-500;
-    @apply w-full;
-  }
-
-  .resume-links {
-    @apply text-gray-500;
-    @apply w-full;
-  }
-
   .quotes {
     @apply mx-auto;
     @apply my-8;
@@ -44,38 +32,10 @@
     @apply text-gray-500;
     @apply text-xl;
   }
-
-  @screen lg {
-    .resume-links {
-      @apply absolute;
-      @apply inline-block;
-      @apply right-0;
-      @apply w-auto;
-    }
-  }
 </style>
 
 <footer id="footer">
-  {#if segment === 'resume'}
-    <div class="h-full w-full bg-transparent py-3">
-      <div class="flex flex-col-reverse lg:flex-row mx-auto text-center">
-        <div class="resume-copyright">
-          <p class="text-base">Handcrafted by me © ayobuenavista</p>
-        </div>
-        <div class="resume-links">
-          <a href="https://twitter.com/ayobuenavista" target="_blank">
-            <i class="fab fa-twitter text-gray-500 text-2xl px-5"></i>
-          </a>
-          <a href="https://github.com/ayobuenavista" target="_blank">
-            <i class="fab fa-github text-gray-500 text-2xl px-5"></i>
-          </a>
-          <a href="https://linkedin.com/in/ayobuenavista" target="_blank">
-            <i class="fab fa-linkedin text-gray-500 text-2xl px-5"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  {:else if segment !== 'playground'}
+  {#if segment !== 'playground'}
     <div class="h-full w-full bg-regal-gray py-3">
       <div class="quotes">
         <p>

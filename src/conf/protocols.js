@@ -1,5 +1,9 @@
 export default [
   {
+    id: 'pendle',
+    name: 'Pendle',
+  },
+  {
     id: 'kyber',
     name: 'Kyber',
   },
@@ -12,13 +16,13 @@ export default [
     name: 'Polkadot',
   },
   {
-    id: 'near',
-    name: 'NEAR',
+    id: 'solana',
+    name: 'Solana',
   },
   {
-    id: 'tezos',
-    name: 'Tezos',
-  },
+    id: 'near',
+    name: 'NEAR',
+  },  
   {
     id: 'cosmos',
     name: 'Cosmos',
@@ -28,8 +32,8 @@ export default [
     name: 'Algorand',
   },
   {
-    id: 'solana',
-    name: 'Solana',
+    id: 'tezos',
+    name: 'Tezos',
   },
   {
     id: 'celo',

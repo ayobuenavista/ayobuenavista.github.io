@@ -31,9 +31,8 @@
   $: desktop = size >= lg;
   $: headerClass = getClass(y);
   $: isPlayground = segment === 'playground' ? 'hidden' : '';
-  $: isResume = segment === 'resume';
-  $: shouldHide = isResume && headerClass !== 'scrolled' ? 'hidden' : '';
-  $: shouldWhite = isResume && !desktop ? 'text-regal-white' : '';
+  $: shouldHide = headerClass !== 'scrolled' ? 'hidden' : '';
+  $: shouldWhite = !desktop ? '' : 'text-regal-white';
   $: visibility = desktop || expand;
 </script>
 
@@ -147,7 +146,6 @@
       <MobileMenu
         on:click="{toggleMobileMenu}"
         {expand}
-        {isResume}
         {headerClass}
       />
     </div>
@@ -161,13 +159,6 @@
             on:click="{toggleMobileMenu}"
             text="Playground"
             href="playground"
-            rel="prefetch"
-            {segment}
-          />
-          <NavLink
-            on:click="{toggleMobileMenu}"
-            text="Resume"
-            href="resume"
             rel="prefetch"
             {segment}
           />

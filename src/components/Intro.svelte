@@ -20,23 +20,6 @@
     @apply bg-red-700;
   }
 
-  .btn-resume {
-    @apply bg-gray-300;
-    @apply font-semibold;
-    @apply mx-4;
-    @apply px-4;
-    @apply py-3;
-    @apply rounded;
-    @apply text-base;
-    @apply text-center;
-    @apply text-gray-900;
-    @apply w-32;
-  }
-
-  .btn-resume:hover {
-    @apply bg-gray-400;
-  }
-
   .horizontal-line {
     @apply mx-auto;
     @apply mt-3;
@@ -88,10 +71,6 @@
     }
 
     .btn-playground {
-      @apply text-xs;
-    }
-
-    .btn-resume {
       @apply text-xs;
     }
 
@@ -162,7 +141,6 @@
         </p>
         <div class="justify-center my-12">
           <a class="btn-playground" href="playground">Visit my Playground</a>
-          <a class="btn-resume" href="resume">Resume</a>
         </div>
       </div>
     </div>

@@ -60,3 +60,5 @@ __sapper__
 # dotenv environment variables file
 .env
 
+# VSCode
+.vscode

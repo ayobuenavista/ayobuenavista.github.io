@@ -3,17 +3,12 @@
 
   export let expand = false;
   export let headerClass;
-  export let isResume;
 
   const dispatch = createEventDispatcher();
 
   function hamburgerTapped() {
     dispatch('click', !expand);
   }
-
-  $: shouldWhite = isResume
-    ? 'border-regal-white text-regal-white'
-    : 'border-regal-gray text-regal-gray';
 </script>
 
 <style>
@@ -38,7 +33,7 @@
   }
 </style>
 
-<button on:click="{hamburgerTapped}" class="button {shouldWhite} {headerClass}">
+<button on:click="{hamburgerTapped}" class="button border-regal-gray text-regal-gray {headerClass}">
   <svg
     class="fill-current h-3 w-3"
     viewBox="0 0 20 20"

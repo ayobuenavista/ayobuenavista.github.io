@@ -11,10 +11,7 @@ blurb:
   about: Full-stack developer who is highly passionate about blockchain,
          cryptography, decentralization, game theory, consensus mechanisms,
          smart contracts, cryptoassets, crypteconomics, open source, and the
-         semantic web. I work on scalable, high availability applications using
-         nascent technology. My work covers both software engineering and
-         systems administration encapsulating services from end-to-end. Vires
-         in Numeris.
+         metaverse. I like working on cool stuff. ♾️♾️♾️
   skills:
     - skill: HTML5
       icon: devicon-html5-plain-wordmark
@@ -42,6 +39,23 @@ blurb:
       icon: devicon-linux-plain colored
 
 experience:
+- company: Pendle Finance
+  logo: pendle.png
+  description: Kyber is an on-chain liquidity protocol that allows decentralized
+               token swaps to be integrated into any application, enabling value
+               exchange to be performed seamlessly between all parties in the
+               ecosystem.
+  position: Developer Relations
+  timeperiod: Present
+  location: Singapore
+  projects:
+    - project: https://github.com/pendle-finance/
+  technologies:
+    - technology: Ethereum
+    - technology: Solidity
+    - technology: Ethers.js
+    - technology: Hardhat
+
 - company: Kyber Network
   logo: kyber.png
   description: Kyber is an on-chain liquidity protocol that allows decentralized
@@ -49,38 +63,23 @@ experience:
                exchange to be performed seamlessly between all parties in the
                ecosystem.
   position: Senior Engineer
-  timeperiod: Present
+  timeperiod: Jul 2018 - Aug 2021
   location: Singapore
-  tasks:
-    - task: Lead growth of Kyber's developer ecosystem via integrations,
-            liquidity provider onboarding, workshops, documentation,
-            presentations, etc.
-    - task: Kyber marketing, business, engagement, and evangelism efforts,
-            helping expand Kyber's awareness and adoption in the space.
-    - task: Blockchain-ops and development of several smart contract projects.
   projects:
-    - project: https://developer.kyber.network (Lead Developer)
-    - project: https://github.com/KyberNetwork/workshop (Lead Developer)
-    - project: https://github.com/KyberNetwork/telegram-query-bot (Lead Developer)
-    - project: https://github.com/KyberNetwork/smart-contracts (Team Member)
+    - project: https://github.com/KyberNetwork/
+    - project: https://github.com/dynamic-amm/
   technologies:
     - technology: Ethereum
     - technology: Solidity
-    - technology: web3
-    - technology: Truffle
-    - technology: Buidler
+    - technology: Ethers.js
+    - technology: Hardhat
 
 - company: Self-Employed
   logo: selfemployed.png
   description: Self-employed, doing consulting and freelance work.
   position: Blockchain Consultant and Freelancer
   timeperiod: Aug 2017 - Jul 2018
-  location: Global
-  tasks:
-    - task: Remotely provided consultation to blockchain companies or
-            projects on design, infrastructure, and tokenomics.
-    - task: Developed a full-stack web ICO/TGE platform and architected its HA
-            infrastructure on AWS.
+  location: Philippines
   technologies:
     - technology: Ethereum
     - technology: Solidity
@@ -100,21 +99,11 @@ experience:
   position: Technical Analyst and DevOps Engineer
   timeperiod: Jul 2015 - Jul 2017
   location: Singapore
-  tasks:
-    - task: Lead developer on a workspace manager project that monitors and
-            manages the workspaces of our internal and external mobile hardware
-            development teams.
-    - task: Lead developer of a Linux command line tool that helps other
-            developers connect to a developer host farm or LSF/Netbatch cluster.
-    - task: Sys-ops tasks and development of automation tools.
-    - task: Integration of SCM tools with many various internal and external
-            systems.
-    - task: L3 technical support for bleeding edge mobile hardware platforms.
   projects:
-    - project: Workspace Manager (Lead Developer)
-    - project: Development Host Command Line Tool (Lead Developer)
-    - project: Build Host Checker (Team Member)
-    - project: Jenkins Automations (Team Member)
+    - project: Workspace Manager
+    - project: Development Host Command Line Tool
+    - project: Build Host Checker
+    - project: Jenkins Automations
   technologies:
     - technology: Angular
     - technology: Sails
@@ -137,26 +126,11 @@ experience:
   position: IT Analyst
   timeperiod: Feb 2010 - May 2015
   location: Singapore
-  tasks:
-    - task: Lead developer on a hydrodynamics forecast web service which serves
-            scientific hydrological model data on the Southeast Asia region,
-            providing plot information such as bathymetry, surface elevation
-            from seabed, and tide speed and direction.
-    - task: Part of an agile three-man team that developed web services for
-            government researchers to view scientific reports (i.e. storm surge
-            forecasts and oil spill simulations).
-    - task: Performed sys-ops tasks which cover the enhancement and maintenance
-            of high-performance computing clusters, web servers, storage units,
-            and network interfaces.
-    - task: Operationalized scientific numerical models by designing and
-            implementing automated systems that runs numerical models on the
-            cluster, performs data processing, then displays the data on our web
-            services.
   projects:
-    - project: Live Access Server with OpenDAP (Lead Developer)
-    - project: Water-quality Data Processing (Lead Developer)
-    - project: Oil Spill Forecasting Web Service (Team Member)
-    - project: Storm Surge Forecasting Web Service (Team Member)
+    - project: Live Access Server with OpenDAP
+    - project: Water-quality Data Processing
+    - project: Oil Spill Forecasting Web Service
+    - project: Storm Surge Forecasting Web Service
   technologies:
     - technology: NetCDF
     - technology: Ferret
@@ -176,14 +150,8 @@ experience:
   position: Application Developer
   timeperiod: May 2009 - Oct 2009
   location: Philippines
-  tasks:
-    - task: Developed backend modules and automated data-loaders for the supply
-            chain and manufacturing data warehouse.
-    - task: Implemented enhancements for an internal reporting tool which
-            tackled dead-on-arrival orders, cutting DOA orders in the production
-            line and achieving 98% delivery effectiveness.
   projects:
-    - project: Dead-on-Arrival Order Analysis Service (Lead Developer)
+    - project: Dead-on-Arrival Order Analysis Service
   technologies:
     - technology: Java
     - technology: Oracle
@@ -198,7 +166,7 @@ education:
     - award: Chairman of the ICON Academic Group
 
 skills:
-- group: Solidity, web3, Truffle, Buidler
+- group: Solidity, web3, Truffle, Hardhat
 - group: HTML5, CSS3, JavaScript, Python, Shell Scripting
 - group: Svelte, Sapper, TailwindCSS, Vue, Sails, Feathers, Express, node.js, 
 - group: MongoDB, MySQL, SQLite

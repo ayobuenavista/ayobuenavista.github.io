@@ -4,10 +4,10 @@
     <loc>https://ayobuenavista.io/</loc>
   </url>
   <url>
-    <loc>https://ayobuenavista.io/resume/</loc>
+    <loc>https://ayobuenavista.io/playground/</loc>
   </url>
   <url>
-    <loc>https://ayobuenavista.io/playground/</loc>
+    <loc>https://ayobuenavista.io/playground/pendle/</loc>
   </url>
   <url>
     <loc>https://ayobuenavista.io/playground/kyber/</loc>
@@ -32,11 +32,5 @@
   </url>
   <url>
     <loc>https://ayobuenavista.io/playground/celo/</loc>
-  </url>
-  <url>
-    <loc>https://ayobuenavista.io/resume/AntonBuenavista_resume.pdf</loc>
-  </url>
-  <url>
-    <loc>https://ayobuenavista.io/playground/kyber/Katalyst-WhatsNew/</loc>
   </url>
 </urlset>

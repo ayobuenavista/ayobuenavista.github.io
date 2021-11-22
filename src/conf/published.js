@@ -1,4 +1,5 @@
 export default {
+  pendle: [],
   kyber: ['Katalyst-WhatsNew'],
   ethereum: [],
   polkadot: ['Polkadot-TelegramQueryBot'],

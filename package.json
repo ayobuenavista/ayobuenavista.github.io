@@ -41,7 +41,7 @@
     "@typeform/embed": "^0.20.0",
     "compression": "^1.7.4",
     "js-yaml": "^3.14.0",
-    "markdown-it": "^11.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-toc": "^1.2.0",
     "marked": "^1.1.0",
     "polka": "^0.5.2",

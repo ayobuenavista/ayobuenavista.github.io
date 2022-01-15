@@ -43,7 +43,7 @@
     "js-yaml": "^3.14.0",
     "markdown-it": "^11.0.0",
     "markdown-toc": "^1.2.0",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "polka": "^0.5.2",
     "prism-svelte": "^0.4.6",
     "sirv": "^1.0.0",
